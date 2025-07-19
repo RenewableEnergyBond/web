@@ -18,12 +18,13 @@ jobs:
         uses: actions/setup-node@v4.1.0
         with:
           node-version: 20
+          cache: 'yarn'
 
       - name: Install dependencies 📦
-        run: npm ci
+        run: yarn install
 
       - name: Build site 🏗️
-        run: npm run build-ssg
+        run: yarn build-ssg
 
       - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
