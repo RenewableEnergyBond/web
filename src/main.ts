@@ -1,12 +1,12 @@
-
-
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
+// import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './assets/main.css'
 
-const app = createApp(App)
+// const app = createApp(App)
 
-app.use(router)
-
-app.mount('#app')
+export const createApp = ViteSSG(
+  App,
+  { routes: router.getRoutes() }
+)
