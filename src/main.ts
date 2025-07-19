@@ -8,5 +8,5 @@ import './assets/main.css'
 
 export const createApp = ViteSSG(
   App,
-  { routes: router.getRoutes() }
+  { routes: router.getRoutes(), scrollBehavior: () => ({ top: 0, behavior: 'smooth' }) }
 )

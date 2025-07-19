@@ -10,8 +10,8 @@ const router = createRouter({
   history: isClient
         ? createWebHistory(import.meta.env.BASE_URL)
         : createMemoryHistory(import.meta.env.BASE_URL),
+  // default bahavior but overrided by vite ssg
   scrollBehavior(to, from, savedPosition) {
-    // always scroll to top
     return { top: 0 }
   },
   routes: [
