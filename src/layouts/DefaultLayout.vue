@@ -7,13 +7,13 @@ import { ref, watch } from 'vue';
 
 const showMobileMenu = ref(false);
 
-watch(showMobileMenu, (value) => {
-  if (value) {
-    document.body.classList.add('overflow-hidden');
-  } else {
-    document.body.classList.remove('overflow-hidden');
-  }
-});
+// watch(showMobileMenu, (value) => {
+//   if (value) {
+//     document.body.classList.add('overflow-hidden');
+//   } else {
+//     document.body.classList.remove('overflow-hidden');
+//   }
+// });
 </script>
 
 <template>
