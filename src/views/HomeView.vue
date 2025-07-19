@@ -32,7 +32,7 @@ import CheckIcon from '@/icons/CheckIcon.vue';
       </div>
     </div>
 
-    <div class="h-[30vh] relative w-full overflow-hidden bg-cover bg-fixed bg-[center_-30vh] bg-no-repeat" style="background-image: url(/assets/hero-1920.jpg);">
+    <div class="h-[30vh] relative w-full overflow-hidden bg-cover bg-fixed bg-[center_-30vh] bg-no-repeat" style="background-image: url(assets/hero-1920.jpg);">
       <!-- <img alt="Centrale EnR" src="/assets/hero-1920.jpg"
         class="h-[30vh] w-full object-cover object-bottom absolute left-1/2 animate-zoom-loop" /> -->
     </div>
