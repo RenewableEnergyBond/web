@@ -26,7 +26,7 @@ import CheckIcon from '@/icons/CheckIcon.vue';
           <span>via la tokenisation d'obligations</span>
         </div>
       </div>
-      <div class="font-semibold text-lg md:text-xl">
+      <div class="text-lg md:text-xl">
         <span class="text-secondary">re</span><span class="text-primary">bond</span> séléctionne, structure et tokenise
         des obligations émises par des producteurs d'énergie renouvelable
       </div>
