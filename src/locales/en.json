@@ -1,0 +1,61 @@
+{
+  "menu": {
+    "mission": "Our Mission",
+    "operation": "How it Works",
+    "producer": "RE Producer",
+    "investor": "Investor",
+    "contact": "Contact"
+  },
+  "foobar": "Hello!",
+  "home": {
+    "hero": {
+      "title": "Accelerating <span class=\"text-secondary\">Energy Transition</span>",
+      "subtitle1": "through financing <span class=\"text-secondary\">Renewable Energy Producers</span>",
+      "subtitle2": "via bond tokenization"
+    },
+    "description": "rebond selects, structures and tokenizes bonds issued by renewable energy producers",
+    "stats": {
+      "yield": {
+        "value": ">6%",
+        "label": "target yield on digital assets"
+      },
+      "partners": {
+        "value": "+20",
+        "label": "committed partners"
+      },
+      "analysis": {
+        "value": "€30M",
+        "label": "under analysis"
+      }
+    },
+    "whatWeDo": {
+      "title": "What we do",
+      "services": {
+        "bonds": "Green Bond Structuring",
+        "tokenization": "Blockchain Tokenization",
+        "distribution": "Secure Distribution"
+      }
+    },
+    "why": {
+      "title": "Why rebond?",
+      "reasons": {
+        "expertise": "Green finance expertise",
+        "compliance": "Compliance and transparency",
+        "quality": "Quality of selected projects",
+        "tech": "Blockchain technology mastery"
+      }
+    },
+    "targets": {
+      "producer": {
+        "title": "RE Producer",
+        "description": "We support renewable energy producers.",
+        "cta": "Learn more"
+      },
+      "investor": {
+        "title": "Investor",
+        "description": "We address impact funds with tokenized assets",
+        "cta": "Learn more"
+      }
+    }
+  }
+}

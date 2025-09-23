@@ -3,30 +3,26 @@ import FinanceIcon from '@/icons/FinanceIcon.vue';
 import CogIcon from '@/icons/CogIcon.vue';
 import BankTransferIcon from '@/icons/BankTransferIcon.vue';
 import CheckIcon from '@/icons/CheckIcon.vue';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <div class="flex flex-col gap-3 py-8 sm:py-16 px-4 justify-center text-center text-primary">
     <div class="flex flex-col leading-normal">
-      <div class="font-semibold lg:text-5xl md:text-4xl sm:text-3xl text-2xl">
-        <span class="text-nowrap">Accélérer la </span>
-        <wbr>
-        <span class="text-secondary text-nowrap">Transition &Eacute;nergétique</span>
+      <div class="font-semibold lg:text-5xl md:text-4xl sm:text-3xl text-2xl" 
+           v-html="t('home.hero.title')">
+      </div>
+      <div class="font-semibold lg:text-3xl md:text-2xl text-xl"
+           v-html="t('home.hero.subtitle1')">
       </div>
       <div class="font-semibold lg:text-3xl md:text-2xl text-xl">
-        <span class="text-nowrap">par le financement </span>
-        <wbr>
-        <span class="text-nowrap">des Producteurs</span>
-        <wbr>
-              d'<span class="text-secondary text-nowrap">&Eacute;nergie Renouvelable</span>
-      </div>
-      <div class="font-semibold lg:text-3xl md:text-2xl text-xl">
-        <span>via la tokenisation d'obligations</span>
+        {{ t('home.hero.subtitle2') }}
       </div>
     </div>
     <div class="text-lg md:text-xl">
-      <span class="text-secondary">re</span><span class="text-primary">bond</span> séléctionne, structure et tokenise
-      des obligations émises par des producteurs d'énergie renouvelable
+      <span class="text-secondary">re</span><span class="text-primary">bond</span> {{ t('home.description') }}
     </div>
   </div>
 
@@ -41,41 +37,41 @@ import CheckIcon from '@/icons/CheckIcon.vue';
   <div class="bg-primary/20">
     <div class="container m-auto lg:max-w-5xl flex flex-col md:flex-row justify-center">
       <div class="flex flex-1 flex-col text-center p-4">
-        <div class="md:text-3xl text-xl font-semibold">>6%</div>
-        <div class="md:text-lg">rendement cible sur actifs numériques</div>
+        <div class="md:text-3xl text-xl font-semibold">{{ t('home.stats.yield.value') }}</div>
+        <div class="md:text-lg">{{ t('home.stats.yield.label') }}</div>
       </div>
       <div class="md:hidden h-0 border-t-2 border-white border-dashed"></div>
       <div class="flex flex-1 flex-col text-center p-4">
-        <div class="md:text-3xl text-xl font-semibold">+20</div>
-        <div class="md:text-lg"><span class="text-nowrap">partenaires engagés</span></div>
+        <div class="md:text-3xl text-xl font-semibold">{{ t('home.stats.partners.value') }}</div>
+        <div class="md:text-lg"><span class="text-nowrap">{{ t('home.stats.partners.label') }}</span></div>
       </div>
       <div class="md:hidden h-0 border-t-2 border-white border-dashed"></div>
       <div class="flex flex-1 flex-col text-center p-4">
-        <div class="md:text-3xl text-xl font-semibold">30M€</div>
-        <div class="md:text-lg"><span>en cours d'analyse</span></div>
+        <div class="md:text-3xl text-xl font-semibold">{{ t('home.stats.analysis.value') }}</div>
+        <div class="md:text-lg"><span>{{ t('home.stats.analysis.label') }}</span></div>
       </div>
     </div>
   </div>
 
   <div class="container lg:max-w-5xl m-auto py-8 sm:py-16 flex flex-col">
     <div class="text-primary font-semibold lg:text-5xl md:text-4xl sm:text-3xl text-2xl text-center mb-8">
-      Ce que nous faisons</div>
+      {{ t('home.whatWeDo.title') }}</div>
     <div class="flex flex-col sm:flex-row gap-6 sm:gap-2">
       <div class="flex-1 flex flex-col text-center">
         <FinanceIcon class="w-16 md:w-24 self-center" />
-        <div class="md:text-xl font-semibold">Structuration d'obligations vertes</div>
+        <div class="md:text-xl font-semibold">{{ t('home.whatWeDo.services.bonds') }}</div>
         <div></div>
       </div>
       <div class="sm:hidden h-0 border-t-2 border-primary/20 border-dashed"></div>
       <div class="flex-1 flex flex-col text-center">
         <CogIcon class="w-16 md:w-24 self-center" />
-        <div class="md:text-xl font-semibold">Tokenisation via blockchain</div>
+        <div class="md:text-xl font-semibold">{{ t('home.whatWeDo.services.tokenization') }}</div>
         <div></div>
       </div>
       <div class="sm:hidden h-0 border-t-2 border-primary/20 border-dashed"></div>
       <div class="flex-1 flex flex-col text-center">
         <BankTransferIcon class="w-16 md:w-24 self-center" />
-        <div class="md:text-xl font-semibold">Distribution sécurisée</div>
+        <div class="md:text-xl font-semibold">{{ t('home.whatWeDo.services.distribution') }}</div>
         <div></div>
       </div>
     </div>
@@ -84,25 +80,24 @@ import CheckIcon from '@/icons/CheckIcon.vue';
   <div class="bg-primary/20">
     <div class="container m-auto lg:max-w-5xl flex flex-col md:flex-row justify-center px-4 py-8 gap-2">
       <div class="flex flex-1">
-        <div class="md:text-3xl text-xl font-semibold">Pourquoi <span class="text-secondary">re</span><span
-            class="text-primary">bond</span> ?</div>
+        <div class="md:text-3xl text-xl font-semibold">{{ t('home.why.title') }}</div>
       </div>
       <div class="flex-1">
         <div class="md:text-xl text-lg flex gap-1">
           <CheckIcon class="w-6 fill-secondary" />
-          <div>Expertise en finance verte</div>
+          <div>{{ t('home.why.reasons.expertise') }}</div>
         </div>
         <div class="md:text-xl text-lg flex gap-1">
           <CheckIcon class="w-6 fill-secondary" />
-          <div>Conformité et transparence</div>
+          <div>{{ t('home.why.reasons.compliance') }}</div>
         </div>
         <div class="md:text-xl text-lg flex gap-1">
           <CheckIcon class="w-6 fill-secondary" />
-          <div>Qualité des projets sélectionnés</div>
+          <div>{{ t('home.why.reasons.quality') }}</div>
         </div>
         <div class="md:text-xl text-lg flex gap-1">
           <CheckIcon class="w-6 fill-secondary" />
-          <div>Maitrise de la technologie blockchain</div>
+          <div>{{ t('home.why.reasons.tech') }}</div>
         </div>
       </div>
     </div>
@@ -111,17 +106,17 @@ import CheckIcon from '@/icons/CheckIcon.vue';
   <div class="container lg:max-w-5xl m-auto py-8 sm:py-16 flex flex-col">
     <div class="flex flex-col sm:flex-row gap-6 sm:gap-2">
       <div class="flex-1 flex flex-col gap-2 text-center">
-        <div class="text-xl font-semibold">Producteur EnR</div>
-        <div>Nous accompagnons les producteurs d'énergie renouvelable.</div>
+        <div class="text-xl font-semibold">{{ t('home.targets.producer.title') }}</div>
+        <div>{{ t('home.targets.producer.description') }}</div>
         <button type="button" class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg 
-        px-5 py-2.5 self-center">En savoir plus</button>
+        px-5 py-2.5 self-center">{{ t('home.targets.producer.cta') }}</button>
       </div>
       <div class="sm:hidden h-0 border-t-2 border-primary/20 border-dashed"></div>
       <div class="flex-1 flex flex-col gap-2 text-center">
-        <div class="text-xl font-semibold">Investisseur</div>
-        <div>Nous adressons les fonds à impact en actifs tokenisés</div>
+        <div class="text-xl font-semibold">{{ t('home.targets.investor.title') }}</div>
+        <div>{{ t('home.targets.investor.description') }}</div>
         <button type="button" class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg 
-        px-5 py-2.5 self-center">En savoir plus</button>
+        px-5 py-2.5 self-center">{{ t('home.targets.investor.cta') }}</button>
       </div>
     </div>
   </div>

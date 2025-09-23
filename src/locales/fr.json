@@ -1,0 +1,61 @@
+{
+  "menu": {
+    "mission": "Notre mission",
+    "operation": "Fonctionnement",
+    "producer": "Producteur EnR",
+    "investor": "Investisseur",
+    "contact": "Contact"
+  },
+  "foobar": "Bonjour !",
+  "home": {
+    "hero": {
+      "title": "Accélérer la <span class=\"text-secondary\">Transition Énergétique</span>",
+      "subtitle1": "par le financement des <span class=\"text-secondary\">Producteurs d'Énergie Renouvelable</span>",
+      "subtitle2": "via la tokenisation d'obligations"
+    },
+    "description": "rebond séléctionne, structure et tokenise des obligations émises par des producteurs d'énergie renouvelable",
+    "stats": {
+      "yield": {
+        "value": ">6%",
+        "label": "rendement cible sur actifs numériques"
+      },
+      "partners": {
+        "value": "+20",
+        "label": "partenaires engagés"
+      },
+      "analysis": {
+        "value": "30M€",
+        "label": "en cours d'analyse"
+      }
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "services": {
+        "bonds": "Structuration d'obligations vertes",
+        "tokenization": "Tokenisation via blockchain",
+        "distribution": "Distribution sécurisée"
+      }
+    },
+    "why": {
+      "title": "Pourquoi rebond ?",
+      "reasons": {
+        "expertise": "Expertise en finance verte",
+        "compliance": "Conformité et transparence",
+        "quality": "Qualité des projets sélectionnés",
+        "tech": "Maitrise de la technologie blockchain"
+      }
+    },
+    "targets": {
+      "producer": {
+        "title": "Producteur EnR",
+        "description": "Nous accompagnons les producteurs d'énergie renouvelable.",
+        "cta": "En savoir plus"
+      },
+      "investor": {
+        "title": "Investisseur",
+        "description": "Nous adressons les fonds à impact en actifs tokenisés",
+        "cta": "En savoir plus"
+      }
+    }
+  }
+}

@@ -2,8 +2,12 @@
 import FooterComponent from '@/components/FooterComponent.vue';
 import BurgerIcon from '@/icons/BurgerIcon.vue';
 import CloseIcon from '@/icons/CloseIcon.vue';
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue';
 import router from '@/router';
 import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const showMobileMenu = ref(false);
 
@@ -43,15 +47,16 @@ watch(showMobileMenu, (value) => {
         <!-- MENU DESKTOP -->
         <div class="menu hidden xl:flex gap-8 justify-end items-center text-primary">
           <RouterLink :to="{ name: 'Mission' }" class="font-medium text-lg hover:text-secondary">
-            Notre mission</RouterLink>
+            {{ t('menu.mission') }}</RouterLink>
           <RouterLink :to="{ name: 'Operation' }" class="font-medium text-lg hover:text-secondary">
-            Fonctionnement</RouterLink>
+            {{ t('menu.operation') }}</RouterLink>
           <RouterLink :to="{ name: 'Producer' }" class="font-medium text-lg hover:text-secondary">
-            Producteur EnR</RouterLink>
+            {{ t('menu.producer') }}</RouterLink>
           <RouterLink :to="{ name: 'Investor' }" class="font-medium text-lg hover:text-secondary">
-            Investisseur</RouterLink>
+            {{ t('menu.investor') }}</RouterLink>
           <RouterLink :to="{ name: 'Contact' }" class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg
-          px-5 py-2.5">Contact</RouterLink>
+          px-5 py-1.5">{{ t('menu.contact') }}</RouterLink>
+          <LanguageSwitcher />
         </div>
       </div>
     </div>
@@ -70,24 +75,25 @@ watch(showMobileMenu, (value) => {
       ]"
     >
       <RouterLink @click="showMobileMenu = false" :to="{ name: 'Mission' }" class="font-medium text-3xl hover:text-secondary">
-        Notre mission
+        {{ t('menu.mission') }}
       </RouterLink>
       <RouterLink @click="showMobileMenu = false" :to="{ name: 'Operation' }" class="font-medium text-3xl hover:text-secondary">
-        Fonctionnement
+        {{ t('menu.operation') }}
       </RouterLink>
       <RouterLink @click="showMobileMenu = false" :to="{ name: 'Producer' }" class="font-medium text-3xl hover:text-secondary">
-        Producteur EnR
+        {{ t('menu.producer') }}
       </RouterLink>
       <RouterLink @click="showMobileMenu = false" :to="{ name: 'Investor' }" class="font-medium text-3xl hover:text-secondary">
-        Investisseur
+        {{ t('menu.investor') }}
       </RouterLink>
       <RouterLink
         @click="showMobileMenu = false"
         :to="{ name: 'Contact' }"
         class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-3xl px-5 py-2.5"
       >
-        Contact
+        {{ t('menu.contact') }}
       </RouterLink>
+      <LanguageSwitcher class="!static mt-4" />
     </div>
   </div>
 </template>
