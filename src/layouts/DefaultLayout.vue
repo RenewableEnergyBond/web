@@ -3,13 +3,23 @@ import FooterComponent from '@/components/FooterComponent.vue';
 import BurgerIcon from '@/icons/BurgerIcon.vue';
 import CloseIcon from '@/icons/CloseIcon.vue';
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue';
-import router from '@/router';
-import { ref, watch } from 'vue';
+import router, { getLocaleFromRoute, getLocalizedRouteName } from '@/router';
+import { ref, watch, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useRoute } from 'vue-router';
 
 const { t } = useI18n();
+const route = useRoute();
 
 const showMobileMenu = ref(false);
+
+// Langue actuelle basée sur la route
+const currentLocale = computed(() => getLocaleFromRoute(route));
+
+// Helper pour générer les routes localisées
+const getRouteFor = (routeName: string) => {
+  return { name: getLocalizedRouteName(routeName, currentLocale.value) };
+};
 
 watch(showMobileMenu, (value) => {
   if (value) {
@@ -27,7 +37,7 @@ watch(showMobileMenu, (value) => {
       <div class="flex py-3 justify-between items-center">
         <div class="flex gap-2 items-center">
           <img alt="Logo rebond" src="/assets/logo-rebond.svg" class="h-[26px] md:h-[32px]" />
-          <RouterLink :to="{ name: 'Home' }" class="flex font-semibold leading-none text-[36px] md:text-[48px]">
+          <RouterLink :to="getRouteFor('Home')" class="flex font-semibold leading-none text-[36px] md:text-[48px]">
             <span class="text-secondary">re</span>
             <span class="text-primary">bond</span>
           </RouterLink>
@@ -46,15 +56,15 @@ watch(showMobileMenu, (value) => {
         </div>
         <!-- MENU DESKTOP -->
         <div class="menu hidden xl:flex gap-8 justify-end items-center text-primary">
-          <RouterLink :to="{ name: 'Mission' }" class="font-medium text-lg hover:text-secondary">
+          <RouterLink :to="getRouteFor('Mission')" class="font-medium text-lg hover:text-secondary">
             {{ t('menu.mission') }}</RouterLink>
-          <RouterLink :to="{ name: 'Operation' }" class="font-medium text-lg hover:text-secondary">
+          <RouterLink :to="getRouteFor('Operation')" class="font-medium text-lg hover:text-secondary">
             {{ t('menu.operation') }}</RouterLink>
-          <RouterLink :to="{ name: 'Producer' }" class="font-medium text-lg hover:text-secondary">
+          <RouterLink :to="getRouteFor('Producer')" class="font-medium text-lg hover:text-secondary">
             {{ t('menu.producer') }}</RouterLink>
-          <RouterLink :to="{ name: 'Investor' }" class="font-medium text-lg hover:text-secondary">
+          <RouterLink :to="getRouteFor('Investor')" class="font-medium text-lg hover:text-secondary">
             {{ t('menu.investor') }}</RouterLink>
-          <RouterLink :to="{ name: 'Contact' }" class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg
+          <RouterLink :to="getRouteFor('Contact')" class="btn-contact text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg
           px-5 py-1.5">{{ t('menu.contact') }}</RouterLink>
           <LanguageSwitcher />
         </div>
@@ -74,21 +84,21 @@ watch(showMobileMenu, (value) => {
         showMobileMenu ? 'translate-x-0' : 'translate-x-full'
       ]"
     >
-      <RouterLink @click="showMobileMenu = false" :to="{ name: 'Mission' }" class="font-medium text-3xl hover:text-secondary">
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Mission')" class="font-medium text-3xl hover:text-secondary">
         {{ t('menu.mission') }}
       </RouterLink>
-      <RouterLink @click="showMobileMenu = false" :to="{ name: 'Operation' }" class="font-medium text-3xl hover:text-secondary">
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Operation')" class="font-medium text-3xl hover:text-secondary">
         {{ t('menu.operation') }}
       </RouterLink>
-      <RouterLink @click="showMobileMenu = false" :to="{ name: 'Producer' }" class="font-medium text-3xl hover:text-secondary">
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Producer')" class="font-medium text-3xl hover:text-secondary">
         {{ t('menu.producer') }}
       </RouterLink>
-      <RouterLink @click="showMobileMenu = false" :to="{ name: 'Investor' }" class="font-medium text-3xl hover:text-secondary">
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Investor')" class="font-medium text-3xl hover:text-secondary">
         {{ t('menu.investor') }}
       </RouterLink>
       <RouterLink
         @click="showMobileMenu = false"
-        :to="{ name: 'Contact' }"
+        :to="getRouteFor('Contact')"
         class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-3xl px-5 py-2.5"
       >
         {{ t('menu.contact') }}
@@ -103,7 +113,7 @@ watch(showMobileMenu, (value) => {
   transition: color 0.3s ease-out;
 }
 
-.menu > a.router-link-active {
+.menu > a.router-link-active:not(.btn-contact) {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   text-decoration-thickness: 2px;

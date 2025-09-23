@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { computed, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { switchLocale, getLocaleFromRoute, type SupportedLocale } from '@/router'
 import FrenchFlagIcon from '../icons/FrenchFlagIcon.vue'
 import BritishFlagIcon from '../icons/BritishFlagIcon.vue'
 
 const { locale } = useI18n()
+const route = useRoute()
+const router = useRouter()
 
 const languages = [
-  { code: 'fr', name: 'FR', flag: FrenchFlagIcon },
-  { code: 'en', name: 'EN', flag: BritishFlagIcon }
+  { code: 'fr' as SupportedLocale, name: 'FR', flag: FrenchFlagIcon },
+  { code: 'en' as SupportedLocale, name: 'EN', flag: BritishFlagIcon }
 ]
 
 const currentLanguage = computed(() =>
@@ -17,8 +21,10 @@ const currentLanguage = computed(() =>
 
 const isOpen = ref(false)
 
-const changeLanguage = (langCode: string) => {
-  locale.value = langCode
+const changeLanguage = (langCode: SupportedLocale) => {
+  // Utiliser le système de routes pour changer de langue
+  const newRoute = switchLocale(route, langCode)
+  router.push(newRoute)
   isOpen.value = false
 }
 

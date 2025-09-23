@@ -1,7 +1,7 @@
 import { ViteSSG } from 'vite-ssg'
 // import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
+import router, { getLocaleFromRoute, SUPPORTED_LOCALES } from './router'
 import './assets/main.css'
 import { createWebHistory, createMemoryHistory } from 'vue-router'
 import { createI18n } from 'vue-i18n'
@@ -11,10 +11,25 @@ import fr from './locales/fr.json'
 // const app = createApp(App)
 
 const isClient = typeof window !== 'undefined';
+
+// Fonction pour détecter la langue initiale
+const getInitialLocale = () => {
+  if (isClient) {
+    // Côté client : détecter depuis l'URL
+    const pathname = window.location.pathname
+    const localeFromPath = pathname.split('/')[1]
+    if (SUPPORTED_LOCALES.includes(localeFromPath as any)) {
+      return localeFromPath
+    }
+  }
+  return 'fr' // langue par défaut
+}
+
 const i18n = createI18n({
   legacy: false,
-  locale: 'fr', // set default locale
+  locale: getInitialLocale(), // langue initiale basée sur l'URL
   fallbackLocale: 'en',
+  warnHtmlMessage: false, // Désactive le warning HTML
   messages: {
     en,
     fr
@@ -27,6 +42,14 @@ export const createApp = ViteSSG(App, {
     : createMemoryHistory(import.meta.env.BASE_URL),
   routes: router.getRoutes(),
   scrollBehavior: () => ({ top: 0, behavior: 'smooth' })
-}, ({ app }) => {
+}, ({ app, router: appRouter }) => {
   app.use(i18n)
+  
+  // Synchronisation de la langue avec la route
+  appRouter.beforeEach((to) => {
+    const locale = getLocaleFromRoute(to)
+    if (i18n.global.locale.value !== locale) {
+      i18n.global.locale.value = locale
+    }
+  })
 })

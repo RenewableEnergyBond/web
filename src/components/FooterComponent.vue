@@ -1,11 +1,26 @@
 <script setup lang="ts">
 import LinkedInIcon from '@/icons/LinkedInIcon.vue';
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+import { getLocaleFromRoute, getLocalizedRouteName } from '@/router';
 
 const props = defineProps({
   class: {
     required: false
   }
 })
+
+const { t } = useI18n();
+const route = useRoute();
+
+// Langue actuelle basée sur la route
+const currentLocale = computed(() => getLocaleFromRoute(route));
+
+// Helper pour générer les routes localisées
+const getRouteFor = (routeName: string) => {
+  return { name: getLocalizedRouteName(routeName, currentLocale.value) };
+};
 </script>
 
 <template>
@@ -16,24 +31,24 @@ const props = defineProps({
         <div>
           <ul class="text-primary font-medium">
             <li>
-              <RouterLink :to="{ name: 'Mission' }" class="hover:underline">
-                Notre mission</RouterLink>
+              <RouterLink :to="getRouteFor('Mission')" class="hover:underline">
+                {{ t('menu.mission') }}</RouterLink>
             </li>
             <li>
-              <RouterLink :to="{ name: 'Operation' }" class="hover:underline">
-                Fonctionnement</RouterLink>
+              <RouterLink :to="getRouteFor('Operation')" class="hover:underline">
+                {{ t('menu.operation') }}</RouterLink>
             </li>
             <li>
-              <RouterLink :to="{ name: 'Producer' }" class="hover:underline">
-                Producteur EnR</RouterLink>
+              <RouterLink :to="getRouteFor('Producer')" class="hover:underline">
+                {{ t('menu.producer') }}</RouterLink>
             </li>
             <li>
-              <RouterLink :to="{ name: 'Investor' }" class="hover:underline">
-                Investisseur</RouterLink>
+              <RouterLink :to="getRouteFor('Investor')" class="hover:underline">
+                {{ t('menu.investor') }}</RouterLink>
             </li>
             <li>
-              <RouterLink :to="{ name: 'Contact' }" class="hover:underline">
-                Contact</RouterLink>
+              <RouterLink :to="getRouteFor('Contact')" class="hover:underline">
+                {{ t('menu.contact') }}</RouterLink>
             </li>
           </ul>
         </div>
