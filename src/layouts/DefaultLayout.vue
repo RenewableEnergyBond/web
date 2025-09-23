@@ -55,15 +55,19 @@ watch(showMobileMenu, (value) => {
           </button>
         </div>
         <!-- MENU DESKTOP -->
-        <div class="menu hidden xl:flex gap-8 justify-end items-center text-primary">
-          <RouterLink :to="getRouteFor('Mission')" class="font-medium text-lg hover:text-secondary">
+        <div class="menu hidden xl:flex gap-10 justify-end items-center text-primary">
+          <RouterLink :to="getRouteFor('Home')" class="font-semibold text-xl hover:brightness-[120%]">
+            <span class="text-secondary">re</span>
+            <span class="text-primary">bond</span>
+          </RouterLink>
+          <RouterLink :to="getRouteFor('Mission')" class="font-medium text-lg hover:brightness-[120%]">
             {{ t('menu.mission') }}</RouterLink>
-          <RouterLink :to="getRouteFor('Operation')" class="font-medium text-lg hover:text-secondary">
+          <RouterLink :to="getRouteFor('Operation')" class="font-medium text-lg hover:brightness-[120%]">
             {{ t('menu.operation') }}</RouterLink>
-          <RouterLink :to="getRouteFor('Producer')" class="font-medium text-lg hover:text-secondary">
+          <!-- <RouterLink :to="getRouteFor('Producer')" class="font-medium text-lg hover:brightness-[120%]">
             {{ t('menu.producer') }}</RouterLink>
-          <RouterLink :to="getRouteFor('Investor')" class="font-medium text-lg hover:text-secondary">
-            {{ t('menu.investor') }}</RouterLink>
+          <RouterLink :to="getRouteFor('Investor')" class="font-medium text-lg hover:brightness-[120%]">
+            {{ t('menu.investor') }}</RouterLink> -->
           <RouterLink :to="getRouteFor('Contact')" class="btn-contact text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg
           px-5 py-1.5">{{ t('menu.contact') }}</RouterLink>
           <LanguageSwitcher />
@@ -77,43 +81,44 @@ watch(showMobileMenu, (value) => {
     <!-- FOOTER -->
     <FooterComponent />
     <!-- MENU MOBILE -->
-    <div
-      v-show="true"
-      :class="[
-        'menu fixed top-0 bottom-0 left-0 right-0 bg-white z-40 px-4 flex flex-col gap-8 items-center justify-center text-primary pt-[60px] md:pt-[72px] h-[100vh] transition-transform duration-500 ease-in-out transform',
-        showMobileMenu ? 'translate-x-0' : 'translate-x-full'
-      ]"
-    >
-      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Mission')" class="font-medium text-3xl hover:text-secondary">
+    <div v-show="true" :class="[
+      'menu fixed top-0 bottom-0 left-0 right-0 bg-white z-40 px-4 flex flex-col gap-8 items-center justify-center text-primary pt-[60px] md:pt-[72px] h-[100vh] transition-transform duration-500 ease-in-out transform',
+      showMobileMenu ? 'translate-x-0' : 'translate-x-full'
+    ]">
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Home')"
+        class="font-semibold text-3xl hover:brightness-[120%]">
+        <span class="text-secondary">re</span>
+        <span class="text-primary">bond</span>
+      </RouterLink>
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Mission')"
+        class="font-medium text-3xl hover:brightness-[120%]">
         {{ t('menu.mission') }}
       </RouterLink>
-      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Operation')" class="font-medium text-3xl hover:text-secondary">
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Operation')"
+        class="font-medium text-3xl hover:brightness-[120%]">
         {{ t('menu.operation') }}
       </RouterLink>
-      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Producer')" class="font-medium text-3xl hover:text-secondary">
+      <!-- <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Producer')" class="font-medium text-3xl hover:brightness-[120%]">
         {{ t('menu.producer') }}
       </RouterLink>
-      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Investor')" class="font-medium text-3xl hover:text-secondary">
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Investor')" class="font-medium text-3xl hover:brightness-[120%]">
         {{ t('menu.investor') }}
-      </RouterLink>
-      <RouterLink
-        @click="showMobileMenu = false"
-        :to="getRouteFor('Contact')"
-        class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-3xl px-5 py-2.5"
-      >
+      </RouterLink> -->
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Contact')"
+        class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-3xl px-5 py-2.5">
         {{ t('menu.contact') }}
       </RouterLink>
-      <LanguageSwitcher class="!static mt-4" />
+      <LanguageSwitcher />
     </div>
   </div>
 </template>
 
 <style>
-.menu > a {
+.menu>a {
   transition: color 0.3s ease-out;
 }
 
-.menu > a.router-link-active:not(.btn-contact) {
+.menu>a.router-link-active:not(.btn-contact) {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   text-decoration-thickness: 2px;

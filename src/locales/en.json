@@ -10,10 +10,10 @@
   "home": {
     "hero": {
       "title": "Accelerating <span class=\"text-secondary\">Energy Transition</span>",
-      "subtitle1": "through financing <span class=\"text-secondary\">Renewable Energy Producers</span>",
+      "subtitle1": "by financing <span class=\"text-secondary\">Renewable Energy Producers</span>",
       "subtitle2": "via bond tokenization"
     },
-    "description": "rebond selects, structures and tokenizes bonds issued by renewable energy producers",
+    "description": "<span class=\"text-secondary\">re</span><span class=\"text-primary\">bond</span> selects, structures and tokenizes bonds issued by renewable energy producers",
     "stats": {
       "yield": {
         "value": ">6%",
@@ -27,9 +27,25 @@
         "value": "€30M",
         "label": "under analysis"
       }
-    },
+    }
+  },
+  "mission": {
+    "hero": {
+      "title": "Uniting green finance and digital assets to accelerate energy transition",
+      "description": "Renewable energy producers financing deserves modern, accessible tools aligned with climate objectives"
+    }
+  },
+  "components": {
     "whatWeDo": {
       "title": "What we do",
+      "services": {
+        "bonds": "Green Bond Structuring",
+        "tokenization": "Blockchain Tokenization",
+        "distribution": "Secure Distribution"
+      }
+    },
+    "solution": {
+      "title": "A hybrid solution between traditional finance and blockchain innovation",
       "services": {
         "bonds": "Green Bond Structuring",
         "tokenization": "Blockchain Tokenization",
@@ -45,6 +61,15 @@
         "tech": "Blockchain technology mastery"
       }
     },
+    "commitment": {
+      "title": "Our commitments for green finance",
+      "reasons": {
+        "environmental": "Measurable environmental impact",
+        "compliance": "Compliance with EU regulations",
+        "transparency": "Transparency on projects and flows",
+        "accessibility": "Accessibility for producers"
+      }
+    },
     "targets": {
       "producer": {
         "title": "RE Producer",
@@ -56,6 +81,42 @@
         "description": "We address impact funds with tokenized assets",
         "cta": "Learn more"
       }
+    }
+  },
+  "footer": {
+    "followUs": "Follow us",
+    "newsletter": {
+      "placeholder": "Your email",
+      "subscribe": "Subscribe to our newsletter",
+      "title": "Newsletter"
+    },
+    "copyright": "© 2025 rebond.eco – All rights reserved",
+    "legal": {
+      "terms": "Legal Notice",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookies"
+    }
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Subscribe to our newsletter to follow our news and updates.",
+    "form": {
+      "emailLabel": "Please enter your email address to subscribe",
+      "emailPlaceholder": "address@email.com",
+      "emailHelp": "Please enter your email address to subscribe. Ex.: abc@xyz.com",
+      "optinText": "I accept to receive the newsletter from rebond.eco.",
+      "submit": "SUBSCRIBE",
+      "submitting": "Subscribing..."
+    },
+    "messages": {
+      "success": "Your subscription is confirmed."
+    },
+    "errors": {
+      "required": "You must fill in this field.",
+      "invalidEmail": "The information you provided is not valid. Please check the field format and try again.",
+      "optinRequired": "You must accept the terms to subscribe.",
+      "captchaRequired": "Please complete the captcha.",
+      "submissionFailed": "We could not confirm your subscription."
     }
   }
 }

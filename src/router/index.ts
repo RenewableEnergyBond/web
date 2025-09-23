@@ -76,20 +76,20 @@ const createLocalizedRoutes = () => {
     })
 
     // Producer
-    routes.push({
-      path: `${prefix}/${ROUTE_SLUGS.producer[locale]}`,
-      name: `Producer-${locale}`,
-      component: HomeView,
-      meta: { locale }
-    })
+    // routes.push({
+    //   path: `${prefix}/${ROUTE_SLUGS.producer[locale]}`,
+    //   name: `Producer-${locale}`,
+    //   component: HomeView,
+    //   meta: { locale }
+    // })
 
     // Investor
-    routes.push({
-      path: `${prefix}/${ROUTE_SLUGS.investor[locale]}`,
-      name: `Investor-${locale}`,
-      component: HomeView,
-      meta: { locale }
-    })
+    // routes.push({
+    //   path: `${prefix}/${ROUTE_SLUGS.investor[locale]}`,
+    //   name: `Investor-${locale}`,
+    //   component: HomeView,
+    //   meta: { locale }
+    // })
 
     // Contact
     routes.push({

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import LinkedInIcon from '@/icons/LinkedInIcon.vue';
+import NewsletterForm from '@/components/NewsletterForm.vue';
+import SocialLinks from '@/components/SocialLinks.vue';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
@@ -31,58 +32,49 @@ const getRouteFor = (routeName: string) => {
         <div>
           <ul class="text-primary font-medium">
             <li>
-              <RouterLink :to="getRouteFor('Mission')" class="hover:underline">
+              <RouterLink :to="getRouteFor('Home')" class="font-semibold hover:brightness-[120%]">
+                <span class="text-secondary">re</span>
+                <span class="text-primary">bond</span>
+              </RouterLink>
+            </li>
+            <li>
+              <RouterLink :to="getRouteFor('Mission')" class="hover:brightness-[120%]">
                 {{ t('menu.mission') }}</RouterLink>
             </li>
             <li>
-              <RouterLink :to="getRouteFor('Operation')" class="hover:underline">
+              <RouterLink :to="getRouteFor('Operation')" class="hover:brightness-[120%]">
                 {{ t('menu.operation') }}</RouterLink>
             </li>
-            <li>
+            <!-- <li>
               <RouterLink :to="getRouteFor('Producer')" class="hover:underline">
                 {{ t('menu.producer') }}</RouterLink>
             </li>
             <li>
               <RouterLink :to="getRouteFor('Investor')" class="hover:underline">
                 {{ t('menu.investor') }}</RouterLink>
-            </li>
+            </li> -->
             <li>
-              <RouterLink :to="getRouteFor('Contact')" class="hover:underline">
+              <RouterLink :to="getRouteFor('Contact')" class="hover:brightness-[120%]">
                 {{ t('menu.contact') }}</RouterLink>
             </li>
           </ul>
         </div>
 
-        <!-- Social & Newsletter -->
-        <div class="text-primary">
-          <div class="flex gap-2 mb-4">
-            <div class="font-medium">Suivez-nous</div>
-            <div class="flex gap-1">
-              <a href="#" aria-label="LinkedIn">
-                <LinkedInIcon class="w-6 h-6 fill-primary hover:fill-primary/90 transition" />
-              </a>
-            </div>
-          </div>
-
-          <form class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-            <input type="email" placeholder="Votre email"
-              class="w-full px-3 py-2 bg-white border border-primary rounded focus:outline-none focus:ring-0 text-sm" />
-            <button type="submit"
-              class="bg-primary text-white px-4 py-2 rounded text-sm hover:bg-primary/90 transition">
-              S’abonner
-            </button>
-          </form>
+        <!-- Social / Newsletter -->
+        <div class="text-primary text-right flex flex-col items-end">
+          <SocialLinks />
+          <NewsletterForm />
         </div>
 
       </div>
     </div>
     <div class="bg-primary text-white text-sm py-4 px-6">
       <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-        <p>&copy; 2025 rebond.eco – Tous droits réservés</p>
-        <ul class="flex space-x-4">
-          <li><a href="/mentions-legales" class="hover:underline">Mentions légales</a></li>
-          <li><a href="/confidentialite" class="hover:underline">Politique de confidentialité</a></li>
-          <li><a href="/cookies" class="hover:underline">Cookies</a></li>
+        <p>{{ t('footer.copyright') }}</p>
+        <ul class="flex space-x-4 text-center items-center">
+          <li><a href="#" class="hover:underline">{{ t('footer.legal.terms') }}</a></li>
+          <li><a href="#" class="hover:underline">{{ t('footer.legal.privacy') }}</a></li>
+          <li><a href="#" class="hover:underline">{{ t('footer.legal.cookies') }}</a></li>
         </ul>
       </div>
     </div>

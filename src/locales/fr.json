@@ -13,7 +13,7 @@
       "subtitle1": "par le financement des <span class=\"text-secondary\">Producteurs d'Énergie Renouvelable</span>",
       "subtitle2": "via la tokenisation d'obligations"
     },
-    "description": "rebond séléctionne, structure et tokenise des obligations émises par des producteurs d'énergie renouvelable",
+    "description": "<span class=\"text-secondary\">re</span><span class=\"text-primary\">bond</span> séléctionne, structure et tokenise des obligations émises par des producteurs d'énergie renouvelable",
     "stats": {
       "yield": {
         "value": ">6%",
@@ -27,9 +27,25 @@
         "value": "30M€",
         "label": "en cours d'analyse"
       }
-    },
+    }
+  },
+  "mission": {
+    "hero": {
+      "title": "Unir la finance verte et les actifs numériques pour accélérer la transition énergétique",
+      "description": "Le financement des producteurs d'énergie renouvelable mérite des outils modernes, accessibles, et alignés avec les objectifs climatiques"
+    }
+  },
+  "components": {
     "whatWeDo": {
       "title": "Ce que nous faisons",
+      "services": {
+        "bonds": "Structuration d'obligations vertes",
+        "tokenization": "Tokenisation via blockchain",
+        "distribution": "Distribution sécurisée"
+      }
+    },
+    "solution": {
+      "title": "Une solution hybride entre finance traditionnelle et innovation blockchain",
       "services": {
         "bonds": "Structuration d'obligations vertes",
         "tokenization": "Tokenisation via blockchain",
@@ -45,6 +61,15 @@
         "tech": "Maitrise de la technologie blockchain"
       }
     },
+    "commitment": {
+      "title": "Nos engagements pour une finance verte",
+      "reasons": {
+        "environmental": "Impact environnemental mesurable",
+        "compliance": "Conformité avec la réglementation française",
+        "transparency": "Transparence sur les projets et les flux",
+        "accessibility": "Accessibilité pour les producteurs"
+      }
+    },
     "targets": {
       "producer": {
         "title": "Producteur EnR",
@@ -56,6 +81,42 @@
         "description": "Nous adressons les fonds à impact en actifs tokenisés",
         "cta": "En savoir plus"
       }
+    }
+  },
+  "footer": {
+    "followUs": "Suivez-nous",
+    "newsletter": {
+      "placeholder": "Votre email",
+      "subscribe": "Abonnez-vous à notre newsletter !",
+      "title": "Newsletter"
+    },
+    "copyright": "© 2025 rebond.eco – Tous droits réservés",
+    "legal": {
+      "terms": "Mentions légales",
+      "privacy": "Politique de confidentialité",
+      "cookies": "Cookies"
+    }
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Inscrivez-vous à notre newsletter pour suivre nos actualités.",
+    "form": {
+      "emailLabel": "Veuillez renseigner votre adresse email pour vous inscrire",
+      "emailPlaceholder": "adresse@email.com",
+      "emailHelp": "Veuillez renseigner votre adresse email pour vous inscrire. Ex. : abc@xyz.com",
+      "optinText": "J'accepte de recevoir la newsletter de rebond.eco.",
+      "submit": "S'INSCRIRE",
+      "submitting": "Inscription en cours..."
+    },
+    "messages": {
+      "success": "Votre inscription est confirmée."
+    },
+    "errors": {
+      "required": "Vous devez renseigner ce champ.",
+      "invalidEmail": "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.",
+      "optinRequired": "Vous devez accepter les conditions pour vous inscrire.",
+      "captchaRequired": "Veuillez compléter le captcha.",
+      "submissionFailed": "Nous n'avons pas pu confirmer votre inscription."
     }
   }
 }
