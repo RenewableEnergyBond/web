@@ -1,33 +1,15 @@
 <script lang="ts" setup>
-import FooterComponent from '@/components/ui/FooterComponent.vue';
-import BurgerIcon from '@/components/icons/BurgerIcon.vue';
-import CloseIcon from '@/components/icons/CloseIcon.vue';
-import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue';
-import router, { getLocaleFromRoute, getLocalizedRouteName } from '@/router';
-import { ref, watch, computed } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useRoute } from 'vue-router';
+import { useI18n } from 'vue-i18n'
+import FooterComponent from '@/components/ui/FooterComponent.vue'
+import BurgerIcon from '@/components/icons/BurgerIcon.vue'
+import CloseIcon from '@/components/icons/CloseIcon.vue'
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
+import { useLocalization } from '@/composables/useLocalization'
+import { useMobileMenu } from '@/composables/useMobileMenu'
 
-const { t } = useI18n();
-const route = useRoute();
-
-const showMobileMenu = ref(false);
-
-// Langue actuelle basée sur la route
-const currentLocale = computed(() => getLocaleFromRoute(route));
-
-// Helper pour générer les routes localisées
-const getRouteFor = (routeName: string) => {
-  return { name: getLocalizedRouteName(routeName, currentLocale.value) };
-};
-
-watch(showMobileMenu, (value) => {
-  if (value) {
-    document.body.classList.add('overflow-hidden');
-  } else {
-    document.body.classList.remove('overflow-hidden');
-  }
-});
+const { t } = useI18n()
+const { getRouteFor } = useLocalization()
+const { showMobileMenu, openMenu, closeMenu } = useMobileMenu()
 </script>
 
 <template>
@@ -42,16 +24,16 @@ watch(showMobileMenu, (value) => {
             <span class="text-primary">bond</span>
           </RouterLink>
         </div>
-        <div class="lg:hidden text-neutral-900">
-          <button @click="showMobileMenu = true" :class="{ 'block': !showMobileMenu, 'hidden': showMobileMenu }"
+        <div class="hidden text-neutral-900">
+          <button @click="openMenu" :class="{ 'block': !showMobileMenu, 'hidden': showMobileMenu }"
             class="text-primary cursor-pointer">
             <span class="sr-only">Open menu</span>
-            <BurgerIcon class="w-6 h-6"></BurgerIcon>
+            <BurgerIcon class="w-6 h-6" />
           </button>
-          <button @click="showMobileMenu = false" :class="{ 'block': showMobileMenu, 'hidden': !showMobileMenu }"
+          <button @click="closeMenu" :class="{ 'block': showMobileMenu, 'hidden': !showMobileMenu }"
             class="text-primary cursor-pointer">
             <span class="sr-only">Close menu</span>
-            <CloseIcon class="w-8 h-8"></CloseIcon>
+            <CloseIcon class="w-8 h-8" />
           </button>
         </div>
         <LanguageSwitcher />

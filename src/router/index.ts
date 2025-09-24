@@ -1,4 +1,4 @@
-import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
+import { createMemoryHistory, createRouter, createWebHistory, type RouteRecordRaw, type RouteLocationNormalized } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import ContactView from '@/views/ContactView.vue'
 
@@ -21,8 +21,8 @@ export const ROUTE_SLUGS = {
 } as const
 
 // Helper pour générer les routes pour toutes les langues
-const createLocalizedRoutes = () => {
-  const routes: any[] = []
+const createLocalizedRoutes = (): RouteRecordRaw[] => {
+  const routes: RouteRecordRaw[] = []
 
   // Route racine - redirige vers la langue par défaut
   routes.push({
@@ -67,8 +67,8 @@ const router = createRouter({
 })
 
 // Helper pour obtenir la langue depuis une route
-export const getLocaleFromRoute = (route: any): SupportedLocale => {
-  return route.meta?.locale || 'fr'
+export const getLocaleFromRoute = (route: RouteLocationNormalized): SupportedLocale => {
+  return (route.meta?.locale as SupportedLocale) || 'fr'
 }
 
 // Helper pour générer un nom de route localisé
@@ -77,11 +77,11 @@ export const getLocalizedRouteName = (baseName: string, locale: SupportedLocale)
 }
 
 // Helper pour basculer vers une autre langue en gardant la même page
-export const switchLocale = (currentRoute: any, newLocale: SupportedLocale) => {
+export const switchLocale = (currentRoute: RouteLocationNormalized, newLocale: SupportedLocale) => {
   const currentLocale = getLocaleFromRoute(currentRoute)
   
   // Extraire le nom de base de la route (sans le suffixe de langue)
-  const routeName = currentRoute.name?.replace(`-${currentLocale}`, '') || 'Home'
+  const routeName = (currentRoute.name as string)?.replace(`-${currentLocale}`, '') || 'Home'
   
   return {
     name: getLocalizedRouteName(routeName, newLocale)

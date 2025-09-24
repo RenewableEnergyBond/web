@@ -1,20 +1,10 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { getLocaleFromRoute, getLocalizedRouteName } from '@/router';
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue';
+import { useLocalization } from '@/composables/useLocalization'
+import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
 
-const { t } = useI18n();
-const route = useRoute();
-
-// Langue actuelle basée sur la route
-const currentLocale = computed(() => getLocaleFromRoute(route));
-
-// Helper pour générer les routes localisées
-const getRouteFor = (routeName: string) => {
-  return { name: getLocalizedRouteName(routeName, currentLocale.value) };
-};
+const { t } = useI18n()
+const { currentLocale, getRouteFor } = useLocalization()
 </script>
 
 <template>

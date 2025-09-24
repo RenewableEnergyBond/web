@@ -1,25 +1,22 @@
 import { ViteSSG } from 'vite-ssg'
-// import { createApp } from 'vue'
-import App from './App.vue'
-import router, { getLocaleFromRoute, SUPPORTED_LOCALES } from './router'
-import './assets/main.css'
 import { createWebHistory, createMemoryHistory } from 'vue-router'
 import { createI18n } from 'vue-i18n'
+import App from './App.vue'
+import router, { getLocaleFromRoute, SUPPORTED_LOCALES, type SupportedLocale } from './router'
+import './assets/main.css'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
 
-// const app = createApp(App)
-
-const isClient = typeof window !== 'undefined';
+const isClient = typeof window !== 'undefined'
 
 // Fonction pour détecter la langue initiale
-const getInitialLocale = () => {
+const getInitialLocale = (): SupportedLocale => {
   if (isClient) {
     // Côté client : détecter depuis l'URL
     const pathname = window.location.pathname
     const localeFromPath = pathname.split('/')[1]
-    if (SUPPORTED_LOCALES.includes(localeFromPath as any)) {
-      return localeFromPath
+    if (SUPPORTED_LOCALES.includes(localeFromPath as SupportedLocale)) {
+      return localeFromPath as SupportedLocale
     }
   }
   return 'fr' // langue par défaut

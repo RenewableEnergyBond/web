@@ -1,24 +1,39 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, watch } from 'vue'
 import CloseIcon from '@/components/icons/CloseIcon.vue'
 
-defineProps<{
+interface Props {
   modelValue: boolean
-}>()
+}
 
-const emit = defineEmits<{
+interface Emits {
   'update:modelValue': [value: boolean]
-}>()
+}
+
+const props = defineProps<Props>()
+const emit = defineEmits<Emits>()
 
 const closeModal = () => {
   emit('update:modelValue', false)
 }
 
-const handleKeydown = (e: KeyboardEvent) => {
-  if (e.key === 'Escape') {
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && props.modelValue) {
     closeModal()
   }
 }
+
+// Gestion du scroll du body
+watch(
+  () => props.modelValue,
+  (isOpen) => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+  }
+)
 
 onMounted(() => {
   document.addEventListener('keydown', handleKeydown)
@@ -26,37 +41,57 @@ onMounted(() => {
 
 onUnmounted(() => {
   document.removeEventListener('keydown', handleKeydown)
+  // Nettoyer le style au démontage
+  document.body.style.overflow = ''
 })
 </script>
 
 <template>
   <Teleport to="body">
     <Transition
-      enter-active-class="transition-opacity duration-300"
+      enter-active-class="transition-opacity duration-300 ease-out"
       enter-from-class="opacity-0"
       enter-to-class="opacity-100"
-      leave-active-class="transition-opacity duration-300"
+      leave-active-class="transition-opacity duration-200 ease-in"
       leave-from-class="opacity-100"
       leave-to-class="opacity-0"
     >
       <div
         v-if="modelValue"
         class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
         @click.self="closeModal"
       >
-        <div class="relative bg-white rounded-lg shadow-xl max-w-2xl max-h-[90vh] overflow-hidden">
-          <button
-            @click="closeModal"
-            class="absolute top-4 right-4 z-10 p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors"
-            aria-label="Fermer"
+        <!-- Modal Content -->
+        <Transition
+          enter-active-class="transition-all duration-300 ease-out"
+          enter-from-class="opacity-0 scale-95 translate-y-4"
+          enter-to-class="opacity-100 scale-100 translate-y-0"
+          leave-active-class="transition-all duration-200 ease-in"
+          leave-from-class="opacity-100 scale-100 translate-y-0"
+          leave-to-class="opacity-0 scale-95 translate-y-4"
+        >
+          <div 
+            v-if="modelValue"
+            class="relative bg-white rounded-lg shadow-xl max-w-2xl max-h-[90vh] overflow-hidden"
           >
-            <CloseIcon class="w-5 h-5" />
-          </button>
-          
-          <div>
-            <slot />
+            <!-- Close Button -->
+            <button
+              @click="closeModal"
+              class="absolute top-4 right-4 z-10 p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-300"
+              aria-label="Close modal"
+            >
+              <CloseIcon class="w-5 h-5" />
+            </button>
+            
+            <!-- Modal Body -->
+            <div class="overflow-y-auto max-h-[90vh]">
+              <slot />
+            </div>
           </div>
-        </div>
+        </Transition>
       </div>
     </Transition>
   </Teleport>

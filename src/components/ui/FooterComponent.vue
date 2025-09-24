@@ -36,9 +36,9 @@ const getRouteFor = (routeName: string) => {
     <div :class class="bg-primary/20">
       <div class="max-w-7xl py-12 px-4 lg:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
 
-        <div class="flex">
+        <div class="hidden sm:flex">
           <RouterLink :to="getRouteFor('Home')">
-            <img alt="Logo rebond" src="/assets/logo-rebond.svg" class="h-[52px] lg:h-[88px]" />
+            <img alt="Logo rebond" src="/assets/logo-rebond.svg" class="h-[88px]" />
           </RouterLink>
         </div>
 
@@ -47,7 +47,7 @@ const getRouteFor = (routeName: string) => {
           <SocialLinks />
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
             <button type="button" @click="openModal" class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg cursor-pointer 
-                px-4 py-2 self-center">
+                px-4 py-2 self-center text-nowrap">
               {{ t('footer.newsletter.subscribe') }}
             </button>
           </div>
