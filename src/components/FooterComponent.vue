@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import NewsletterForm from '@/components/NewsletterForm.vue';
 import SocialLinks from '@/components/SocialLinks.vue';
-import { computed } from 'vue';
+import ModalComponent from '@/components/ModalComponent.vue';
+import BrevoNewsletterForm from '@/components/BrevoNewsletterForm.vue';
+import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { getLocaleFromRoute, getLocalizedRouteName } from '@/router';
@@ -14,6 +15,12 @@ const props = defineProps({
 
 const { t } = useI18n();
 const route = useRoute();
+
+const isModalOpen = ref(false);
+
+const openModal = () => {
+  isModalOpen.value = true;
+};
 
 // Langue actuelle basée sur la route
 const currentLocale = computed(() => getLocaleFromRoute(route));
@@ -63,7 +70,12 @@ const getRouteFor = (routeName: string) => {
         <!-- Social / Newsletter -->
         <div class="text-primary text-right flex flex-col items-end">
           <SocialLinks />
-          <NewsletterForm />
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+            <button type="button" @click="openModal" class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg cursor-pointer 
+                px-4 py-2 self-center">
+              {{ t('footer.newsletter.subscribe') }}
+            </button>
+          </div>
         </div>
 
       </div>
@@ -78,6 +90,10 @@ const getRouteFor = (routeName: string) => {
         </ul>
       </div>
     </div>
+
+    <ModalComponent v-model="isModalOpen">
+      <BrevoNewsletterForm :show-opt-in="true" />
+    </ModalComponent>
 
   </footer>
 
