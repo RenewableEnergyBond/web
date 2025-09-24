@@ -1,78 +1,47 @@
 <script setup lang="ts">
-import SocialLinks from '@/components/ui/SocialLinks.vue';
-import ModalComponent from '@/components/ui/ModalComponent.vue';
-import BrevoNewsletterForm from '@/components/forms/BrevoNewsletterForm.vue';
-import { computed, ref } from 'vue';
-import { useRoute } from 'vue-router';
-import { useI18n } from 'vue-i18n';
-import { getLocaleFromRoute, getLocalizedRouteName } from '@/router';
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import SocialLinks from '@/components/ui/SocialLinks.vue'
+import ModalComponent from '@/components/ui/ModalComponent.vue'
+import BrevoNewsletterForm from '@/components/forms/BrevoNewsletterForm.vue'
+import { useLocalization } from '@/composables/useLocalization'
 
-const props = defineProps({
-  class: {
-    required: false
-  }
-})
+interface Props {
+  class?: string
+}
 
-const { t } = useI18n();
-const route = useRoute();
+defineProps<Props>()
 
-const isModalOpen = ref(false);
+const { t } = useI18n()
+const { getRouteFor } = useLocalization()
 
-const openModal = () => {
-  isModalOpen.value = true;
-};
+const isModalOpen = ref(false)
 
-// Langue actuelle basée sur la route
-const currentLocale = computed(() => getLocaleFromRoute(route));
-
-// Helper pour générer les routes localisées
-const getRouteFor = (routeName: string) => {
-  return { name: getLocalizedRouteName(routeName, currentLocale.value) };
-};
+const openModalNewsletter = (): void => {
+  isModalOpen.value = true
+}
 </script>
 
 <template>
   <footer>
-    <div :class class="bg-primary/20 px-4 py-12">
-      <div class="container lg:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Menu -->
-        <div>
-          <ul class="text-primary font-medium">
-            <li>
-              <RouterLink :to="getRouteFor('Home')" class="font-semibold hover:brightness-[120%]">
-                <span class="text-secondary">re</span>
-                <span class="text-primary">bond</span>
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink :to="getRouteFor('Mission')" class="hover:brightness-[120%]">
-                {{ t('menu.mission') }}</RouterLink>
-            </li>
-            <li>
-              <RouterLink :to="getRouteFor('Operation')" class="hover:brightness-[120%]">
-                {{ t('menu.operation') }}</RouterLink>
-            </li>
-            <!-- <li>
-              <RouterLink :to="getRouteFor('Producer')" class="hover:underline">
-                {{ t('menu.producer') }}</RouterLink>
-            </li>
-            <li>
-              <RouterLink :to="getRouteFor('Investor')" class="hover:underline">
-                {{ t('menu.investor') }}</RouterLink>
-            </li> -->
-            <li>
-              <RouterLink :to="getRouteFor('Contact')" class="hover:brightness-[120%]">
-                {{ t('menu.contact') }}</RouterLink>
-            </li>
-          </ul>
+    <div :class class="bg-primary/20">
+      <div class="max-w-7xl py-12 px-4 lg:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+        <div class="hidden sm:flex">
+          <RouterLink :to="getRouteFor('Home')">
+            <img alt="Logo rebond" src="/assets/logo-rebond.svg" class="h-[88px]" />
+          </RouterLink>
         </div>
 
         <!-- Social / Newsletter -->
-        <div class="text-primary text-right flex flex-col items-end">
+        <div class="text-primary text-right flex flex-col items-start sm:items-end">
           <SocialLinks />
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-            <button type="button" @click="openModal" class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg cursor-pointer 
-                px-4 py-2 self-center">
+            <button 
+              type="button" 
+              @click="openModalNewsletter" 
+              class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg cursor-pointer px-4 py-2 self-center text-nowrap transition-all duration-200"
+            >
               {{ t('footer.newsletter.subscribe') }}
             </button>
           </div>
@@ -80,14 +49,21 @@ const getRouteFor = (routeName: string) => {
 
       </div>
     </div>
-    <div class="bg-primary text-white text-sm py-4 px-6">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+    <div class="bg-primary text-white text-sm">
+      <div class="max-w-7xl py-4 px-4 lg:px-8 mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
         <p>{{ t('footer.copyright') }}</p>
-        <ul class="flex space-x-4 text-center items-center">
-          <li><a href="#" class="hover:underline">{{ t('footer.legal.terms') }}</a></li>
-          <li><a href="#" class="hover:underline">{{ t('footer.legal.privacy') }}</a></li>
-          <li><a href="#" class="hover:underline">{{ t('footer.legal.cookies') }}</a></li>
-        </ul>
+        <nav aria-label="Legal links">
+          <ul class="flex space-x-4 text-center items-center">
+            <li>
+              <RouterLink 
+                :to="getRouteFor('Legals')" 
+                class="hover:underline transition-colors"
+              >
+                {{ t('footer.legal.terms') }}
+              </RouterLink>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
 

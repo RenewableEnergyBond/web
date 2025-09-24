@@ -1,85 +1,46 @@
 {
-  "menu": {
-    "mission": "Notre mission",
-    "operation": "Fonctionnement",
-    "producer": "Producteur EnR",
-    "investor": "Investisseur",
-    "contact": "Contact"
-  },
-  "foobar": "Bonjour !",
   "home": {
     "hero": {
       "title": "Accélérer la <span class=\"text-secondary\">Transition Énergétique</span>",
-      "subtitle1": "par le financement des <span class=\"text-secondary\">Producteurs d'Énergie Renouvelable</span>",
-      "subtitle2": "via la tokenisation d'obligations"
-    },
-    "description": "<span class=\"text-secondary\">re</span><span class=\"text-primary\">bond</span> séléctionne, structure et tokenise des obligations émises par des producteurs d'énergie renouvelable",
-    "stats": {
-      "yield": {
-        "value": ">6%",
-        "label": "rendement cible sur actifs numériques"
-      },
-      "partners": {
-        "value": "+20",
-        "label": "partenaires engagés"
-      },
-      "analysis": {
-        "value": "30M€",
-        "label": "en cours d'analyse"
-      }
+      "subtitle1": "grâce aux obligations digitalisées",
+      "intro": "Nous rapprochons les producteurs d’énergie renouvelable et les investisseurs en actifs numériques au sein d’un cadre réglementaire et sécurisé.",
+      "contact": "Contactez-nous",
+      "imageAlt": "Photo d'une centrale EnR"
     }
   },
-  "mission": {
-    "hero": {
-      "title": "Unir la finance verte et les actifs numériques pour accélérer la transition énergétique",
-      "description": "Le financement des producteurs d'énergie renouvelable mérite des outils modernes, accessibles, et alignés avec les objectifs climatiques"
-    }
-  },
-  "components": {
-    "whatWeDo": {
-      "title": "Ce que nous faisons",
-      "services": {
-        "bonds": "Structuration d'obligations vertes",
-        "tokenization": "Tokenisation via blockchain",
-        "distribution": "Distribution sécurisée"
-      }
-    },
+  "blocks": {
     "solution": {
-      "title": "Une solution hybride entre finance traditionnelle et innovation blockchain",
-      "services": {
-        "bonds": "Structuration d'obligations vertes",
-        "tokenization": "Tokenisation via blockchain",
-        "distribution": "Distribution sécurisée"
+      "title": "Nos Solutions",
+      "structuration": {
+        "title": "Structuration d’Obligations EnR",
+        "description": "Nous concevons des obligations adaptées aux besoins des producteurs d’énergie renouvelable."
+      },
+      "tokenization": {
+        "title": "Obligations EnR Digitalisées",
+        "description": "Nous digitalisons nos obligations afin de les rendre accessibles à des investisseurs institutionnels et fonds spécialisés en actifs numériques."
+      },
+      "distribution": {
+        "title": "Distribution aux Investisseurs",
+        "description": "Nous assurons la mise à disposition des obligations digitalisées auprès d’investisseurs qualifiés."
       }
     },
     "why": {
-      "title": "Pourquoi rebond ?",
-      "reasons": {
-        "expertise": "Expertise en finance verte",
-        "compliance": "Conformité et transparence",
-        "quality": "Qualité des projets sélectionnés",
-        "tech": "Maitrise de la technologie blockchain"
-      }
-    },
-    "commitment": {
-      "title": "Nos engagements pour une finance verte",
-      "reasons": {
-        "environmental": "Impact environnemental mesurable",
-        "compliance": "Conformité avec la réglementation française",
-        "transparency": "Transparence sur les projets et les flux",
-        "accessibility": "Accessibilité pour les producteurs"
-      }
-    },
-    "targets": {
-      "producer": {
-        "title": "Producteur EnR",
-        "description": "Nous accompagnons les producteurs d'énergie renouvelable.",
-        "cta": "En savoir plus"
+      "title": "Pourquoi <span class=\"text-secondary\">re</span>bond ?",
+      "regulation": {
+        "title": "Sécurité réglementaire",
+        "description": "Toutes nos opérations respectent les standards de l’AMF, avec des processus KYC/AML rigoureux et la conservation des titres chez un dépositaire agréé."
       },
-      "investor": {
-        "title": "Investisseur",
-        "description": "Nous adressons les fonds à impact en actifs tokenisés",
-        "cta": "En savoir plus"
+      "yield": {
+        "title": "Rendement et stabilité",
+        "description": "Des obligations adossées à des actifs réels, offrant un rendement structuré (>6%) et une faible volatilité par rapport aux actifs numériques classiques."
+      },
+      "impact": {
+        "title": "Impact environnemental positif",
+        "description": "Chaque investissement contribue directement au développement de nouvelles capacités photovoltaïques et éoliennes locales."
+      },
+      "innovation": {
+        "title": "Innovation technologique",
+        "description": "Une solution innovante qui facilite l’émission, la gestion et le suivi des obligations, tout en renforçant la transparence pour les parties prenantes."
       }
     }
   },
@@ -96,6 +57,77 @@
       "privacy": "Politique de confidentialité",
       "cookies": "Cookies"
     }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Une question sur nos solutions ? Un projet d'investissement ? Notre équipe est à votre disposition pour vous accompagner.",
+    "email": {
+      "title": "Écrivez-nous",
+      "description": "Envoyez-nous un message, nous vous répondrons dans les plus brefs délais."
+    },
+    "address": {
+      "title": "Notre adresse",
+      "description": "Retrouvez-nous dans nos locaux à Bordeaux."
+    },
+    "additional": {
+      "title": "Vous êtes investisseur ?",
+      "description": "Pour toute demande d'information sur nos obligations EnR digitalisées, n'hésitez pas à nous contacter. Nous étudierons ensemble les opportunités d'investissement adaptées à votre profil."
+    },
+    "backToHome": "Retour à l'accueil"
+  },
+  "legals": {
+    "title": "Mentions légales",
+    "lastUpdated": "Dernière mise à jour : Septembre 2025",
+    "company": {
+      "title": "Informations sur la société",
+      "name": "Dénomination sociale",
+      "nameValue": "Rebond SAS",
+      "form": "Forme juridique",
+      "formValue": "Société par Actions Simplifiée (SAS)",
+      "capital": "Capital social",
+      "capitalValue": "10 000 euros",
+      "siret": "Numéro SIRET",
+      "siretValue": "989 337 373 00017",
+      "address": "Adresse du siège social",
+      "addressValue": "16 place des Quinconces \n33000 Bordeaux, France",
+      "email": "Email"
+    },
+    "director": {
+      "title": "Directeur de la publication",
+      "content": "Le directeur de la publication est le représentant légal de la société Rebond SAS."
+    },
+    "hosting": {
+      "title": "Hébergement du site",
+      "content": "Le site rebond.eco est hébergé par :",
+      "provider": "GitHub Pages",
+      "address": "GitHub, Inc. - 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis",
+      "phone": "Téléphone : +1-877-448-4820"
+    },
+    "intellectual": {
+      "title": "Propriété intellectuelle",
+      "content1": "L'ensemble du contenu de ce site (textes, images, logos, graphismes, etc.) est protégé par le droit d'auteur et appartient à la société Rebond SAS ou à ses partenaires.",
+      "content2": "Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable."
+    },
+    "data": {
+      "title": "Données personnelles",
+      "content1": "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données personnelles.",
+      "content2": "Les données collectées via le formulaire de contact et la newsletter sont utilisées uniquement dans le cadre de notre activité commerciale et ne sont pas transmises à des tiers.",
+      "content3": "Pour exercer vos droits ou pour toute question relative au traitement de vos données personnelles, vous pouvez nous contacter à l'adresse : bonjour@rebond.eco"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content1": "Ce site n'utilise aucun cookie. Nous avons fait le choix de ne pas implémenter de système de cookies pour respecter au maximum votre vie privée.",
+      "content2": "Aucune donnée de navigation n'est stockée sur votre appareil lors de votre visite sur notre site."
+    },
+    "liability": {
+      "title": "Responsabilité",
+      "content": "Rebond SAS s'efforce de fournir des informations exactes et à jour, mais ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition sur ce site. L'utilisation de ces informations se fait sous la seule responsabilité de l'utilisateur."
+    },
+    "law": {
+      "title": "Droit applicable",
+      "content": "Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents."
+    },
+    "backToHome": "Retour à l'accueil"
   },
   "newsletter": {
     "title": "Newsletter",

@@ -1,7 +1,7 @@
-import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
+import { createMemoryHistory, createRouter, createWebHistory, type RouteRecordRaw, type RouteLocationNormalized } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import MissionView from '@/views/MissionView.vue'
-import OperationView from '@/views/OperationView.vue'
+import ContactView from '@/views/ContactView.vue'
+import LegalsView from '@/views/LegalsView.vue'
 
 const isClient = typeof window !== 'undefined'
 
@@ -15,31 +15,19 @@ export const ROUTE_SLUGS = {
     fr: '',
     en: ''
   },
-  mission: {
-    fr: 'mission',
-    en: 'mission'
-  },
-  operation: {
-    fr: 'fonctionnement',
-    en: 'how-it-works'
-  },
-  producer: {
-    fr: 'producteur-enr',
-    en: 're-producer'
-  },
-  investor: {
-    fr: 'investisseur',
-    en: 'investor'
-  },
   contact: {
     fr: 'contact',
     en: 'contact'
+  },
+  legals: {
+    fr: 'mentions-legales',
+    en: 'legal-notice'
   }
 } as const
 
 // Helper pour générer les routes pour toutes les langues
-const createLocalizedRoutes = () => {
-  const routes: any[] = []
+const createLocalizedRoutes = (): RouteRecordRaw[] => {
+  const routes: RouteRecordRaw[] = []
 
   // Route racine - redirige vers la langue par défaut
   routes.push({
@@ -59,43 +47,19 @@ const createLocalizedRoutes = () => {
       meta: { locale }
     })
 
-    // Mission
-    routes.push({
-      path: `${prefix}/${ROUTE_SLUGS.mission[locale]}`,
-      name: `Mission-${locale}`,
-      component: MissionView,
-      meta: { locale }
-    })
-
-    // Operation
-    routes.push({
-      path: `${prefix}/${ROUTE_SLUGS.operation[locale]}`,
-      name: `Operation-${locale}`,
-      component: OperationView,
-      meta: { locale }
-    })
-
-    // Producer
-    // routes.push({
-    //   path: `${prefix}/${ROUTE_SLUGS.producer[locale]}`,
-    //   name: `Producer-${locale}`,
-    //   component: HomeView,
-    //   meta: { locale }
-    // })
-
-    // Investor
-    // routes.push({
-    //   path: `${prefix}/${ROUTE_SLUGS.investor[locale]}`,
-    //   name: `Investor-${locale}`,
-    //   component: HomeView,
-    //   meta: { locale }
-    // })
-
     // Contact
     routes.push({
       path: `${prefix}/${ROUTE_SLUGS.contact[locale]}`,
       name: `Contact-${locale}`,
-      component: HomeView,
+      component: ContactView,
+      meta: { locale }
+    })
+
+    // Legals
+    routes.push({
+      path: `${prefix}/${ROUTE_SLUGS.legals[locale]}`,
+      name: `Legals-${locale}`,
+      component: LegalsView,
       meta: { locale }
     })
   })
@@ -116,8 +80,8 @@ const router = createRouter({
 })
 
 // Helper pour obtenir la langue depuis une route
-export const getLocaleFromRoute = (route: any): SupportedLocale => {
-  return route.meta?.locale || 'fr'
+export const getLocaleFromRoute = (route: RouteLocationNormalized): SupportedLocale => {
+  return (route.meta?.locale as SupportedLocale) || 'fr'
 }
 
 // Helper pour générer un nom de route localisé
@@ -126,11 +90,11 @@ export const getLocalizedRouteName = (baseName: string, locale: SupportedLocale)
 }
 
 // Helper pour basculer vers une autre langue en gardant la même page
-export const switchLocale = (currentRoute: any, newLocale: SupportedLocale) => {
+export const switchLocale = (currentRoute: RouteLocationNormalized, newLocale: SupportedLocale) => {
   const currentLocale = getLocaleFromRoute(currentRoute)
   
   // Extraire le nom de base de la route (sans le suffixe de langue)
-  const routeName = currentRoute.name?.replace(`-${currentLocale}`, '') || 'Home'
+  const routeName = (currentRoute.name as string)?.replace(`-${currentLocale}`, '') || 'Home'
   
   return {
     name: getLocalizedRouteName(routeName, newLocale)

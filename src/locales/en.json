@@ -1,17 +1,11 @@
 {
-  "menu": {
-    "mission": "Our Mission",
-    "operation": "How it Works",
-    "producer": "RE Producer",
-    "investor": "Investor",
-    "contact": "Contact"
-  },
-  "foobar": "Hello!",
   "home": {
     "hero": {
-      "title": "Accelerating <span class=\"text-secondary\">Energy Transition</span>",
-      "subtitle1": "by financing <span class=\"text-secondary\">Renewable Energy Producers</span>",
-      "subtitle2": "via bond tokenization"
+      "title": "Accelerating the <span class=\"text-secondary\">Energy Transition</span>",
+      "subtitle1": "through tokenized bonds",
+      "intro": "We connect renewable energy producers with digital asset investors within a secure and regulated framework.",
+      "contact": "Contact us",
+      "imageAlt": "Photography of a renewable energy power plant"
     },
     "description": "<span class=\"text-secondary\">re</span><span class=\"text-primary\">bond</span> selects, structures and tokenizes bonds issued by renewable energy producers",
     "stats": {
@@ -29,57 +23,39 @@
       }
     }
   },
-  "mission": {
-    "hero": {
-      "title": "Uniting green finance and digital assets to accelerate energy transition",
-      "description": "Renewable energy producers financing deserves modern, accessible tools aligned with climate objectives"
-    }
-  },
-  "components": {
-    "whatWeDo": {
-      "title": "What we do",
-      "services": {
-        "bonds": "Green Bond Structuring",
-        "tokenization": "Blockchain Tokenization",
-        "distribution": "Secure Distribution"
-      }
-    },
+  "blocks": {
     "solution": {
-      "title": "A hybrid solution between traditional finance and blockchain innovation",
-      "services": {
-        "bonds": "Green Bond Structuring",
-        "tokenization": "Blockchain Tokenization",
-        "distribution": "Secure Distribution"
+      "title": "Our Solutions",
+      "structuration": {
+        "title": "Bond Structuring",
+        "description": "We design tailored bond instruments that meet the financing needs of renewable energy producers."
+      },
+      "tokenization": {
+        "title": "Tokenized Bond Issuance",
+        "description": "We tokenize our bonds to make them accessible to institutional investors and digital asset funds."
+      },
+      "distribution": {
+        "title": "Investor Distribution",
+        "description": "We ensure the distribution of digital bonds to qualified investors."
       }
     },
     "why": {
-      "title": "Why rebond?",
-      "reasons": {
-        "expertise": "Green finance expertise",
-        "compliance": "Compliance and transparency",
-        "quality": "Quality of selected projects",
-        "tech": "Blockchain technology mastery"
-      }
-    },
-    "commitment": {
-      "title": "Our commitments for green finance",
-      "reasons": {
-        "environmental": "Measurable environmental impact",
-        "compliance": "Compliance with EU regulations",
-        "transparency": "Transparency on projects and flows",
-        "accessibility": "Accessibility for producers"
-      }
-    },
-    "targets": {
-      "producer": {
-        "title": "RE Producer",
-        "description": "We support renewable energy producers.",
-        "cta": "Learn more"
+      "title": "Why <span class=\"text-secondary\">re</span>bond ?",
+      "regulation": {
+        "title": "Regulatory Security",
+        "description": "All our operations are fully compliant with AMF standards, supported by robust KYC/AML processes and regulated asset custody."
       },
-      "investor": {
-        "title": "Investor",
-        "description": "We address impact funds with tokenized assets",
-        "cta": "Learn more"
+      "yield": {
+        "title": "Stable Returns",
+        "description": "Bonds backed by real assets, offering structured yields (>6%) with lower volatility compared to traditional digital assets."
+      },
+      "impact": {
+        "title": "Positive Environmental Impact",
+        "description": "Each investment directly contributes to the development of new local solar and wind power capacities."
+      },
+      "innovation": {
+        "title": "Technological Innovation",
+        "description": "A digital platform that streamlines issuance, management, and monitoring of bonds, enhancing transparency for all stakeholders."
       }
     }
   },
@@ -96,6 +72,77 @@
       "privacy": "Privacy Policy",
       "cookies": "Cookies"
     }
+  },
+  "contact": {
+    "title": "Contact us",
+    "description": "Have a question about our solutions? An investment project? Our team is available to support you.",
+    "email": {
+      "title": "Send us a message",
+      "description": "Drop us a line, we'll get back to you as soon as possible."
+    },
+    "address": {
+      "title": "Our address",
+      "description": "Visit us at our offices in Bordeaux."
+    },
+    "additional": {
+      "title": "Are you an investor?",
+      "description": "For any information request about our tokenized renewable energy bonds, feel free to contact us. We'll explore together the investment opportunities that match your profile."
+    },
+    "backToHome": "Back to home"
+  },
+  "legals": {
+    "title": "Legal Notice",
+    "lastUpdated": "Last updated: September 2025",
+    "company": {
+      "title": "Company Information",
+      "name": "Company name",
+      "nameValue": "Rebond SAS",
+      "form": "Legal form",
+      "formValue": "Simplified Joint Stock Company (SAS)",
+      "capital": "Share capital",
+      "capitalValue": "10,000 euros",
+      "siret": "SIRET number",
+      "siretValue": "989 337 373 00017",
+      "address": "Registered office address",
+      "addressValue": "16 place des Quinconces \n33000 Bordeaux, France",
+      "email": "Email"
+    },
+    "director": {
+      "title": "Publication Director",
+      "content": "The publication director is the legal representative of Rebond SAS."
+    },
+    "hosting": {
+      "title": "Website Hosting",
+      "content": "The rebond.eco website is hosted by:",
+      "provider": "GitHub Pages",
+      "address": "GitHub, Inc. - 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States",
+      "phone": "Phone: +1-877-448-4820"
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content1": "All content on this website (texts, images, logos, graphics, etc.) is protected by copyright and belongs to Rebond SAS or its partners.",
+      "content2": "Any reproduction, representation, modification, publication, adaptation of all or part of the site elements, regardless of the means or process used, is prohibited without prior written authorization."
+    },
+    "data": {
+      "title": "Personal Data",
+      "content1": "In accordance with the General Data Protection Regulation (GDPR), you have the right to access, rectify, erase and port your personal data.",
+      "content2": "Data collected via the contact form and newsletter are used only for our commercial activities and are not transmitted to third parties.",
+      "content3": "To exercise your rights or for any questions regarding the processing of your personal data, you can contact us at: bonjour@rebond.eco"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content1": "This website does not use any cookies. We have chosen not to implement any cookie system to maximize respect for your privacy.",
+      "content2": "No browsing data is stored on your device when you visit our site."
+    },
+    "liability": {
+      "title": "Liability",
+      "content": "Rebond SAS strives to provide accurate and up-to-date information, but cannot guarantee the accuracy, precision or completeness of the information made available on this site. The use of this information is at the sole responsibility of the user."
+    },
+    "law": {
+      "title": "Applicable Law",
+      "content": "These legal notices are subject to French law. In case of dispute, French courts shall have sole jurisdiction."
+    },
+    "backToHome": "Back to home"
   },
   "newsletter": {
     "title": "Newsletter",
