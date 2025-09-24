@@ -1,6 +1,7 @@
 import { createMemoryHistory, createRouter, createWebHistory, type RouteRecordRaw, type RouteLocationNormalized } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import ContactView from '@/views/ContactView.vue'
+import LegalsView from '@/views/LegalsView.vue'
 
 const isClient = typeof window !== 'undefined'
 
@@ -17,6 +18,10 @@ export const ROUTE_SLUGS = {
   contact: {
     fr: 'contact',
     en: 'contact'
+  },
+  legals: {
+    fr: 'mentions-legales',
+    en: 'legal-notice'
   }
 } as const
 
@@ -47,6 +52,14 @@ const createLocalizedRoutes = (): RouteRecordRaw[] => {
       path: `${prefix}/${ROUTE_SLUGS.contact[locale]}`,
       name: `Contact-${locale}`,
       component: ContactView,
+      meta: { locale }
+    })
+
+    // Legals
+    routes.push({
+      path: `${prefix}/${ROUTE_SLUGS.legals[locale]}`,
+      name: `Legals-${locale}`,
+      component: LegalsView,
       meta: { locale }
     })
   })

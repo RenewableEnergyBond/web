@@ -75,6 +75,60 @@
     },
     "backToHome": "Retour à l'accueil"
   },
+  "legals": {
+    "title": "Mentions légales",
+    "lastUpdated": "Dernière mise à jour : Septembre 2025",
+    "company": {
+      "title": "Informations sur la société",
+      "name": "Dénomination sociale",
+      "nameValue": "Rebond SAS",
+      "form": "Forme juridique",
+      "formValue": "Société par Actions Simplifiée (SAS)",
+      "capital": "Capital social",
+      "capitalValue": "10 000 euros",
+      "siret": "Numéro SIRET",
+      "siretValue": "989 337 373 00017",
+      "address": "Adresse du siège social",
+      "addressValue": "16 place des Quinconces \n33000 Bordeaux, France",
+      "email": "Email"
+    },
+    "director": {
+      "title": "Directeur de la publication",
+      "content": "Le directeur de la publication est le représentant légal de la société Rebond SAS."
+    },
+    "hosting": {
+      "title": "Hébergement du site",
+      "content": "Le site rebond.eco est hébergé par :",
+      "provider": "GitHub Pages",
+      "address": "GitHub, Inc. - 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis",
+      "phone": "Téléphone : +1-877-448-4820"
+    },
+    "intellectual": {
+      "title": "Propriété intellectuelle",
+      "content1": "L'ensemble du contenu de ce site (textes, images, logos, graphismes, etc.) est protégé par le droit d'auteur et appartient à la société Rebond SAS ou à ses partenaires.",
+      "content2": "Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable."
+    },
+    "data": {
+      "title": "Données personnelles",
+      "content1": "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données personnelles.",
+      "content2": "Les données collectées via le formulaire de contact et la newsletter sont utilisées uniquement dans le cadre de notre activité commerciale et ne sont pas transmises à des tiers.",
+      "content3": "Pour exercer vos droits ou pour toute question relative au traitement de vos données personnelles, vous pouvez nous contacter à l'adresse : bonjour@rebond.eco"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content1": "Ce site n'utilise aucun cookie. Nous avons fait le choix de ne pas implémenter de système de cookies pour respecter au maximum votre vie privée.",
+      "content2": "Aucune donnée de navigation n'est stockée sur votre appareil lors de votre visite sur notre site."
+    },
+    "liability": {
+      "title": "Responsabilité",
+      "content": "Rebond SAS s'efforce de fournir des informations exactes et à jour, mais ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition sur ce site. L'utilisation de ces informations se fait sous la seule responsabilité de l'utilisateur."
+    },
+    "law": {
+      "title": "Droit applicable",
+      "content": "Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents."
+    },
+    "backToHome": "Retour à l'accueil"
+  },
   "newsletter": {
     "title": "Newsletter",
     "description": "Inscrivez-vous à notre newsletter pour suivre nos actualités.",

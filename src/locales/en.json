@@ -90,6 +90,60 @@
     },
     "backToHome": "Back to home"
   },
+  "legals": {
+    "title": "Legal Notice",
+    "lastUpdated": "Last updated: September 2025",
+    "company": {
+      "title": "Company Information",
+      "name": "Company name",
+      "nameValue": "Rebond SAS",
+      "form": "Legal form",
+      "formValue": "Simplified Joint Stock Company (SAS)",
+      "capital": "Share capital",
+      "capitalValue": "10,000 euros",
+      "siret": "SIRET number",
+      "siretValue": "989 337 373 00017",
+      "address": "Registered office address",
+      "addressValue": "16 place des Quinconces \n33000 Bordeaux, France",
+      "email": "Email"
+    },
+    "director": {
+      "title": "Publication Director",
+      "content": "The publication director is the legal representative of Rebond SAS."
+    },
+    "hosting": {
+      "title": "Website Hosting",
+      "content": "The rebond.eco website is hosted by:",
+      "provider": "GitHub Pages",
+      "address": "GitHub, Inc. - 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States",
+      "phone": "Phone: +1-877-448-4820"
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content1": "All content on this website (texts, images, logos, graphics, etc.) is protected by copyright and belongs to Rebond SAS or its partners.",
+      "content2": "Any reproduction, representation, modification, publication, adaptation of all or part of the site elements, regardless of the means or process used, is prohibited without prior written authorization."
+    },
+    "data": {
+      "title": "Personal Data",
+      "content1": "In accordance with the General Data Protection Regulation (GDPR), you have the right to access, rectify, erase and port your personal data.",
+      "content2": "Data collected via the contact form and newsletter are used only for our commercial activities and are not transmitted to third parties.",
+      "content3": "To exercise your rights or for any questions regarding the processing of your personal data, you can contact us at: bonjour@rebond.eco"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content1": "This website does not use any cookies. We have chosen not to implement any cookie system to maximize respect for your privacy.",
+      "content2": "No browsing data is stored on your device when you visit our site."
+    },
+    "liability": {
+      "title": "Liability",
+      "content": "Rebond SAS strives to provide accurate and up-to-date information, but cannot guarantee the accuracy, precision or completeness of the information made available on this site. The use of this information is at the sole responsibility of the user."
+    },
+    "law": {
+      "title": "Applicable Law",
+      "content": "These legal notices are subject to French law. In case of dispute, French courts shall have sole jurisdiction."
+    },
+    "backToHome": "Back to home"
+  },
   "newsletter": {
     "title": "Newsletter",
     "description": "Subscribe to our newsletter to follow our news and updates.",
