@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import SocialLinks from '@/components/SocialLinks.vue';
-import ModalComponent from '@/components/ModalComponent.vue';
-import BrevoNewsletterForm from '@/components/BrevoNewsletterForm.vue';
+import SocialLinks from '@/components/ui/SocialLinks.vue';
+import ModalComponent from '@/components/ui/ModalComponent.vue';
+import BrevoNewsletterForm from '@/components/forms/BrevoNewsletterForm.vue';
 import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import WhatWeDoBlock from '@/components/WhatWeDoBlock.vue';
-import WhyBlock from '@/components/WhyBlock.vue';
-import TargetsBlock from '@/components/TargetsBlock.vue';
+import WhatWeDoBlock from '@/components/blocks/WhatWeDoBlock.vue';
+import WhyBlock from '@/components/blocks/WhyBlock.vue';
+import TargetsBlock from '@/components/blocks/TargetsBlock.vue';
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

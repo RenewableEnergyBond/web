@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
-import CloseIcon from '@/icons/CloseIcon.vue'
+import CloseIcon from '@/components/icons/CloseIcon.vue'
 
 defineProps<{
   modelValue: boolean

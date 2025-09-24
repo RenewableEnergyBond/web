@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import FooterComponent from '@/components/FooterComponent.vue';
-import BurgerIcon from '@/icons/BurgerIcon.vue';
-import CloseIcon from '@/icons/CloseIcon.vue';
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue';
+import FooterComponent from '@/components/ui/FooterComponent.vue';
+import BurgerIcon from '@/components/icons/BurgerIcon.vue';
+import CloseIcon from '@/components/icons/CloseIcon.vue';
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue';
 import router, { getLocaleFromRoute, getLocalizedRouteName } from '@/router';
 import { ref, watch, computed } from 'vue';
 import { useI18n } from 'vue-i18n';

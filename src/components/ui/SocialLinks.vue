@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LinkedInIcon from '@/icons/LinkedInIcon.vue';
+import LinkedInIcon from '@/components/icons/LinkedInIcon.vue';
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

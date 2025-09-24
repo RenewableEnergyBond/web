@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import CommitmentBlock from '@/components/CommitmentBlock.vue';
-import SolutionBlock from '@/components/SolutionBlock.vue';
-import TargetsBlock from '@/components/TargetsBlock.vue';
+import CommitmentBlock from '@/components/blocks/CommitmentBlock.vue';
+import SolutionBlock from '@/components/blocks/SolutionBlock.vue';
+import TargetsBlock from '@/components/blocks/TargetsBlock.vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n()

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CheckIcon from '@/icons/CheckIcon.vue';
+import CheckIcon from '@/components/icons/CheckIcon.vue';
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()

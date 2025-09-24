@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import BankTransferIcon from '@/icons/BankTransferIcon.vue';
-import CheckIcon from '@/icons/CheckIcon.vue';
-import CogIcon from '@/icons/CogIcon.vue';
-import FinanceIcon from '@/icons/FinanceIcon.vue';
+import BankTransferIcon from '@/components/icons/BankTransferIcon.vue';
+import CheckIcon from '@/components/icons/CheckIcon.vue';
+import CogIcon from '@/components/icons/CogIcon.vue';
+import FinanceIcon from '@/components/icons/FinanceIcon.vue';
 </script>
 
 <template>

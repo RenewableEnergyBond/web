@@ -3,8 +3,8 @@ import { useI18n } from 'vue-i18n'
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { switchLocale, getLocaleFromRoute, type SupportedLocale } from '@/router'
-import FrenchFlagIcon from '../icons/FrenchFlagIcon.vue'
-import BritishFlagIcon from '../icons/BritishFlagIcon.vue'
+import FrenchFlagIcon from '@/components/icons/FrenchFlagIcon.vue'
+import BritishFlagIcon from '@/components/icons/BritishFlagIcon.vue'
 
 const { locale } = useI18n()
 const route = useRoute()
