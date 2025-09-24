@@ -4,7 +4,8 @@
       "title": "Accelerating the <span class=\"text-secondary\">Energy Transition</span>",
       "subtitle1": "through tokenized bonds",
       "intro": "We connect renewable energy producers with digital asset investors within a secure and regulated framework.",
-      "contact": "Contact us"
+      "contact": "Contact us",
+      "imageAlt": "Photography of a renewable energy power plant"
     },
     "description": "<span class=\"text-secondary\">re</span><span class=\"text-primary\">bond</span> selects, structures and tokenizes bonds issued by renewable energy producers",
     "stats": {
@@ -71,6 +72,23 @@
       "privacy": "Privacy Policy",
       "cookies": "Cookies"
     }
+  },
+  "contact": {
+    "title": "Contact us",
+    "description": "Have a question about our solutions? An investment project? Our team is available to support you.",
+    "email": {
+      "title": "Send us a message",
+      "description": "Drop us a line, we'll get back to you as soon as possible."
+    },
+    "address": {
+      "title": "Our address",
+      "description": "Visit us at our offices in Bordeaux."
+    },
+    "additional": {
+      "title": "Are you an investor?",
+      "description": "For any information request about our tokenized renewable energy bonds, feel free to contact us. We'll explore together the investment opportunities that match your profile."
+    },
+    "backToHome": "Back to home"
   },
   "newsletter": {
     "title": "Newsletter",

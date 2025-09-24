@@ -33,22 +33,22 @@ const { getRouteFor } = useLocalization()
     class="h-[180px] bg-[center_-40px] sm:bg-[center_-270px] relative w-full overflow-hidden bg-cover bg-fixed bg-no-repeat" 
     :style="{ backgroundImage: 'url(assets/hero-1920.jpg)' }"
     role="img"
-    :aria-label="t('home.hero.imageAlt', 'Hero image')"
+    :aria-label="t('home.hero.imageAlt')"
   />
 
   <!-- Solution Section -->
   <section class="max-w-7xl mx-auto my-8 sm:my-16 px-4 lg:px-8">
     <h2 v-html="t('blocks.solution.title')" class="font-semibold text-3xl mb-4" />
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <article class="basis-full p-4 border-2 border-primary/20 border-dashed rounded-lg">
+      <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 v-html="t('blocks.solution.structuration.title')" class="font-semibold text-xl mb-2" />
         <div v-html="t('blocks.solution.structuration.description')" class="text-base leading-relaxed" />
       </article>
-      <article class="basis-full p-4 border-2 border-primary/20 border-dashed rounded-lg">
+      <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 v-html="t('blocks.solution.tokenization.title')" class="font-semibold text-xl mb-2" />
         <div v-html="t('blocks.solution.tokenization.description')" class="text-base leading-relaxed" />
       </article>
-      <article class="basis-full p-4 border-2 border-primary/20 border-dashed rounded-lg">
+      <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 v-html="t('blocks.solution.distribution.title')" class="font-semibold text-xl mb-2" />
         <div v-html="t('blocks.solution.distribution.description')" class="text-base leading-relaxed" />
       </article>
@@ -62,19 +62,19 @@ const { getRouteFor } = useLocalization()
   <section class="max-w-7xl mx-auto my-8 sm:my-16 px-4 lg:px-8">
     <h2 v-html="t('blocks.why.title')" class="font-semibold text-3xl mb-4" />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <article class="basis-full p-4 border-2 border-primary/20 border-dashed rounded-lg">
+      <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 v-html="t('blocks.why.regulation.title')" class="font-semibold text-xl mb-2" />
         <div v-html="t('blocks.why.regulation.description')" class="text-base leading-relaxed" />
       </article>
-      <article class="basis-full p-4 border-2 border-primary/20 border-dashed rounded-lg">
+      <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 v-html="t('blocks.why.yield.title')" class="font-semibold text-xl mb-2" />
         <div v-html="t('blocks.why.yield.description')" class="text-base leading-relaxed" />
       </article>
-      <article class="basis-full p-4 border-2 border-primary/20 border-dashed rounded-lg">
+      <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 v-html="t('blocks.why.impact.title')" class="font-semibold text-xl mb-2" />
         <div v-html="t('blocks.why.impact.description')" class="text-base leading-relaxed" />
       </article>
-      <article class="basis-full p-4 border-2 border-primary/20 border-dashed rounded-lg">
+      <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 v-html="t('blocks.why.innovation.title')" class="font-semibold text-xl mb-2" />
         <div v-html="t('blocks.why.innovation.description')" class="text-base leading-relaxed" />
       </article>
