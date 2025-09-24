@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const props = defineProps<{
   showOptIn?: boolean
-  showCaptcha?: boolean
 }>()
 
 const { t } = useI18n()
@@ -15,9 +14,6 @@ const isSubmitting = ref(false)
 const showSuccess = ref(false)
 const showError = ref(false)
 const errorMessage = ref('')
-const recaptchaLoaded = ref(false)
-
-let recaptchaToken = ''
 
 // Error messages
 const EMAIL_INVALID_MESSAGE = t('newsletter.errors.invalidEmail')
@@ -26,10 +22,6 @@ const REQUIRED_ERROR_MESSAGE = t('newsletter.errors.required')
 const validateEmail = (email: string) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return emailRegex.test(email)
-}
-
-const handleCaptchaResponse = (token: string) => {
-  recaptchaToken = token
 }
 
 const resetMessages = () => {
@@ -41,7 +33,7 @@ const resetMessages = () => {
 const submitForm = async () => {
   resetMessages()
 
-  // Validation basique
+  // Basic validation
   if (!email.value) {
     showError.value = true
     errorMessage.value = REQUIRED_ERROR_MESSAGE
@@ -61,19 +53,11 @@ const submitForm = async () => {
     return
   }
 
-  // Validation captcha if enabled
-  if (props.showCaptcha && !recaptchaToken) {
-    showError.value = true
-    errorMessage.value = t('newsletter.errors.captchaRequired')
-    return
-  }
-
   isSubmitting.value = true
 
   try {
     const formData = new FormData()
     formData.append('EMAIL', email.value)
-    formData.append('g-recaptcha-response', recaptchaToken)
     formData.append('email_address_check', '')
     formData.append('locale', 'fr')
 
@@ -88,12 +72,6 @@ const submitForm = async () => {
     email.value = ''
     optInAccepted.value = false
 
-    // Reset recaptcha if enabled
-    if (props.showCaptcha && window.grecaptcha) {
-      window.grecaptcha.reset()
-      recaptchaToken = ''
-    }
-
   } catch (error) {
     showError.value = true
     errorMessage.value = t('newsletter.errors.submissionFailed')
@@ -101,50 +79,10 @@ const submitForm = async () => {
     isSubmitting.value = false
   }
 }
-
-const loadRecaptcha = () => {
-  // Only load reCAPTCHA if needed
-  if (!props.showCaptcha) return
-
-  if (window.grecaptcha) {
-    recaptchaLoaded.value = true
-    return
-  }
-
-  // Global callback for reCAPTCHA
-  window.handleCaptchaResponse = handleCaptchaResponse
-
-  const script = document.createElement('script')
-  script.src = 'https://www.google.com/recaptcha/api.js?hl=fr'
-  script.onload = () => {
-    recaptchaLoaded.value = true
-  }
-  document.head.appendChild(script)
-}
-
-onMounted(() => {
-  loadRecaptcha()
-})
-
-onUnmounted(() => {
-  if (window.handleCaptchaResponse) {
-    window.handleCaptchaResponse = undefined as any
-  }
-})
-
-// TypeScript declarations for global variables
-declare global {
-  interface Window {
-    grecaptcha: any
-    handleCaptchaResponse: (token: string) => void
-  }
-}
 </script>
 
 <template>
   <div class="max-w-lg mx-auto">
-
-
     <!-- Form -->
     <form @submit.prevent="submitForm" class="p-4 space-y-6">
       <!-- Title -->
@@ -194,12 +132,6 @@ declare global {
         </label>
       </div>
 
-      <!-- reCAPTCHA -->
-      <div v-if="showCaptcha && recaptchaLoaded">
-        <div class="g-recaptcha" data-sitekey="6Ld6zNIrAAAAADPK3-VeKt9WRIyDWbaNWQZMdyC1"
-          data-callback="handleCaptchaResponse"></div>
-      </div>
-
       <!-- Submit button -->
       <button type="submit" :disabled="isSubmitting"
         class="w-full bg-primary text-white py-3 px-6 rounded-xl font-semibold hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
@@ -215,17 +147,3 @@ declare global {
     </form>
   </div>
 </template>
-
-<style scoped>
-/* reCAPTCHA responsive */
-:deep(.g-recaptcha) {
-  transform: scale(0.77);
-  transform-origin: 0 0;
-}
-
-@media (min-width: 640px) {
-  :deep(.g-recaptcha) {
-    transform: scale(1);
-  }
-}
-</style>
