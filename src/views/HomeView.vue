@@ -2,6 +2,9 @@
 import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
+import FileSignIcon from '@/components/icons/FileSignIcon.vue'
+import CubeScanIcon from '@/components/icons/CubeScanIcon.vue'
+import AccountGroupIcon from '@/components/icons/AccountGroupIcon.vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
@@ -41,15 +44,24 @@ const { getRouteFor } = useLocalization()
     <h2 v-html="t('blocks.solution.title')" class="font-semibold text-3xl mb-4" />
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
-        <h3 v-html="t('blocks.solution.structuration.title')" class="font-semibold text-xl mb-2" />
+        <h3 class="font-semibold text-xl mb-2 flex gap-2 items-center">
+          <FileSignIcon class="w-6 h-6"></FileSignIcon>
+          <span v-html="t('blocks.solution.structuration.title')"></span>
+        </h3>
         <div v-html="t('blocks.solution.structuration.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
-        <h3 v-html="t('blocks.solution.tokenization.title')" class="font-semibold text-xl mb-2" />
+        <h3 class="font-semibold text-xl mb-2 flex gap-2 items-center">
+          <CubeScanIcon class="w-6 h-6"></CubeScanIcon>
+          <span v-html="t('blocks.solution.tokenization.title')"></span>
+        </h3>
         <div v-html="t('blocks.solution.tokenization.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
-        <h3 v-html="t('blocks.solution.distribution.title')" class="font-semibold text-xl mb-2" />
+        <h3 class="font-semibold text-xl mb-2 flex gap-2 items-center">
+          <AccountGroupIcon class="w-6 h-6"></AccountGroupIcon>
+          <span v-html="t('blocks.solution.distribution.title')"></span>
+        </h3>
         <div v-html="t('blocks.solution.distribution.description')" class="text-base leading-relaxed" />
       </article>
     </div>
