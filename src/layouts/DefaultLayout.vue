@@ -34,7 +34,7 @@ watch(showMobileMenu, (value) => {
   <div class="flex flex-col min-h-screen">
     <!-- HEADER -->
     <div class="fixed top-0 w-full shadow-md bg-white z-50 px-4">
-      <div class="flex py-3 justify-between items-center">
+      <div class="flex py-3 justify-between items-center max-w-7xl mx-auto">
         <div class="flex gap-2 items-center">
           <img alt="Logo rebond" src="/assets/logo-rebond.svg" class="h-[26px] md:h-[32px]" />
           <RouterLink :to="getRouteFor('Home')" class="flex font-semibold leading-none text-[36px] md:text-[48px]">
