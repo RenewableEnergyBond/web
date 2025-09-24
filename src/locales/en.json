@@ -1,17 +1,10 @@
 {
-  "menu": {
-    "mission": "Our Mission",
-    "operation": "How it Works",
-    "producer": "RE Producer",
-    "investor": "Investor",
-    "contact": "Contact"
-  },
-  "foobar": "Hello!",
   "home": {
     "hero": {
-      "title": "Accelerating <span class=\"text-secondary\">Energy Transition</span>",
-      "subtitle1": "by financing <span class=\"text-secondary\">Renewable Energy Producers</span>",
-      "subtitle2": "via bond tokenization"
+      "title": "Accelerating the <span class=\"text-secondary\">Energy Transition</span>",
+      "subtitle1": "through tokenized bonds",
+      "intro": "We connect renewable energy producers with digital asset investors within a secure and regulated framework.",
+      "contact": "Contact us"
     },
     "description": "<span class=\"text-secondary\">re</span><span class=\"text-primary\">bond</span> selects, structures and tokenizes bonds issued by renewable energy producers",
     "stats": {
@@ -29,57 +22,39 @@
       }
     }
   },
-  "mission": {
-    "hero": {
-      "title": "Uniting green finance and digital assets to accelerate energy transition",
-      "description": "Renewable energy producers financing deserves modern, accessible tools aligned with climate objectives"
-    }
-  },
-  "components": {
-    "whatWeDo": {
-      "title": "What we do",
-      "services": {
-        "bonds": "Green Bond Structuring",
-        "tokenization": "Blockchain Tokenization",
-        "distribution": "Secure Distribution"
-      }
-    },
+  "blocks": {
     "solution": {
-      "title": "A hybrid solution between traditional finance and blockchain innovation",
-      "services": {
-        "bonds": "Green Bond Structuring",
-        "tokenization": "Blockchain Tokenization",
-        "distribution": "Secure Distribution"
+      "title": "Our Solutions",
+      "structuration": {
+        "title": "Bond Structuring",
+        "description": "We design tailored bond instruments that meet the financing needs of renewable energy producers."
+      },
+      "tokenization": {
+        "title": "Tokenized Bond Issuance",
+        "description": "We tokenize our bonds to make them accessible to institutional investors and digital asset funds."
+      },
+      "distribution": {
+        "title": "Investor Distribution",
+        "description": "We ensure the distribution of digital bonds to qualified investors."
       }
     },
     "why": {
-      "title": "Why rebond?",
-      "reasons": {
-        "expertise": "Green finance expertise",
-        "compliance": "Compliance and transparency",
-        "quality": "Quality of selected projects",
-        "tech": "Blockchain technology mastery"
-      }
-    },
-    "commitment": {
-      "title": "Our commitments for green finance",
-      "reasons": {
-        "environmental": "Measurable environmental impact",
-        "compliance": "Compliance with EU regulations",
-        "transparency": "Transparency on projects and flows",
-        "accessibility": "Accessibility for producers"
-      }
-    },
-    "targets": {
-      "producer": {
-        "title": "RE Producer",
-        "description": "We support renewable energy producers.",
-        "cta": "Learn more"
+      "title": "Why <span class=\"text-secondary\">re</span>bond ?",
+      "regulation": {
+        "title": "Regulatory Security",
+        "description": "All our operations are fully compliant with AMF standards, supported by robust KYC/AML processes and regulated asset custody."
       },
-      "investor": {
-        "title": "Investor",
-        "description": "We address impact funds with tokenized assets",
-        "cta": "Learn more"
+      "yield": {
+        "title": "Stable Returns",
+        "description": "Bonds backed by real assets, offering structured yields (>6%) with lower volatility compared to traditional digital assets."
+      },
+      "impact": {
+        "title": "Positive Environmental Impact",
+        "description": "Each investment directly contributes to the development of new local solar and wind power capacities."
+      },
+      "innovation": {
+        "title": "Technological Innovation",
+        "description": "A digital platform that streamlines issuance, management, and monitoring of bonds, enhancing transparency for all stakeholders."
       }
     }
   },

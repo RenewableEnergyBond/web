@@ -116,7 +116,7 @@ const submitForm = async () => {
         </label>
         <input id="newsletter-email" v-model="email" type="email" :placeholder="t('newsletter.form.emailPlaceholder')"
           required
-          class="w-full px-3 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
           :class="{ 'border-red-300': showError && !email }" />
         <p class="mt-1 text-xs text-gray-500">
           {{ t('newsletter.form.emailHelp') }}
@@ -134,7 +134,7 @@ const submitForm = async () => {
 
       <!-- Submit button -->
       <button type="submit" :disabled="isSubmitting"
-        class="w-full bg-primary text-white py-3 px-6 rounded-xl font-semibold hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+        class="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
         <span v-if="isSubmitting" class="flex items-center justify-center gap-2">
           <svg class="animate-spin w-4 h-4" viewBox="0 0 512 512">
             <path fill="currentColor"

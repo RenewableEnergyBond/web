@@ -33,42 +33,17 @@ const getRouteFor = (routeName: string) => {
 
 <template>
   <footer>
-    <div :class class="bg-primary/20 px-4 py-12">
-      <div class="container lg:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Menu -->
-        <div>
-          <ul class="text-primary font-medium">
-            <li>
-              <RouterLink :to="getRouteFor('Home')" class="font-semibold hover:brightness-[120%]">
-                <span class="text-secondary">re</span>
-                <span class="text-primary">bond</span>
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink :to="getRouteFor('Mission')" class="hover:brightness-[120%]">
-                {{ t('menu.mission') }}</RouterLink>
-            </li>
-            <li>
-              <RouterLink :to="getRouteFor('Operation')" class="hover:brightness-[120%]">
-                {{ t('menu.operation') }}</RouterLink>
-            </li>
-            <!-- <li>
-              <RouterLink :to="getRouteFor('Producer')" class="hover:underline">
-                {{ t('menu.producer') }}</RouterLink>
-            </li>
-            <li>
-              <RouterLink :to="getRouteFor('Investor')" class="hover:underline">
-                {{ t('menu.investor') }}</RouterLink>
-            </li> -->
-            <li>
-              <RouterLink :to="getRouteFor('Contact')" class="hover:brightness-[120%]">
-                {{ t('menu.contact') }}</RouterLink>
-            </li>
-          </ul>
+    <div :class class="bg-primary/20">
+      <div class="max-w-7xl py-12 px-4 lg:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+        <div class="flex">
+          <RouterLink :to="getRouteFor('Home')">
+            <img alt="Logo rebond" src="/assets/logo-rebond.svg" class="h-[52px] lg:h-[88px]" />
+          </RouterLink>
         </div>
 
         <!-- Social / Newsletter -->
-        <div class="text-primary text-right flex flex-col items-end">
+        <div class="text-primary text-right flex flex-col items-start sm:items-end">
           <SocialLinks />
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
             <button type="button" @click="openModal" class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg cursor-pointer 
@@ -80,8 +55,8 @@ const getRouteFor = (routeName: string) => {
 
       </div>
     </div>
-    <div class="bg-primary text-white text-sm py-4 px-6">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+    <div class="bg-primary text-white text-sm">
+      <div class="max-w-7xl py-4 px-4 lg:px-8 mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
         <p>{{ t('footer.copyright') }}</p>
         <ul class="flex space-x-4 text-center items-center">
           <li><a href="#" class="hover:underline">{{ t('footer.legal.terms') }}</a></li>

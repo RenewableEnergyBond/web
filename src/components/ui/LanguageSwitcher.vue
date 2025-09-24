@@ -38,7 +38,7 @@ const toggleDropdown = () => {
     <!-- Bouton principal avec seulement le drapeau -->
     <button
       @click="toggleDropdown"
-      class="bg-white text-primary border border-primary px-3 py-2 rounded-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 flex items-center gap-2 h-10"
+      class="bg-white text-primary border border-primary px-3 py-2 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 flex items-center gap-2 h-10"
     >
       <component :is="currentLanguage.flag" class="w-5 h-4" />
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,7 +49,7 @@ const toggleDropdown = () => {
     <!-- Menu déroulant avec drapeaux + codes -->
     <div 
       v-if="isOpen"
-      class="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-lg z-10 min-w-full"
+      class="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-10 min-w-full"
     >
       <button
         v-for="language in languages"

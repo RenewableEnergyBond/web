@@ -1,7 +1,6 @@
 import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import MissionView from '@/views/MissionView.vue'
-import OperationView from '@/views/OperationView.vue'
+import ContactView from '@/views/ContactView.vue'
 
 const isClient = typeof window !== 'undefined'
 
@@ -14,22 +13,6 @@ export const ROUTE_SLUGS = {
   home: {
     fr: '',
     en: ''
-  },
-  mission: {
-    fr: 'mission',
-    en: 'mission'
-  },
-  operation: {
-    fr: 'fonctionnement',
-    en: 'how-it-works'
-  },
-  producer: {
-    fr: 'producteur-enr',
-    en: 're-producer'
-  },
-  investor: {
-    fr: 'investisseur',
-    en: 'investor'
   },
   contact: {
     fr: 'contact',
@@ -59,43 +42,11 @@ const createLocalizedRoutes = () => {
       meta: { locale }
     })
 
-    // Mission
-    routes.push({
-      path: `${prefix}/${ROUTE_SLUGS.mission[locale]}`,
-      name: `Mission-${locale}`,
-      component: MissionView,
-      meta: { locale }
-    })
-
-    // Operation
-    routes.push({
-      path: `${prefix}/${ROUTE_SLUGS.operation[locale]}`,
-      name: `Operation-${locale}`,
-      component: OperationView,
-      meta: { locale }
-    })
-
-    // Producer
-    // routes.push({
-    //   path: `${prefix}/${ROUTE_SLUGS.producer[locale]}`,
-    //   name: `Producer-${locale}`,
-    //   component: HomeView,
-    //   meta: { locale }
-    // })
-
-    // Investor
-    // routes.push({
-    //   path: `${prefix}/${ROUTE_SLUGS.investor[locale]}`,
-    //   name: `Investor-${locale}`,
-    //   component: HomeView,
-    //   meta: { locale }
-    // })
-
     // Contact
     routes.push({
       path: `${prefix}/${ROUTE_SLUGS.contact[locale]}`,
       name: `Contact-${locale}`,
-      component: HomeView,
+      component: ContactView,
       meta: { locale }
     })
   })
