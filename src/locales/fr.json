@@ -102,8 +102,8 @@
     "description": "Inscrivez-vous à notre newsletter pour suivre nos actualités.",
     "form": {
       "emailLabel": "Veuillez renseigner votre adresse email pour vous inscrire",
-      "emailPlaceholder": "adresse@email.com",
-      "emailHelp": "Veuillez renseigner votre adresse email pour vous inscrire. Ex. : abc@xyz.com",
+      "emailPlaceholder": "adresse{'@'}email.com",
+      "emailHelp": "Veuillez renseigner votre adresse email pour vous inscrire. Ex. : abc{'@'}xyz.com",
       "optinText": "J'accepte de recevoir la newsletter de rebond.eco.",
       "submit": "S'INSCRIRE",
       "submitting": "Inscription en cours..."

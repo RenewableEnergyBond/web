@@ -102,8 +102,8 @@
     "description": "Subscribe to our newsletter to follow our news and updates.",
     "form": {
       "emailLabel": "Please enter your email address to subscribe",
-      "emailPlaceholder": "address@email.com",
-      "emailHelp": "Please enter your email address to subscribe. Ex.: abc@xyz.com",
+      "emailPlaceholder": "address{'@'}email.com",
+      "emailHelp": "Please enter your email address to subscribe. Ex.: abc{'@'}xyz.com",
       "optinText": "I accept to receive the newsletter from rebond.eco.",
       "submit": "SUBSCRIBE",
       "submitting": "Subscribing..."
