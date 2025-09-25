@@ -1,3 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
-@config "../../tailwind.config.js";
+
+@theme {
+  --color-primary: #236476;
+  --color-secondary: #4a9f6d;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Roboto Slab", ui-serif, Georgia, serif;
+}
