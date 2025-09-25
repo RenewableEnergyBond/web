@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
+import { useSeo } from '@/composables/useSeo'
 import MailIcon from '@/components/icons/MailIcon.vue'
 import MarkerIcon from '@/components/icons/MarkerIcon.vue'
 import OpenIcon from '@/components/icons/OpenIcon.vue'
@@ -8,6 +9,9 @@ import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
+
+// SEO
+useSeo('contact')
 </script>
 
 <template>

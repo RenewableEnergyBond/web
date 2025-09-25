@@ -1,4 +1,18 @@
 {
+  "seo": {
+    "home": {
+      "title": "rebond.eco - Tokenized Renewable Energy Bonds | Energy Transition",
+      "description": "Invest in energy transition through tokenized bonds backed by renewable energy assets. Secure and AMF-regulated solutions."
+    },
+    "contact": {
+      "title": "Contact - rebond.eco | Tokenized Renewable Energy Bonds",
+      "description": "Contact our rebond.eco team for your tokenized renewable energy bond investment projects. Quick response guaranteed."
+    },
+    "legals": {
+      "title": "Legal Notice - rebond.eco",
+      "description": "Legal notice for rebond.eco website, specialist in tokenized renewable energy bonds and energy transition."
+    }
+  },
   "home": {
     "hero": {
       "title": "Accelerating the <span class=\"text-secondary\">Energy Transition</span>",

@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
+import { useSeo } from '@/composables/useSeo'
 import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
+
+// SEO
+useSeo('legals')
 </script>
 
 <template>

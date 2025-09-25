@@ -44,7 +44,7 @@ const createLocalizedRoutes = (): RouteRecordRaw[] => {
       path: `${prefix}`,
       name: `Home-${locale}`,
       component: HomeView,
-      meta: { locale }
+      meta: { locale, seoKey: 'home' }
     })
 
     // Contact
@@ -52,7 +52,7 @@ const createLocalizedRoutes = (): RouteRecordRaw[] => {
       path: `${prefix}/${ROUTE_SLUGS.contact[locale]}`,
       name: `Contact-${locale}`,
       component: ContactView,
-      meta: { locale }
+      meta: { locale, seoKey: 'contact' }
     })
 
     // Legals
@@ -60,7 +60,7 @@ const createLocalizedRoutes = (): RouteRecordRaw[] => {
       path: `${prefix}/${ROUTE_SLUGS.legals[locale]}`,
       name: `Legals-${locale}`,
       component: LegalsView,
-      meta: { locale }
+      meta: { locale, seoKey: 'legals' }
     })
   })
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
+import { useSeo } from '@/composables/useSeo'
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
 import FileSignIcon from '@/components/icons/FileSignIcon.vue'
 import CubeScanIcon from '@/components/icons/CubeScanIcon.vue'
@@ -12,6 +13,9 @@ import FlaskIcon from '@/components/icons/FlaskIcon.vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
+
+// SEO
+useSeo('home')
 </script>
 
 <template>

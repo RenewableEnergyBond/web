@@ -1,4 +1,18 @@
 {
+  "seo": {
+    "home": {
+      "title": "rebond.eco - Obligations EnR Digitalisées | Transition Énergétique",
+      "description": "Investissez dans la transition énergétique grâce aux obligations digitalisées adossées aux énergies renouvelables. Solutions sécurisées et réglementées AMF."
+    },
+    "contact": {
+      "title": "Contact - rebond.eco | Obligations EnR Digitalisées",
+      "description": "Contactez notre équipe rebond.eco pour vos projets d'investissement en obligations EnR digitalisées. Réponse rapide garantie."
+    },
+    "legals": {
+      "title": "Mentions Légales - rebond.eco",
+      "description": "Mentions légales du site rebond.eco, spécialiste des obligations EnR digitalisées et de la transition énergétique."
+    }
+  },
   "home": {
     "hero": {
       "title": "Accélérer la <span class=\"text-secondary text-nowrap\">Transition Énergétique</span>",
