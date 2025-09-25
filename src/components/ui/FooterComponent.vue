@@ -4,9 +4,9 @@ import { useI18n } from 'vue-i18n'
 import SocialLinks from '@/components/ui/SocialLinks.vue'
 import ModalComponent from '@/components/ui/ModalComponent.vue'
 import BrevoNewsletterForm from '@/components/forms/BrevoNewsletterForm.vue'
+import EcoindexBadge from '@/components/ui/EcoindexBadge.vue'
 import { useLocalization } from '@/composables/useLocalization'
 import MailIcon from '../icons/MailIcon.vue'
-import { useRoute } from 'vue-router'
 
 interface Props {
   class?: string
@@ -16,11 +16,6 @@ defineProps<Props>()
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
-
-const route = useRoute();
-const fullUrl = computed(() => {
-  return new URL(route.fullPath, window.location.origin + window.location.pathname).href
-});
 
 const isModalOpen = ref(false)
 
@@ -64,9 +59,7 @@ const openModalNewsletter = (): void => {
               </RouterLink>
             </li>
             <li>
-              <a :href="`https://bff.ecoindex.fr/redirect/?url=${fullUrl}`" target="_blank">
-                <img :src="`https://bff.ecoindex.fr/badge/?theme=light&url=${fullUrl}`" alt="Ecoindex Badge" />
-              </a>
+              <EcoindexBadge />
             </li>
           </ul>
         </nav>
