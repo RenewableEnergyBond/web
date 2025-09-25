@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import SocialLinks from '@/components/ui/SocialLinks.vue'
 import ModalComponent from '@/components/ui/ModalComponent.vue'
 import BrevoNewsletterForm from '@/components/forms/BrevoNewsletterForm.vue'
 import { useLocalization } from '@/composables/useLocalization'
+import MailIcon from '../icons/MailIcon.vue'
+import { useRoute } from 'vue-router'
 
 interface Props {
   class?: string
@@ -14,6 +16,11 @@ defineProps<Props>()
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
+
+const route = useRoute();
+const fullUrl = computed(() => {
+  return new URL(route.fullPath, window.location.origin + window.location.pathname).href
+});
 
 const isModalOpen = ref(false)
 
@@ -37,16 +44,13 @@ const openModalNewsletter = (): void => {
         <div class="text-primary text-right flex flex-col items-start sm:items-end">
           <SocialLinks />
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-            <button 
-              type="button" 
-              @click="openModalNewsletter" 
-              class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg cursor-pointer px-4 py-2 self-center text-nowrap transition-all duration-200"
-            >
+            <button type="button" @click="openModalNewsletter"
+              class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg cursor-pointer px-4 py-2 self-center text-nowrap transition-all duration-200 flex items-center gap-2">
+              <MailIcon class="w-5 h-5"></MailIcon>
               {{ t('footer.newsletter.subscribe') }}
             </button>
           </div>
         </div>
-
       </div>
     </div>
     <div class="bg-primary text-white text-sm">
@@ -55,12 +59,14 @@ const openModalNewsletter = (): void => {
         <nav aria-label="Legal links">
           <ul class="flex space-x-4 text-center items-center">
             <li>
-              <RouterLink 
-                :to="getRouteFor('Legals')" 
-                class="hover:underline transition-colors"
-              >
+              <RouterLink :to="getRouteFor('Legals')" class="hover:underline transition-colors">
                 {{ t('footer.legal.terms') }}
               </RouterLink>
+            </li>
+            <li>
+              <a :href="`https://bff.ecoindex.fr/redirect/?url=${fullUrl}`" target="_blank">
+                <img :src="`https://bff.ecoindex.fr/badge/?theme=light&url=${fullUrl}`" alt="Ecoindex Badge" />
+              </a>
             </li>
           </ul>
         </nav>
