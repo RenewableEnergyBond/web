@@ -47,7 +47,6 @@ useSeo('home')
     class="h-[180px] bg-[center_-40px] sm:bg-[center_-270px] relative w-full overflow-hidden bg-cover bg-fixed bg-no-repeat" 
     :style="{ backgroundImage: 'url(assets/hero-1920.jpg)' }"
     role="img"
-    :aria-label="t('home.hero.imageAlt')"
   />
 
   <!-- Section Divider -->
