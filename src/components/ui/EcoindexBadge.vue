@@ -6,7 +6,7 @@ const route = useRoute()
 
 const currentUrl = computed(() => {
   if (import.meta.env.SSR) return ''
-  return new URL(route.fullPath, window.location.origin).href
+  return new URL(route.fullPath, window.location.origin + window.location.pathname).href
 })
 
 const redirectUrl = computed(() => 
