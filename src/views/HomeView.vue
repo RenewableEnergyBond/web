@@ -5,6 +5,10 @@ import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
 import FileSignIcon from '@/components/icons/FileSignIcon.vue'
 import CubeScanIcon from '@/components/icons/CubeScanIcon.vue'
 import AccountGroupIcon from '@/components/icons/AccountGroupIcon.vue'
+import ScaleBalanceIcon from '@/components/icons/ScaleBalanceIcon.vue'
+import FinanceIcon from '@/components/icons/FinanceIcon.vue'
+import SproutIcon from '@/components/icons/SproutIcon.vue'
+import FlaskIcon from '@/components/icons/FlaskIcon.vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
@@ -81,19 +85,31 @@ const { getRouteFor } = useLocalization()
     <h2 v-html="t('blocks.why.title')" class="font-semibold text-3xl mb-4" />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
-        <h3 v-html="t('blocks.why.regulation.title')" class="font-semibold xl:text-xl sm:text-lg mb-2" />
+        <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
+          <ScaleBalanceIcon class="w-6 h-6"></ScaleBalanceIcon>
+          <span v-html="t('blocks.why.regulation.title')"></span>
+        </h3>
         <div v-html="t('blocks.why.regulation.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
-        <h3 v-html="t('blocks.why.yield.title')" class="font-semibold xl:text-xl sm:text-lg mb-2" />
+        <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
+          <FinanceIcon class="w-6 h-6"></FinanceIcon>
+          <span v-html="t('blocks.why.yield.title')"></span>
+        </h3>
         <div v-html="t('blocks.why.yield.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
-        <h3 v-html="t('blocks.why.impact.title')" class="font-semibold xl:text-xl sm:text-lg mb-2" />
+        <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
+          <SproutIcon class="w-6 h-6"></SproutIcon>
+          <span v-html="t('blocks.why.impact.title')"></span>
+        </h3>
         <div v-html="t('blocks.why.impact.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
-        <h3 v-html="t('blocks.why.innovation.title')" class="font-semibold xl:text-xl sm:text-lg mb-2" />
+        <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
+          <FlaskIcon class="w-6 h-6"></FlaskIcon>
+          <span v-html="t('blocks.why.innovation.title')"></span>
+        </h3>
         <div v-html="t('blocks.why.innovation.description')" class="text-base leading-relaxed" />
       </article>
     </div>
