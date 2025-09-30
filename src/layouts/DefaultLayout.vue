@@ -24,7 +24,7 @@ const { showMobileMenu, openMenu, closeMenu } = useMobileMenu()
             <span class="text-primary">bond</span>
           </RouterLink>
         </div>
-        <div class="hidden text-neutral-900">
+        <div class="xl:hidden text-neutral-900">
           <button @click="openMenu" :class="{ 'block': !showMobileMenu, 'hidden': showMobileMenu }"
             class="text-primary cursor-pointer">
             <span class="sr-only">Open menu</span>
@@ -36,7 +36,16 @@ const { showMobileMenu, openMenu, closeMenu } = useMobileMenu()
             <CloseIcon class="w-8 h-8" />
           </button>
         </div>
-        <LanguageSwitcher />
+        <!-- MENU DESKTOP -->
+        <div class="menu hidden xl:flex gap-6 justify-end items-center text-primary">
+          <RouterLink :to="getRouteFor('Producers')" class="font-medium text-lg hover:brightness-[120%]">
+            {{ t('menu.producers') }}</RouterLink>
+          <RouterLink :to="getRouteFor('Investors')" class="font-medium text-lg hover:brightness-[120%]">
+            {{ t('menu.investors') }}</RouterLink>
+          <RouterLink :to="getRouteFor('Contact')" class="btn-contact text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg
+          px-5 py-1.5">{{ t('menu.contact') }}</RouterLink>
+          <LanguageSwitcher />
+        </div>
       </div>
     </div>
     <!-- CONTENT -->
@@ -45,6 +54,23 @@ const { showMobileMenu, openMenu, closeMenu } = useMobileMenu()
     </main>
     <!-- FOOTER -->
     <FooterComponent />
+    <!-- MENU MOBILE -->
+    <div :class="[
+      'menu fixed top-0 bottom-0 left-0 right-0 bg-white z-40 px-4 flex flex-col gap-8 items-center justify-center text-primary pt-[60px] md:pt-[72px] h-[100vh] transition-transform duration-500 ease-in-out transform',
+      showMobileMenu ? 'translate-x-0' : 'translate-x-full'
+    ]">
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Producers')" class="font-medium text-3xl hover:brightness-[120%]">
+        {{ t('menu.producers') }}
+      </RouterLink>
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Investors')" class="font-medium text-3xl hover:brightness-[120%]">
+        {{ t('menu.investors') }}
+      </RouterLink>
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Contact')"
+        class="btn-contact text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg px-5 py-2.5">
+        {{ t('menu.contact') }}
+      </RouterLink>
+      <LanguageSwitcher />
+    </div>
   </div>
 </template>
 

@@ -1,5 +1,7 @@
 import { createMemoryHistory, createRouter, createWebHistory, type RouteRecordRaw, type RouteLocationNormalized } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import ProducersView from '@/views/ProducersView.vue'
+import InvestorsView from '@/views/InvestorsView.vue'
 import ContactView from '@/views/ContactView.vue'
 import LegalsView from '@/views/LegalsView.vue'
 
@@ -14,6 +16,14 @@ export const ROUTE_SLUGS = {
   home: {
     fr: '',
     en: ''
+  },
+  producers: {
+    fr: 'producteurs-enr',
+    en: 'renewable-energy-producers'
+  },
+  investors: {
+    fr: 'investisseurs',
+    en: 'investors'
   },
   contact: {
     fr: 'contact',
@@ -44,6 +54,22 @@ const createLocalizedRoutes = (): RouteRecordRaw[] => {
       path: `${prefix}`,
       name: `Home-${locale}`,
       component: HomeView,
+      meta: { locale, seoKey: 'home' }
+    })
+
+    // Producers
+    routes.push({
+      path: `${prefix}/${ROUTE_SLUGS.producers[locale]}`,
+      name: `Producers-${locale}`,
+      component: ProducersView,
+      meta: { locale, seoKey: 'home' }
+    })
+
+    // Investors
+    routes.push({
+      path: `${prefix}/${ROUTE_SLUGS.investors[locale]}`,
+      name: `Investors-${locale}`,
+      component: InvestorsView,
       meta: { locale, seoKey: 'home' }
     })
 

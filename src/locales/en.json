@@ -1,8 +1,21 @@
 {
+  "menu": {
+    "producers": "Producers",
+    "investors": "Investors",
+    "contact": "Contact"
+  },
   "seo": {
     "home": {
       "title": "rebond - Tokenized Renewable Energy Bonds",
       "description": "Tokenized Renewable Energy Bonds. Secure & regulated."
+    },
+    "producers": {
+      "title": "Renewable Energy Producers | rebond - Tokenized Renewable Energy Bonds",
+      "description": ""
+    },
+    "investors": {
+      "title": "Digital Asset Investors | rebond - Tokenized Renewable Energy Bonds",
+      "description": ""
     },
     "contact": {
       "title": "Contact | rebond - Tokenized Renewable Energy Bonds",
@@ -19,20 +32,49 @@
       "subtitle1": "through tokenized bonds",
       "intro": "We connect renewable energy producers with digital asset investors within a secure and regulated framework.",
       "contact": "Contact us"
+    }
+  },
+  "producers": {
+    "hero": {
+      "title": "Producers of <span class=\"text-secondary text-nowrap\">Renewable Energy</span>",
+      "intro": "We structure and tokenize your bonds to accelerate the financing of your projects."
     },
-    "description": "<span class=\"text-secondary\">re</span><span class=\"text-primary\">bond</span> selects, structures and tokenizes bonds issued by renewable energy producers",
-    "stats": {
-      "yield": {
-        "value": ">6%",
-        "label": "target yield on digital assets"
+    "needs": {
+      "title": "Your Financing Needs",
+      "description": "Developing a renewable energy project often requires more than bank debt alone.<br/>Between equity requirements and lengthy procedures, a funding gap frequently remains.<br/><span class=\"font-medium\">We address this complementary need with a flexible, fast, and tailored approach to your projects.</span>"
+    },
+    "solution": {
+      "title": "Our Solutions",
+      "structured": {
+        "title": "Structured Bonds",
+        "description": "We design a bond instrument tailored to your project, providing an effective alternative to equity fundraising."
       },
-      "partners": {
-        "value": "+20",
-        "label": "committed partners"
+      "digitalization": {
+        "title": "Tokenized Bonds & Distribution",
+        "description": "We tokenize these bonds to facilitate their distribution among investors specialized in digital assets and sustainable finance."
       },
-      "analysis": {
-        "value": "€30M",
-        "label": "under analysis"
+      "support": {
+        "title": "Comprehensive Support",
+        "description": "From legal structuring to investor outreach, we guide you throughout the entire financing process."
+      }
+    },
+    "advantages": {
+      "title": "Your Benefits",
+      "capital": {
+        "title": "Broader Access to Complementary Capital",
+        "description": "A complementary financing solution that broadens your sources of capital and secures project delivery — without diluting your governance."
+      },
+      "fees": {
+        "title": "Reduced Costs",
+        "description": "Optimized structuring and transaction costs, significantly below market standards, to maximize the financial efficiency of your fundraising."
+      },
+      "esg": {
+        "title": "ESG & Regulatory Framework",
+        "description": "An integrated solution fully compliant with AMF requirements, with bond custody ensured by a regulated depositary bank, and strict alignment with ESG standards and best practices in sustainable finance."
+      },
+      "speed": {
+        "title": "Speed & Transparency",
+        "description": "A simplified and digitalized process enabling real-time monitoring and clear reporting, ensuring speed, visibility, and trust for all stakeholders."
       }
     }
   },
@@ -49,7 +91,7 @@
       },
       "distribution": {
         "title": "Investor Distribution",
-        "description": "We ensure the distribution of digital bonds to qualified investors."
+        "description": "We ensure the distribution of tokenized bonds to qualified investors."
       }
     },
     "why": {

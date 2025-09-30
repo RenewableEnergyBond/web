@@ -1,8 +1,21 @@
 {
+  "menu": {
+    "producers": "Producteurs EnR",
+    "investors": "Investisseurs",
+    "contact": "Contact"
+  },
   "seo": {
     "home": {
       "title": "rebond - Obligations EnR Digitalisées",
       "description": "Obligations digitalisées adossées aux énergies renouvelables. Sécurisé & réglementé AMF."
+    },
+    "producers": {
+      "title": "Producteurs EnR | rebond - Obligations EnR Digitalisées",
+      "description": ""
+    },
+    "investors": {
+      "title": "Investisseurs en Actifs Numériques | rebond - Obligations EnR Digitalisées",
+      "description": ""
     },
     "contact": {
       "title": "Contact | rebond - Obligations EnR Digitalisées",
@@ -19,6 +32,76 @@
       "subtitle1": "grâce aux <span class=\"text-nowrap\">obligations digitalisées</span>",
       "intro": "Nous rapprochons les producteurs d’énergie renouvelable et les investisseurs en actifs numériques au sein d’un cadre réglementaire et sécurisé.",
       "contact": "Contactez-nous"
+    }
+  },
+  "producers": {
+    "hero": {
+      "title": "Producteurs d'<span class=\"text-secondary text-nowrap\">Énergies Renouvelables</span>",
+      "intro": "Nous structurons et digitalisons vos obligations pour accélérer le financement de vos projets."
+    },
+    "needs": {
+      "title": "Vos besoins financiers",
+      "description": "Financer un projet d'énergie renouvelable demande plus que la seule dette bancaire.<br/>Entre apports en fonds propres et délais de mise en place, un manque subsiste souvent.<br/><span class=\"font-medium\">Nous répondons à ce besoin avec une approche souple, rapide et adaptée à vos projets.</span>"
+    },
+    "solution": {
+      "title": "Nos solutions",
+      "structured": {
+        "title": "Obligations structurées",
+        "description": "Nous concevons avec vous un instrument obligataire adapté à votre projet, offrant une alternative efficace à la levée de fonds propres."
+      },
+      "digitalization": {
+        "title": "Digitalisation & distribution",
+        "description": "Nous digitalisons vos obligations pour faciliter leur distribution auprès d'investisseurs spécialisés dans les actifs numériques et la finance durable."
+      },
+      "support": {
+        "title": "Accompagnement complet",
+        "description": "De la structuration juridique à la mise en relation avec les investisseurs, nous vous accompagnons sur tout le cycle de financement."
+      }
+    },
+    "advantages": {
+      "title": "Vos avantages",
+      "capital": {
+        "title": "Accès élargi au capital",
+        "description": "Une solution de financement complémentaire qui élargit vos sources de capitaux et sécurise la réalisation de vos projets, sans diluer votre gouvernance."
+      },
+      "fees": {
+        "title": "Frais réduits",
+        "description": "Des coûts de structuration et de transaction optimisés, nettement inférieurs aux standards du marché, pour maximiser l’efficacité financière de vos levées de fonds."
+      },
+      "esg": {
+        "title": "Cadre ESG et réglementaire",
+        "description": "Une solution intégrée conforme aux exigences de l’AMF, avec conservation des titres par une banque dépositaire, et un alignement strict avec les critères ESG et les meilleures pratiques de la finance durable."
+      },
+      "speed": {
+        "title": "Rapidité et transparence",
+        "description": "Un processus simplifié et digitalisé, permettant un suivi en temps réel et un reporting clair, pour offrir rapidité, visibilité et confiance à toutes les parties prenantes."
+      }
+    }
+  },
+  "investors": {
+    "hero": {
+      "title": "Investisseurs en <span class=\"text-secondary text-nowrap\">Actifs Numériques</span>",
+      "intro": "Les obligations tokenisées de Rebond offrent une alternative stable et transparente dans un univers d'actifs numériques souvent volatil. Elles allient le meilleur de deux mondes : la sécurité des obligations classiques et l'innovation de la blockchain."
+    },
+    "yield": {
+      "title": "Rendement attractif et structuré",
+      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Coupon défini contractuellement, généralement > 6 %, adossé à des projets EnR réels.</li><li>Stabilité supérieure aux crypto-actifs traditionnels ou aux matières premières tokenisées.</li><li>Risque maîtrisé grâce à la nature obligataire du support (dette).</li></ul>"
+    },
+    "esg": {
+      "title": "Alignement ESG",
+      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Les capitaux financent exclusivement des projets solaires et éoliens en France et en Europe.</li><li>Chaque investissement contribue directement à la réduction des émissions de CO₂ et à la transition énergétique.</li><li>Eligible aux portefeuilles d'investissement responsables (ESG / impact).</li></ul>"
+    },
+    "security": {
+      "title": "Sécurité et conformité",
+      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Émissions encadrées par la réglementation de l'Autorité des Marchés Financiers (AMF).</li><li>Processus strict de KYC/AML pour les investisseurs.</li><li>Conservation des titres par un dépositaire réglementé, garantissant la sécurité juridique des actifs.</li></ul>"
+    },
+    "transparency": {
+      "title": "Transparence blockchain",
+      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Enregistrement immuable des obligations et flux financiers.</li><li>Suivi en temps réel des paiements et des performances des projets.</li><li>Accès direct à des rapports de performance clairs et vérifiables.</li></ul>"
+    },
+    "liquidity": {
+      "title": "Liquidité et diversification",
+      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Même si la liquidité est plus limitée que sur les marchés crypto classiques, les obligations offrent une stabilité recherchée par les investisseurs institutionnels et fonds à impact.</li><li>Elles permettent de diversifier un portefeuille d'actifs numériques avec un produit adossé à du réel, moins sensible aux fluctuations spéculatives.</li></ul>"
     }
   },
   "blocks": {
