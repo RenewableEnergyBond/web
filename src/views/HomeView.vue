@@ -30,7 +30,7 @@ useSeo('home')
       <div class="lg:w-2/3 text-lg md:text-xl" v-html="t('home.hero.intro')" />
       <RouterLink 
         :to="getRouteFor('Contact')" 
-        class="text-primary font-medium text-lg md:text-xl py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%]"
+        class="text-primary font-semibold text-lg md:text-xl py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%] uppercase"
         :aria-label="t('home.hero.contact')"
       >
         <ArrowRightIcon class="w-6 h-6" />
@@ -54,28 +54,28 @@ useSeo('home')
 
   <!-- Solution Section -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 v-html="t('blocks.solution.title')" class="font-semibold text-3xl mb-4" />
+    <h2 v-html="t('home.solution.title')" class="font-semibold text-3xl mb-4" />
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
           <FileSignIcon class="w-6 h-6"></FileSignIcon>
-          <span v-html="t('blocks.solution.structuration.title')"></span>
+          <span v-html="t('home.solution.structuration.title')"></span>
         </h3>
-        <div v-html="t('blocks.solution.structuration.description')" class="text-base leading-relaxed" />
+        <div v-html="t('home.solution.structuration.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
           <CubeScanIcon class="w-6 h-6"></CubeScanIcon>
-          <span v-html="t('blocks.solution.tokenization.title')"></span>
+          <span v-html="t('home.solution.tokenization.title')"></span>
         </h3>
-        <div v-html="t('blocks.solution.tokenization.description')" class="text-base leading-relaxed" />
+        <div v-html="t('home.solution.tokenization.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
           <AccountGroupIcon class="w-6 h-6"></AccountGroupIcon>
-          <span v-html="t('blocks.solution.distribution.title')"></span>
+          <span v-html="t('home.solution.distribution.title')"></span>
         </h3>
-        <div v-html="t('blocks.solution.distribution.description')" class="text-base leading-relaxed" />
+        <div v-html="t('home.solution.distribution.description')" class="text-base leading-relaxed" />
       </article>
     </div>
   </section>
@@ -85,35 +85,35 @@ useSeo('home')
 
   <!-- Why Section -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 v-html="t('blocks.why.title')" class="font-semibold text-3xl mb-4" />
+    <h2 v-html="t('home.why.title')" class="font-semibold text-3xl mb-4" />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
           <ScaleBalanceIcon class="w-6 h-6"></ScaleBalanceIcon>
-          <span v-html="t('blocks.why.regulation.title')"></span>
+          <span v-html="t('home.why.regulation.title')"></span>
         </h3>
-        <div v-html="t('blocks.why.regulation.description')" class="text-base leading-relaxed" />
+        <div v-html="t('home.why.regulation.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
           <FinanceIcon class="w-6 h-6"></FinanceIcon>
-          <span v-html="t('blocks.why.yield.title')"></span>
+          <span v-html="t('home.why.yield.title')"></span>
         </h3>
-        <div v-html="t('blocks.why.yield.description')" class="text-base leading-relaxed" />
+        <div v-html="t('home.why.yield.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
           <SproutIcon class="w-6 h-6"></SproutIcon>
-          <span v-html="t('blocks.why.impact.title')"></span>
+          <span v-html="t('home.why.impact.title')"></span>
         </h3>
-        <div v-html="t('blocks.why.impact.description')" class="text-base leading-relaxed" />
+        <div v-html="t('home.why.impact.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
           <FlaskIcon class="w-6 h-6"></FlaskIcon>
-          <span v-html="t('blocks.why.innovation.title')"></span>
+          <span v-html="t('home.why.innovation.title')"></span>
         </h3>
-        <div v-html="t('blocks.why.innovation.description')" class="text-base leading-relaxed" />
+        <div v-html="t('home.why.innovation.description')" class="text-base leading-relaxed" />
       </article>
     </div>
   </section>

@@ -10,19 +10,19 @@
       "description": "Tokenized Renewable Energy Bonds. Secure & regulated."
     },
     "producers": {
-      "title": "Renewable Energy Producers | rebond - Tokenized Renewable Energy Bonds",
+      "title": "Renewable Energy Producers {'|'} rebond - Tokenized Renewable Energy Bonds",
       "description": ""
     },
     "investors": {
-      "title": "Digital Asset Investors | rebond - Tokenized Renewable Energy Bonds",
+      "title": "Digital Asset Investors {'|'} rebond - Tokenized Renewable Energy Bonds",
       "description": ""
     },
     "contact": {
-      "title": "Contact | rebond - Tokenized Renewable Energy Bonds",
+      "title": "Contact {'|'} rebond - Tokenized Renewable Energy Bonds",
       "description": "Contact our rebond team for your tokenized renewable energy bond investment projects."
     },
     "legals": {
-      "title": "Legal Notice | rebond.eco - Tokenized Renewable Energy Bonds",
+      "title": "Legal Notice {'|'} rebond.eco - Tokenized Renewable Energy Bonds",
       "description": "Legal notice for rebond.eco website, specialist in tokenized renewable energy bonds and energy transition."
     }
   },
@@ -32,6 +32,40 @@
       "subtitle1": "through tokenized bonds",
       "intro": "We connect renewable energy producers with digital asset investors within a secure and regulated framework.",
       "contact": "Contact us"
+    },
+    "solution": {
+      "title": "Our Solutions",
+      "structuration": {
+        "title": "Bond Structuring",
+        "description": "We design tailored bond instruments that meet the financing needs of renewable energy producers."
+      },
+      "tokenization": {
+        "title": "Tokenized Bond Issuance",
+        "description": "We tokenize our bonds to make them accessible to institutional investors and digital asset funds."
+      },
+      "distribution": {
+        "title": "Investor Distribution",
+        "description": "We ensure the distribution of tokenized bonds to qualified investors."
+      }
+    },
+    "why": {
+      "title": "Why <span class=\"text-secondary\">re</span>bond ?",
+      "regulation": {
+        "title": "Regulatory Security",
+        "description": "All our operations are fully compliant with AMF standards, supported by robust KYC/AML processes and regulated asset custody."
+      },
+      "yield": {
+        "title": "Stable Returns",
+        "description": "Bonds backed by real assets, offering structured yields (>6%) with lower volatility compared to traditional digital assets."
+      },
+      "impact": {
+        "title": "Positive Environmental Impact",
+        "description": "Each investment directly contributes to the development of new local solar and wind power capacities."
+      },
+      "innovation": {
+        "title": "Technological Innovation",
+        "description": "A digital platform that streamlines issuance, management, and monitoring of bonds, enhancing transparency for all stakeholders."
+      }
     }
   },
   "producers": {
@@ -78,40 +112,98 @@
       }
     }
   },
-  "blocks": {
-    "solution": {
-      "title": "Our Solutions",
-      "structuration": {
-        "title": "Bond Structuring",
-        "description": "We design tailored bond instruments that meet the financing needs of renewable energy producers."
+  "investors": {
+    "hero": {
+      "title": "Real, regulated <span class=\"text-secondary text-nowrap\">digital bonds</span> for your digital asset portfolios.",
+      "intro": "We provide digital asset funds with stable, compliant financial instruments that deliver positive impact."
+    },
+    "context": {
+      "title": "Context & Opportunity",
+      "paragraph1": "The digital asset market has grown rapidly but remains dominated by volatile instruments (cryptocurrencies) or low-yield products (stablecoins).",
+      "paragraph2": "Investors are now seeking digital assets backed by real-world assets, combining security, yield, and ESG alignment.",
+      "paragraph3": "<span class=\"font-medium\">rebond</span> addresses this demand by digitalizing bonds issued by renewable energy producers."
+    },
+    "offer": {
+      "title": "Our Investment Offer",
+      "digitalBonds": {
+        "title": "Digitalized Bonds",
+        "description": "Financial instruments issued and managed on blockchain, backed by real projects and offering a contractual yield above 6%, with full transparency and traceability."
       },
-      "tokenization": {
-        "title": "Tokenized Bond Issuance",
-        "description": "We tokenize our bonds to make them accessible to institutional investors and digital asset funds."
+      "underlying": {
+        "title": "Tangible Underlying",
+        "description": "Each bond directly finances solar or wind power plants, making a measurable contribution to the energy transition."
       },
       "distribution": {
-        "title": "Investor Distribution",
-        "description": "We ensure the distribution of tokenized bonds to qualified investors."
+        "title": "Secure Distribution",
+        "description": "Investment reserved for qualified actors, with custody ensured by a regulated depositary bank and strict compliance procedures (KYC/AML)."
       }
     },
     "why": {
-      "title": "Why <span class=\"text-secondary\">re</span>bond ?",
-      "regulation": {
+      "title": "Why invest with <span class=\"text-secondary\">re</span>bond?",
+      "regulatory": {
         "title": "Regulatory Security",
-        "description": "All our operations are fully compliant with AMF standards, supported by robust KYC/AML processes and regulated asset custody."
-      },
-      "yield": {
-        "title": "Stable Returns",
-        "description": "Bonds backed by real assets, offering structured yields (>6%) with lower volatility compared to traditional digital assets."
+        "description": "AMF framework, MiFID II compliance and integrated KYC/AML processes, ensuring end-to-end regulatory alignment."
       },
       "impact": {
-        "title": "Positive Environmental Impact",
-        "description": "Each investment directly contributes to the development of new local solar and wind power capacities."
+        "title": "Measurable Impact",
+        "description": "Each euro invested translates into installed MW capacity and avoided CO₂ emissions, with impact indicators tracked over time."
+      },
+      "yield": {
+        "title": "Attractive Yield",
+        "description": "Target yield above 6% per year, contractually defined and uncorrelated with crypto market volatility."
       },
       "innovation": {
-        "title": "Technological Innovation",
-        "description": "A digital platform that streamlines issuance, management, and monitoring of bonds, enhancing transparency for all stakeholders."
+        "title": "Digital Innovation",
+        "description": "On-chain issuance and lifecycle management, full audit trail, enhanced reporting and visibility for all stakeholders."
       }
+    },
+    "comparison": {
+      "title": "Comparison of Digital Asset Classes",
+      "headers": {
+        "assetClass": "Asset Class",
+        "yield": "Yield",
+        "volatility": "Volatility",
+        "esg": "ESG",
+        "regulation": "Regulation"
+      },
+      "rows": {
+        "crypto": {
+          "name": "Cryptocurrencies (BTC, ETH)",
+          "yield": "Speculative",
+          "volatility": "High",
+          "esg": "No",
+          "regulation": "No"
+        },
+        "stable": {
+          "name": "Stablecoins / Tokenized Fiat Bonds",
+          "yield": "~3%",
+          "volatility": "None",
+          "esg": "No",
+          "regulation": "Yes"
+        },
+        "commodities": {
+          "name": "Tokenized Commodities",
+          "yield": "Variable",
+          "volatility": "Medium",
+          "esg": "No",
+          "regulation": "Yes"
+        },
+        "rebond": {
+          "name": "rebond Renewable Energy Bonds",
+          "yield": ">6%",
+          "volatility": "Low",
+          "esg": "Yes",
+          "regulation": "Yes (AMF)"
+        }
+      }
+    },
+    "cta": {
+      "title": "Combine performance, security, and sustainability in your digital investments.",
+      "subtitle": "Let’s discuss your needs, compliance requirements, and investment horizon.",
+      "button": "Contact us"
+    },
+    "disclaimer": {
+      "text": "rebond provides financial instruments reserved for qualified investors. The information presented does not constitute a public offering."
     }
   },
   "footer": {

@@ -10,19 +10,19 @@
       "description": "Obligations digitalisées adossées aux énergies renouvelables. Sécurisé & réglementé AMF."
     },
     "producers": {
-      "title": "Producteurs EnR | rebond - Obligations EnR Digitalisées",
+      "title": "Producteurs EnR {'|'} rebond - Obligations EnR Digitalisées",
       "description": ""
     },
     "investors": {
-      "title": "Investisseurs en Actifs Numériques | rebond - Obligations EnR Digitalisées",
+      "title": "Investisseurs en Actifs Numériques {'|'} rebond - Obligations EnR Digitalisées",
       "description": ""
     },
     "contact": {
-      "title": "Contact | rebond - Obligations EnR Digitalisées",
+      "title": "Contact {'|'} rebond - Obligations EnR Digitalisées",
       "description": "Une question sur nos solutions ? Un projet d'investissement ? Notre équipe est à votre disposition pour vous accompagner."
     },
     "legals": {
-      "title": "Mentions Légales | rebond - Obligations EnR Digitalisées",
+      "title": "Mentions Légales {'|'} rebond - Obligations EnR Digitalisées",
       "description": "Mentions légales du site rebond.eco, spécialiste des obligations EnR digitalisées."
     }
   },
@@ -32,6 +32,40 @@
       "subtitle1": "grâce aux <span class=\"text-nowrap\">obligations digitalisées</span>",
       "intro": "Nous rapprochons les producteurs d’énergie renouvelable et les investisseurs en actifs numériques au sein d’un cadre réglementaire et sécurisé.",
       "contact": "Contactez-nous"
+    },
+    "solution": {
+      "title": "Nos Solutions",
+      "structuration": {
+        "title": "Structuration d’Obligations EnR",
+        "description": "Nous concevons des obligations adaptées aux besoins des producteurs d’énergie renouvelable."
+      },
+      "tokenization": {
+        "title": "Obligations EnR Digitalisées",
+        "description": "Nous digitalisons nos obligations afin de les rendre accessibles à des investisseurs institutionnels et fonds spécialisés en actifs numériques."
+      },
+      "distribution": {
+        "title": "Distribution aux Investisseurs",
+        "description": "Nous assurons la mise à disposition des obligations digitalisées auprès d’investisseurs qualifiés."
+      }
+    },
+    "why": {
+      "title": "Pourquoi <span class=\"text-secondary\">re</span>bond ?",
+      "regulation": {
+        "title": "Sécurité réglementaire",
+        "description": "Toutes nos opérations respectent les standards de l’AMF, avec des processus KYC/AML rigoureux et la conservation des titres chez un dépositaire agréé."
+      },
+      "yield": {
+        "title": "Rendement et stabilité",
+        "description": "Des obligations adossées à des actifs réels, offrant un rendement structuré (>6%) et une faible volatilité par rapport aux actifs numériques classiques."
+      },
+      "impact": {
+        "title": "Impact environnemental positif",
+        "description": "Chaque investissement contribue directement au développement de nouvelles capacités photovoltaïques et éoliennes locales."
+      },
+      "innovation": {
+        "title": "Innovation technologique",
+        "description": "Une solution innovante qui facilite l’émission, la gestion et le suivi des obligations, tout en renforçant la transparence pour les parties prenantes."
+      }
     }
   },
   "producers": {
@@ -80,64 +114,96 @@
   },
   "investors": {
     "hero": {
-      "title": "Investisseurs en <span class=\"text-secondary text-nowrap\">Actifs Numériques</span>",
-      "intro": "Les obligations tokenisées de Rebond offrent une alternative stable et transparente dans un univers d'actifs numériques souvent volatil. Elles allient le meilleur de deux mondes : la sécurité des obligations classiques et l'innovation de la blockchain."
+      "title": "Des <span class=\"text-secondary text-nowrap\">obligations digitalisées</span>, réelles et régulées pour vos portefeuilles d’actifs numériques.",
+      "intro": "Nous offrons aux fonds spécialisés dans les actifs numériques des instruments financiers stables, conformes et à impact positif."
     },
-    "yield": {
-      "title": "Rendement attractif et structuré",
-      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Coupon défini contractuellement, généralement > 6 %, adossé à des projets EnR réels.</li><li>Stabilité supérieure aux crypto-actifs traditionnels ou aux matières premières tokenisées.</li><li>Risque maîtrisé grâce à la nature obligataire du support (dette).</li></ul>"
+    "context": {
+      "title": "Contexte & opportunité",
+      "paragraph1": "Le marché des actifs numériques a connu une croissance rapide, mais reste dominé par des instruments volatils (cryptomonnaies) ou faiblement rémunérateurs (stablecoins).",
+      "paragraph2": "Les investisseurs recherchent désormais des actifs numériques adossés à des actifs réels, offrant à la fois sécurité, rendement et alignement ESG.",
+      "paragraph3": "<span class=\"font-medium\">rebond</span> répond à cette attente en digitalisant des obligations émises par des producteurs d’énergie renouvelable."
     },
-    "esg": {
-      "title": "Alignement ESG",
-      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Les capitaux financent exclusivement des projets solaires et éoliens en France et en Europe.</li><li>Chaque investissement contribue directement à la réduction des émissions de CO₂ et à la transition énergétique.</li><li>Eligible aux portefeuilles d'investissement responsables (ESG / impact).</li></ul>"
-    },
-    "security": {
-      "title": "Sécurité et conformité",
-      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Émissions encadrées par la réglementation de l'Autorité des Marchés Financiers (AMF).</li><li>Processus strict de KYC/AML pour les investisseurs.</li><li>Conservation des titres par un dépositaire réglementé, garantissant la sécurité juridique des actifs.</li></ul>"
-    },
-    "transparency": {
-      "title": "Transparence blockchain",
-      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Enregistrement immuable des obligations et flux financiers.</li><li>Suivi en temps réel des paiements et des performances des projets.</li><li>Accès direct à des rapports de performance clairs et vérifiables.</li></ul>"
-    },
-    "liquidity": {
-      "title": "Liquidité et diversification",
-      "description": "<ul class=\"list-disc ml-6 space-y-2\"><li>Même si la liquidité est plus limitée que sur les marchés crypto classiques, les obligations offrent une stabilité recherchée par les investisseurs institutionnels et fonds à impact.</li><li>Elles permettent de diversifier un portefeuille d'actifs numériques avec un produit adossé à du réel, moins sensible aux fluctuations spéculatives.</li></ul>"
-    }
-  },
-  "blocks": {
-    "solution": {
-      "title": "Nos Solutions",
-      "structuration": {
-        "title": "Structuration d’Obligations EnR",
-        "description": "Nous concevons des obligations adaptées aux besoins des producteurs d’énergie renouvelable."
+    "offer": {
+      "title": "Notre offre d’investissement",
+      "digitalBonds": {
+        "title": "Obligations digitalisées",
+        "description": "Des titres financiers émis et gérés sur blockchain, adossés à des projets réels et offrant un rendement contractuel supérieur à 6%, avec transparence et traçabilité intégrales."
       },
-      "tokenization": {
-        "title": "Obligations EnR Digitalisées",
-        "description": "Nous digitalisons nos obligations afin de les rendre accessibles à des investisseurs institutionnels et fonds spécialisés en actifs numériques."
+      "underlying": {
+        "title": "Sous-jacent tangible",
+        "description": "Chaque obligation finance directement des centrales photovoltaïques ou éoliennes, contribuant de manière mesurable à la transition énergétique."
       },
       "distribution": {
-        "title": "Distribution aux Investisseurs",
-        "description": "Nous assurons la mise à disposition des obligations digitalisées auprès d’investisseurs qualifiés."
+        "title": "Distribution sécurisée",
+        "description": "Investissement réservé aux acteurs qualifiés, avec conservation des titres par une banque dépositaire et procédures de conformité rigoureuses (KYC/AML)."
       }
     },
     "why": {
-      "title": "Pourquoi <span class=\"text-secondary\">re</span>bond ?",
-      "regulation": {
+      "title": "Pourquoi investir avec <span class=\"text-secondary\">re</span>bond ?",
+      "regulatory": {
         "title": "Sécurité réglementaire",
-        "description": "Toutes nos opérations respectent les standards de l’AMF, avec des processus KYC/AML rigoureux et la conservation des titres chez un dépositaire agréé."
-      },
-      "yield": {
-        "title": "Rendement et stabilité",
-        "description": "Des obligations adossées à des actifs réels, offrant un rendement structuré (>6%) et une faible volatilité par rapport aux actifs numériques classiques."
+        "description": "Cadre AMF, respect MiFID II et processus KYC/AML intégrés, pour une conformité de bout en bout."
       },
       "impact": {
-        "title": "Impact environnemental positif",
-        "description": "Chaque investissement contribue directement au développement de nouvelles capacités photovoltaïques et éoliennes locales."
+        "title": "Impact mesurable",
+        "description": "Chaque euro investi se traduit par des MW installés et des tonnes de CO₂ évitées, avec indicateurs d’impact suivis dans le temps."
+      },
+      "yield": {
+        "title": "Rendement attractif",
+        "description": "Rendement cible > 6% par an, défini contractuellement et décorrélé de la volatilité crypto."
       },
       "innovation": {
-        "title": "Innovation technologique",
-        "description": "Une solution innovante qui facilite l’émission, la gestion et le suivi des obligations, tout en renforçant la transparence pour les parties prenantes."
+        "title": "Innovation digitale",
+        "description": "Émission et gestion on-chain, piste d’audit, reporting et visibilité renforcée pour toutes les parties prenantes."
       }
+    },
+    "comparison": {
+      "title": "Comparatif des classes d’actifs numériques",
+      "headers": {
+        "assetClass": "Classe d’actifs",
+        "yield": "Rendement",
+        "volatility": "Volatilité",
+        "esg": "ESG",
+        "regulation": "Régulation"
+      },
+      "rows": {
+        "crypto": {
+          "name": "Cryptomonnaies (BTC, ETH)",
+          "yield": "Spéculatif",
+          "volatility": "Élevée",
+          "esg": "Non",
+          "regulation": "Non"
+        },
+        "stable": {
+          "name": "Stablecoins / Bonds fiat digitalisés",
+          "yield": "~3%",
+          "volatility": "Nulle",
+          "esg": "Non",
+          "regulation": "Oui"
+        },
+        "commodities": {
+          "name": "Matières premières tokenisées",
+          "yield": "Variable",
+          "volatility": "Moyenne",
+          "esg": "Non",
+          "regulation": "Oui"
+        },
+        "rebond": {
+          "name": "Obligations EnR rebond",
+          "yield": ">6%",
+          "volatility": "Faible",
+          "esg": "Oui",
+          "regulation": "Oui (AMF)"
+        }
+      }
+    },
+    "cta": {
+      "title": "Associez performance, sécurité et durabilité dans vos investissements numériques.",
+      "subtitle": "Discutons de vos besoins, de vos contraintes de conformité et de votre horizon d’investissement.",
+      "button": "Contactez-nous"
+    },
+    "disclaimer": {
+      "text": "rebond propose des instruments financiers réservés aux investisseurs qualifiés. Les informations présentées ne constituent pas une offre publique."
     }
   },
   "footer": {
