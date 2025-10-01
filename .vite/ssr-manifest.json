@@ -1,5 +1,6 @@
 {
   "\u0000vite/modulepreload-polyfill.js": [],
+  "../../../../../assets/funding-gap.webp": [],
   "../../../../../assets/logo-rebond.svg": [],
   "index.html": [],
   "node_modules/@intlify/core-base/dist/core-base.mjs": [],
@@ -29,10 +30,14 @@
   "src/components/icons/AccountGroupIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/ArrowLeftIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/ArrowRightIcon.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/components/icons/BankPlusIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/BritishFlagIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/BurgerIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/CloseIcon.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/components/icons/CubeOutlineIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/CubeScanIcon.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/components/icons/CubeSendIcon.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/components/icons/CurrencyEurIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/FileSignIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/FinanceIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/FlaskIcon.vue?vue&type=script&setup=true&lang.ts": [],
@@ -44,6 +49,7 @@
   "src/components/icons/ScaleBalanceIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/SpinnerIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/icons/SproutIcon.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/components/icons/SupportIcon.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/ui/EcoindexBadge.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/ui/FooterComponent.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/ui/LanguageSwitcher.vue?vue&type=script&setup=true&lang.ts": [],
@@ -60,5 +66,7 @@
   "src/router/index.ts": [],
   "src/views/ContactView.vue?vue&type=script&setup=true&lang.ts": [],
   "src/views/HomeView.vue?vue&type=script&setup=true&lang.ts": [],
-  "src/views/LegalsView.vue?vue&type=script&setup=true&lang.ts": []
+  "src/views/InvestorsView.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/views/LegalsView.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/views/ProducersView.vue?vue&type=script&setup=true&lang.ts": []
 }
