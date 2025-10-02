@@ -229,7 +229,9 @@
     },
     "address": {
       "title": "Our address",
-      "description": "Visit us at our offices in Bordeaux."
+      "description": "Visit us at our offices in Bordeaux.",
+      "name": "Rebond SAS",
+      "value": "16 place des Quinconces <br/>33000 Bordeaux, France"
     },
     "additional": {
       "title": "Are you an investor?",

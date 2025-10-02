@@ -60,10 +60,8 @@ useSeo('contact')
             {{ t('contact.address.description') }}
           </p>
           <address class="not-italic space-y-1">
-            <div class="font-semibold">Rebond SAS</div>
-            <div>Bordeaux Technowest - La Place</div>
-            <div>185 Boulevard Maréchal Leclerc</div>
-            <div>33000 Bordeaux - France</div>
+            <div class="font-semibold">{{ t('contact.address.name') }}</div>
+            <div v-html="t('contact.address.value')"></div>
           </address>
         </article>
 
