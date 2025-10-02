@@ -9,44 +9,57 @@ import fr from './locales/fr.json'
 
 const isClient = typeof window !== 'undefined'
 
-// Fonction pour détecter la langue initiale
-const getInitialLocale = (): SupportedLocale => {
-  if (isClient) {
-    // Côté client : détecter depuis l'URL
-    const pathname = window.location.pathname
-    const localeFromPath = pathname.split('/')[1]
-    if (SUPPORTED_LOCALES.includes(localeFromPath as SupportedLocale)) {
-      return localeFromPath as SupportedLocale
-    }
-  }
-  return 'fr' // langue par défaut
+const createI18nInstance = (initialLocale: SupportedLocale) => {
+  return createI18n({
+    legacy: false,
+    locale: initialLocale,
+    fallbackLocale: 'en',
+    warnHtmlMessage: false,
+    messages: { en, fr }
+  })
 }
 
-const i18n = createI18n({
-  legacy: false,
-  locale: getInitialLocale(), // langue initiale basée sur l'URL
-  fallbackLocale: 'en',
-  warnHtmlMessage: false, // Désactive le warning HTML
-  messages: {
-    en,
-    fr
-  }
-})
+const getLocaleFromPath = (pathname: string): SupportedLocale => {
+  const segments = pathname.split('/').filter(Boolean)
+  const localeSegment = segments.find(segment => 
+    SUPPORTED_LOCALES.includes(segment as SupportedLocale)
+  )
+  return (localeSegment as SupportedLocale) || 'fr'
+}
 
-export const createApp = ViteSSG(App, {
-  history: isClient
-    ? createWebHistory(import.meta.env.BASE_URL)
-    : createMemoryHistory(import.meta.env.BASE_URL),
-  routes: router.getRoutes(),
-  scrollBehavior: () => ({ top: 0, behavior: 'smooth' })
-}, ({ app, router: appRouter }) => {
-  app.use(i18n)
-  
-  // Synchronisation de la langue avec la route
-  appRouter.beforeEach((to) => {
-    const locale = getLocaleFromRoute(to)
-    if (i18n.global.locale.value !== locale) {
+const getInitialLocale = (): SupportedLocale => {
+  if (isClient) {
+    return getLocaleFromPath(window.location.pathname)
+  }
+  return 'fr'
+}
+
+export const createApp = ViteSSG(
+  App,
+  {
+    history: isClient 
+      ? createWebHistory(import.meta.env.BASE_URL)
+      : createMemoryHistory(import.meta.env.BASE_URL),
+    routes: router.getRoutes(),
+    scrollBehavior: () => ({ top: 0, behavior: 'smooth' })
+  },
+  ({ app, router: appRouter }) => {
+    const initialLocale = isClient ? getInitialLocale() : 'fr'
+    const i18n = createI18nInstance(initialLocale)
+    
+    app.use(i18n)
+
+    // Sync locale with route changes
+    appRouter.beforeEach((to) => {
+      const locale = getLocaleFromRoute(to)
+      i18n.global.locale.value = locale
+    })
+
+    // Ensure correct locale for SSG rendering
+    if (!isClient) {
+      const currentRoute = appRouter.currentRoute.value
+      const locale = getLocaleFromRoute(currentRoute)
       i18n.global.locale.value = locale
     }
-  })
-})
+  }
+)
