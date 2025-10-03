@@ -147,4 +147,67 @@ useSeo('producers')
     </div>
   </section>
 
+  <!-- Section Divider -->
+  <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
+
+  <section class="max-w-7xl mx-auto p-4 lg:p-8">
+    <h2 class="font-semibold text-3xl mb-4" v-html="t('compliance.governance.title')"></h2>
+    <div class="flex flex-col lg:flex-row gap-4">
+
+      <article class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
+        <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center text-nowrap">
+          <Icon icon="mdi:eye-check" class="text-2xl" />
+          <span v-html="t('compliance.governance.advisory.title')"></span>
+        </h3>
+        <div v-html="t('compliance.governance.advisory.description')" class="text-base leading-relaxed" />
+      </article>
+
+      <article class="basis-auto p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
+        <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center text-nowrap">
+          <Icon icon="mdi:scale-balance" class="text-2xl" />
+          <span v-html="t('compliance.governance.consultants.title')"></span>
+        </h3>
+        <div v-html="t('compliance.governance.consultants.description')" class="text-base leading-relaxed" />
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
+
+  <section class="max-w-7xl mx-auto p-4 lg:p-8">
+    <h2 class="font-semibold text-3xl mb-4" v-html="t('compliance.transparency.title')"></h2>
+    <div class="flex flex-col lg:flex-row gap-4">
+
+      <article class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
+        <p class="text-base leading-relaxed mb-2 flex gap-2">
+          <span>
+            <Icon icon="mdi:alert-circle-outline" class="text-2xl" />
+          </span>
+          <span v-html="t('compliance.transparency.disclaimer')"></span>
+        </p>
+      </article>
+
+      <article class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
+        <p class="text-base leading-relaxed mb-2 flex gap-2">
+          <span>
+            <Icon icon="mdi:shield-account-outline" class="text-2xl" />
+          </span>
+          <span v-html="t('compliance.transparency.restricted')"></span>
+        </p>
+      </article>
+
+      <article class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
+        <p class="text-base leading-relaxed mb-2 flex gap-2">
+          <span>
+            <Icon icon="mdi:file-chart-outline" class="text-2xl" />
+          </span>
+          <span v-html="t('compliance.transparency.reporting')"></span>
+        </p>
+      </article>
+
+    </div>
+  </section>
+
 </template>

@@ -219,14 +219,14 @@
     "regulation": {
       "title": "Cadre réglementaire",
       "prospectus": "Opérations encadrées par : <br/><span class=\"font-semibold\">Règlement Prospectus AMF</span>",
-      "qualified": "Investisseurs qualifiés <br/><span class=\"text-xs\">* Connaissance client et Lutte contre le blanchiment d'argent",
-      "risk": "Information et transparence<br/><span class=\"text-xs\">* Markets in Financial Instruments Directive</span>"
+      "qualified": "Investisseurs qualifiés <br/><span class=\"text-sm\">* Procédures KYC / LCB-FT</span>",
+      "risk": "Information sur les risques<br/><span class=\"text-sm\">* Markets in Financial Instruments Directive</span>"
     },
     "customerSecurity": {
       "title": "Sécurité des investisseurs",
       "tokenization": "<span class=\"font-semibold\">Digitalisation sécurisée</span> via des smart-contracts audités",
       "custody": "<span class=\"font-semibold\">Conservation des titres</span> via un dépositaire bancaire agréé",
-      "traceability": "<span class=\"font-semibold\">Traçabilité et transparence</span> via blockchains publiques"
+      "traceability": "<span class=\"font-semibold\">Traçabilité et transparence</span><br/>Auditable sur blockchains publiques"
     },
     "rwa": {
       "title": "Sécurité des actifs réels",
@@ -246,6 +246,23 @@
         "title": "Suivi de l’impact",
         "description": "Reporting ESG conforme aux meilleures pratiques internationales"
       }
+    },
+    "governance": {
+      "title": "Gouvernance & Contrôle",
+      "advisory": {
+        "title": "Un comité consultatif indépendant",
+        "description": "Consitué d'experts en réglementation financière, énergies renouvelables et blockchain"
+      },
+      "consultants": {
+        "title": "Des cabinets juridiques spécialisés",
+        "description": "Consultés à chaque opération"
+      }
+    },
+    "transparency": {
+      "title": "Transparence & Responsabilités",
+      "disclaimer": "Les rendements annoncés constituent des objectifs non garantis. Chaque investissement comporte un risque de perte en capital et de liquidité",
+      "restricted": "Les obligations sont exclusivement destinées à des investisseurs qualifiés ; aucune offre au public n’est réalisée",
+      "reporting": "<span class=\"font-semibold\"><span class=\"text-secondary\">re</span>bond</span> s’engage à publier régulièrement des rapports financiers et extra-financiers, incluant le suivi de l’impact ESG"
     }
   },
   "footer": {
