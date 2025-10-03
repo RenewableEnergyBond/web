@@ -114,7 +114,7 @@ useSeo('producers')
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <Icon icon="mdi:chart-line" class="w-6 h-6" />
+          <Icon icon="mdi:chart-line" class="text-2xl" />
           <span v-html="t('compliance.rwa.study.title')"></span>
         </h3>
         <div v-html="t('compliance.rwa.study.description')" class="text-base leading-relaxed" />
@@ -122,7 +122,7 @@ useSeo('producers')
 
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <Icon icon="mdi:math-compass" class="w-6 h-6" />
+          <Icon icon="mdi:math-compass" class="text-2xl" />
           <span v-html="t('compliance.rwa.structuration.title')"></span>
         </h3>
         <div v-html="t('compliance.rwa.structuration.description')" class="text-base leading-relaxed" />
@@ -130,7 +130,7 @@ useSeo('producers')
 
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <Icon icon="mdi:bank" class="w-6 h-6" />
+          <Icon icon="mdi:bank" class="text-2xl" />
           <span v-html="t('compliance.rwa.custody.title')"></span>
         </h3>
         <div v-html="t('compliance.rwa.custody.description')" class="text-base leading-relaxed" />
@@ -138,7 +138,7 @@ useSeo('producers')
 
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <Icon icon="mdi:chart-bar" class="w-6 h-6" />
+          <Icon icon="mdi:chart-bar" class="text-2xl" />
           <span v-html="t('compliance.rwa.impact.title')"></span>
         </h3>
         <div v-html="t('compliance.rwa.impact.description')" class="text-base leading-relaxed" />

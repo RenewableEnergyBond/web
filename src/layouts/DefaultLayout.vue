@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 import FooterComponent from '@/components/ui/FooterComponent.vue'
-import BurgerIcon from '@/components/icons/BurgerIcon.vue'
-import CloseIcon from '@/components/icons/CloseIcon.vue'
+import { Icon } from '@iconify/vue'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
 import { useLocalization } from '@/composables/useLocalization'
 import { useMobileMenu } from '@/composables/useMobileMenu'
@@ -28,12 +27,12 @@ const { showMobileMenu, openMenu, closeMenu } = useMobileMenu()
           <button @click="openMenu" :class="{ 'block': !showMobileMenu, 'hidden': showMobileMenu }"
             class="text-primary cursor-pointer">
             <span class="sr-only">Open menu</span>
-            <BurgerIcon class="w-8 h-8" />
+            <Icon icon="mdi:menu" class="text-4xl" />
           </button>
           <button @click="closeMenu" :class="{ 'block': showMobileMenu, 'hidden': !showMobileMenu }"
             class="text-primary cursor-pointer">
             <span class="sr-only">Close menu</span>
-            <CloseIcon class="w-8 h-8" />
+            <Icon icon="mdi:close" class="text-4xl" />
           </button>
         </div>
         <!-- MENU DESKTOP -->

@@ -2,12 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
 import { useSeo } from '@/composables/useSeo'
-import CurrencyEurIcon from '@/components/icons/CurrencyEurIcon.vue'
-import FileSignIcon from '@/components/icons/FileSignIcon.vue'
-import CubeSendIcon from '@/components/icons/CubeSendIcon.vue'
-import SupportIcon from '@/components/icons/SupportIcon.vue'
-import BankPlusIcon from '@/components/icons/BankPlusIcon.vue'
-import SproutIcon from '@/components/icons/SproutIcon.vue'
+import { Icon } from '@iconify/vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
@@ -59,21 +54,21 @@ useSeo('producers')
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <FileSignIcon class="w-6 h-6"></FileSignIcon>
+          <Icon icon="mdi:file-sign" class="text-2xl" />
           <span v-html="t('producers.solution.structured.title')"></span>
         </h3>
         <p v-html="t('producers.solution.structured.description')" class="text-base leading-relaxed"></p>
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <CubeSendIcon class="w-6 h-6"></CubeSendIcon>
+          <Icon icon="mdi:cube-send" class="text-2xl" />
           <span v-html="t('producers.solution.digitalization.title')"></span>
         </h3>
         <p v-html="t('producers.solution.digitalization.description')" class="text-base leading-relaxed"></p>
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <SupportIcon class="w-6 h-6"></SupportIcon>
+          <Icon icon="mdi:lifebuoy" class="text-2xl" />
           <span v-html="t('producers.solution.support.title')"></span>
         </h3>
         <p v-html="t('producers.solution.support.description')" class="text-base leading-relaxed"></p>
@@ -92,28 +87,28 @@ useSeo('producers')
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <BankPlusIcon class="w-6 h-6" />
+          <Icon icon="mdi:bank-plus" class="text-2xl" />
           <span v-html="t('producers.advantages.capital.title')"></span>
         </h3>
         <div v-html="t('producers.advantages.capital.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <CurrencyEurIcon class="w-6 h-6" />
+          <Icon icon="mdi:currency-eur" class="text-2xl" />
           <span v-html="t('producers.advantages.fees.title')"></span>
         </h3>
         <div v-html="t('producers.advantages.fees.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <SproutIcon class="w-6 h-6"></SproutIcon>
+          <Icon icon="mdi:sprout" class="text-2xl" />
           <span v-html="t('producers.advantages.esg.title')"></span>
         </h3>
         <div v-html="t('producers.advantages.esg.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <CubeSendIcon class="w-6 h-6" />
+          <Icon icon="mdi:cube-send" class="text-2xl" />
           <span v-html="t('producers.advantages.speed.title')"></span>
         </h3>
         <div v-html="t('producers.advantages.speed.description')" class="text-base leading-relaxed" />

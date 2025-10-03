@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import SpinnerIcon from '../icons/SpinnerIcon.vue'
-import MailIcon from '../icons/MailIcon.vue'
+import { Icon } from '@iconify/vue'
 
 interface Props {
   showOptIn?: boolean
@@ -184,13 +183,13 @@ const resetForm = (): void => {
 
       <!-- Submit button -->
       <button type="submit" :disabled="isSubmitting" :aria-describedby="isSubmitting ? 'submit-status' : undefined"
-        class="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200">
+        class="cursor-pointer w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200">
         <span v-if="isSubmitting" class="flex items-center justify-center gap-2">
-          <SpinnerIcon class="w-4 h-4" />
+          <Icon icon="mdi:loading" class="text-base animate-spin" />
           <span id="submit-status">{{ t('newsletter.form.submitting') }}</span>
         </span>
         <span v-else class="flex items-center justify-center gap-2">
-          <MailIcon class="w-4 h-4" />
+          <Icon icon="mdi:mail" class="text-base" />
           {{ t('newsletter.form.submit') }}
         </span>
       </button>

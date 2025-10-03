@@ -6,7 +6,7 @@ import ModalComponent from '@/components/ui/ModalComponent.vue'
 import BrevoNewsletterForm from '@/components/forms/BrevoNewsletterForm.vue'
 import EcoindexBadge from '@/components/ui/EcoindexBadge.vue'
 import { useLocalization } from '@/composables/useLocalization'
-import MailIcon from '../icons/MailIcon.vue'
+import { Icon } from '@iconify/vue'
 
 interface Props {
   class?: string
@@ -41,7 +41,7 @@ const openModalNewsletter = (): void => {
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
             <button type="button" @click="openModalNewsletter"
               class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg cursor-pointer px-4 py-2 self-center text-nowrap transition-all duration-200 flex items-center gap-2">
-              <MailIcon class="w-5 h-5"></MailIcon>
+              <Icon icon="mdi:mail" class="text-xl" />
               {{ t('footer.newsletter.subscribe') }}
             </button>
           </div>

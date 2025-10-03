@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import AccountGroupIcon from '@/components/icons/AccountGroupIcon.vue'
-import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
-import CubeOutlineIcon from '@/components/icons/CubeOutlineIcon.vue'
-import FinanceIcon from '@/components/icons/FinanceIcon.vue'
-import FlaskIcon from '@/components/icons/FlaskIcon.vue'
-import ScaleBalanceIcon from '@/components/icons/ScaleBalanceIcon.vue'
-import SproutIcon from '@/components/icons/SproutIcon.vue'
+import { Icon } from '@iconify/vue'
 import { useLocalization } from '@/composables/useLocalization'
 import { useI18n } from 'vue-i18n'
 
@@ -55,7 +49,7 @@ const { getRouteFor } = useLocalization()
       <!-- Digital Bonds -->
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <CubeOutlineIcon class="w-6 h-6" />
+          <Icon icon="mdi:cube-outline" class="text-2xl" />
           <span v-html="t('investors.offer.digitalBonds.title')"></span>
         </h3>
         <p class="text-base leading-relaxed" v-html="t('investors.offer.digitalBonds.description')" />
@@ -64,7 +58,7 @@ const { getRouteFor } = useLocalization()
       <!-- Underlying -->
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <SproutIcon class="w-6 h-6" />
+          <Icon icon="mdi:solar-panel" class="text-2xl" />
           <span v-html="t('investors.offer.underlying.title')"></span>
         </h3>
         <p class="text-base leading-relaxed" v-html="t('investors.offer.underlying.description')" />
@@ -73,7 +67,7 @@ const { getRouteFor } = useLocalization()
       <!-- Distribution -->
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <AccountGroupIcon class="w-6 h-6" />
+          <Icon icon="mdi:account-group" class="text-2xl" />
           <span v-html="t('investors.offer.distribution.title')"></span>
         </h3>
         <p class="text-base leading-relaxed" v-html="t('investors.offer.distribution.description')" />
@@ -90,7 +84,7 @@ const { getRouteFor } = useLocalization()
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <ScaleBalanceIcon class="w-6 h-6" />
+          <Icon icon="mdi:scale-balance" class="text-2xl" />
           <span v-html="t('investors.why.regulatory.title')"></span>
         </h3>
         <div v-html="t('investors.why.regulatory.description')" class="text-base leading-relaxed" />
@@ -98,7 +92,7 @@ const { getRouteFor } = useLocalization()
 
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <SproutIcon class="w-6 h-6" />
+          <Icon icon="mdi:sprout" class="text-2xl" />
           <span v-html="t('investors.why.impact.title')"></span>
         </h3>
         <div v-html="t('investors.why.impact.description')" class="text-base leading-relaxed" />
@@ -106,7 +100,7 @@ const { getRouteFor } = useLocalization()
 
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <FinanceIcon class="w-6 h-6" />
+          <Icon icon="mdi:finance" class="text-2xl" />
           <span v-html="t('investors.why.yield.title')"></span>
         </h3>
         <div v-html="t('investors.why.yield.description')" class="text-base leading-relaxed" />
@@ -114,7 +108,7 @@ const { getRouteFor } = useLocalization()
 
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <FlaskIcon class="w-6 h-6" />
+          <Icon icon="mdi:flask" class="text-2xl" />
           <span v-html="t('investors.why.innovation.title')"></span>
         </h3>
         <div v-html="t('investors.why.innovation.description')" class="text-base leading-relaxed" />
@@ -192,7 +186,7 @@ const { getRouteFor } = useLocalization()
       <RouterLink :to="getRouteFor('Contact')"
         class="text-primary font-semibold py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%] uppercase"
         :aria-label="t('investors.cta.button')">
-        <ArrowRightIcon class="w-6 h-6" />
+        <Icon icon="mdi:arrow-right" class="text-2xl" />
         {{ t('investors.cta.button') }}
       </RouterLink>
     </div>

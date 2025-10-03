@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
 import { useSeo } from '@/composables/useSeo'
-import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue'
+import { Icon } from '@iconify/vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
@@ -130,7 +130,7 @@ useSeo('legals')
     <div class="mt-12 pt-8 border-t border-primary/20 text-center">
       <RouterLink :to="getRouteFor('Home')"
         class="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors font-medium text-lg">
-        <ArrowLeftIcon class="w-5 h-5"></ArrowLeftIcon>
+        <Icon icon="mdi:arrow-left" class="text-xl" />
         {{ t('legals.backToHome') }}
       </RouterLink>
     </div>
