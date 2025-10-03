@@ -214,7 +214,7 @@
   "compliance": {
     "hero": {
       "title": "<span class=\"text-secondary\">Conformité</span> réglementaire & Sécurité",
-      "intro": "La confiance est au cœur de chaque opération. <br/><span class=\"font-semibold\"><span class=\"text-secondary\">re</span>bond</span> s’appuie sur un cadre juridique clair, des partenaires régulés et des procédures strictes pour garantir la sécurité de ses investisseurs et de ses émetteurs."
+      "intro": "La confiance est au cœur de chaque opération. <br/><span class=\"font-semibold\"><span class=\"text-secondary\">re</span>bond</span> s’appuie sur un cadre juridique clair, des partenaires agréés et des procédures strictes pour garantir la sécurité de ses investisseurs et de ses émetteurs."
     },
     "regulation": {
       "title": "Cadre réglementaire",
@@ -240,7 +240,7 @@
       },
       "custody": {
         "title": "Sûretés & conservation",
-        "description": "Les titres émis sont bloqués et sécurisés par un dépositaire régulé"
+        "description": "Les titres émis sont bloqués et sécurisés par un dépositaire agréé"
       },
       "impact": {
         "title": "Suivi de l’impact",
@@ -255,7 +255,7 @@
       },
       "consultants": {
         "title": "Des cabinets juridiques spécialisés",
-        "description": "Consultés à chaque opération"
+        "description": "Mobilisés à chaque émission"
       }
     },
     "transparency": {

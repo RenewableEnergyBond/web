@@ -162,7 +162,7 @@ useSeo('producers')
         <div v-html="t('compliance.governance.advisory.description')" class="text-base leading-relaxed" />
       </article>
 
-      <article class="basis-auto p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
+      <article class="p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center text-nowrap">
           <Icon icon="mdi:scale-balance" class="text-2xl" />
           <span v-html="t('compliance.governance.consultants.title')"></span>
