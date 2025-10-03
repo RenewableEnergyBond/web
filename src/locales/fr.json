@@ -2,6 +2,7 @@
   "menu": {
     "producers": "Producteurs EnR",
     "investors": "Investisseurs",
+    "compliance": "Conformité",
     "contact": "Contact"
   },
   "seo": {
@@ -15,6 +16,10 @@
     },
     "investors": {
       "title": "Investisseurs en Actifs Numériques {'|'} rebond - Obligations EnR Digitalisées",
+      "description": ""
+    },
+    "compliance": {
+      "title": "Conformité réglementaire & Sécurité {'|'} rebond - Obligations EnR Digitalisées",
       "description": ""
     },
     "contact": {
@@ -75,7 +80,7 @@
     },
     "needs": {
       "title": "Vos besoins financiers",
-      "description": "Financer un projet d'énergie renouvelable demande plus que la seule dette bancaire.<br/>Entre apports en fonds propres et délais de mise en place, un manque subsiste souvent.<br/><span class=\"font-medium\">Nous répondons à ce besoin avec une approche souple, rapide et adaptée à vos projets.</span>"
+      "description": "Financer un projet d'énergie renouvelable demande plus que la seule dette bancaire.<br/>Entre apports en fonds propres et délais de mise en place, un manque subsiste souvent.<br/><span class=\"font-semibold\">Nous répondons à ce besoin avec une approche souple, rapide et adaptée à vos projets.</span>"
     },
     "solution": {
       "title": "Nos solutions",
@@ -121,7 +126,7 @@
       "title": "Contexte & opportunité",
       "paragraph1": "Le marché des actifs numériques a connu une croissance rapide, mais reste dominé par des instruments volatils (cryptomonnaies) ou faiblement rémunérateurs (stablecoins).",
       "paragraph2": "Les investisseurs recherchent désormais des actifs numériques adossés à des actifs réels, offrant à la fois sécurité, rendement et alignement ESG.",
-      "paragraph3": "<span class=\"font-medium\">rebond</span> répond à cette attente en digitalisant des obligations émises par des producteurs d’énergie renouvelable."
+      "paragraph3": "<span class=\"font-semibold\">rebond</span> répond à cette attente en digitalisant des obligations émises par des producteurs d’énergie renouvelable."
     },
     "offer": {
       "title": "Notre offre d’investissement",
@@ -204,6 +209,43 @@
     },
     "disclaimer": {
       "text": "rebond propose des instruments financiers réservés aux investisseurs qualifiés. Les informations présentées ne constituent pas une offre publique."
+    }
+  },
+  "compliance": {
+    "hero": {
+      "title": "<span class=\"text-secondary\">Conformité</span> réglementaire & Sécurité",
+      "intro": "La confiance est au cœur de chaque opération. <br/><span class=\"font-semibold\"><span class=\"text-secondary\">re</span>bond</span> s’appuie sur un cadre juridique clair, des partenaires régulés et des procédures strictes pour garantir la sécurité de ses investisseurs et de ses émetteurs."
+    },
+    "regulation": {
+      "title": "Cadre réglementaire",
+      "prospectus": "Opérations encadrées par : <br/><span class=\"font-semibold\">Règlement Prospectus AMF</span>",
+      "qualified": "Investisseurs qualifiés <br/><span class=\"text-xs\">* Connaissance client et Lutte contre le blanchiment d'argent",
+      "risk": "Information et transparence<br/><span class=\"text-xs\">* Markets in Financial Instruments Directive</span>"
+    },
+    "customerSecurity": {
+      "title": "Sécurité des investisseurs",
+      "tokenization": "<span class=\"font-semibold\">Digitalisation sécurisée</span> via des smart-contracts audités",
+      "custody": "<span class=\"font-semibold\">Conservation des titres</span> via un dépositaire bancaire agréé",
+      "traceability": "<span class=\"font-semibold\">Traçabilité et transparence</span> via blockchains publiques"
+    },
+    "rwa": {
+      "title": "Sécurité des actifs réels",
+      "study": {
+        "title": "Analyse préalable",
+        "description": "Audit technique, financier et réglementaire des projets financés"
+      },
+      "structuration": {
+        "title": "Structuration",
+        "description": "Véhicules dédiés (SPV) et clauses protectrices (covenants)"
+      },
+      "custody": {
+        "title": "Sûretés & conservation",
+        "description": "Les titres émis sont bloqués et sécurisés par un dépositaire régulé"
+      },
+      "impact": {
+        "title": "Suivi de l’impact",
+        "description": "Reporting ESG conforme aux meilleures pratiques internationales"
+      }
     }
   },
   "footer": {

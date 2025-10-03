@@ -4,6 +4,7 @@ import ProducersView from '@/views/ProducersView.vue'
 import InvestorsView from '@/views/InvestorsView.vue'
 import ContactView from '@/views/ContactView.vue'
 import LegalsView from '@/views/LegalsView.vue'
+import ComplianceView from '@/views/ComplianceView.vue'
 
 const isClient = typeof window !== 'undefined'
 
@@ -24,6 +25,10 @@ export const ROUTE_SLUGS = {
   investors: {
     fr: 'investisseurs',
     en: 'investors'
+  },
+  compliance: {
+    fr: 'conformite-reglementaire',
+    en: 'compliance'
   },
   contact: {
     fr: 'contact',
@@ -71,6 +76,14 @@ const createLocalizedRoutes = (): RouteRecordRaw[] => {
       name: `Investors-${locale}`,
       component: InvestorsView,
       meta: { locale, seoKey: 'home' }
+    })
+
+    // Compliance
+    routes.push({
+      path: `${prefix}/${ROUTE_SLUGS.compliance[locale]}`,
+      name: `Compliance-${locale}`,
+      component: ComplianceView,
+      meta: { locale, seoKey: 'compliance' }
     })
 
     // Contact

@@ -75,7 +75,7 @@
     },
     "needs": {
       "title": "Your Financing Needs",
-      "description": "Developing a renewable energy project often requires more than bank debt alone.<br/>Between equity requirements and lengthy procedures, a funding gap frequently remains.<br/><span class=\"font-medium\">We address this complementary need with a flexible, fast, and tailored approach to your projects.</span>"
+      "description": "Developing a renewable energy project often requires more than bank debt alone.<br/>Between equity requirements and lengthy procedures, a funding gap frequently remains.<br/><span class=\"font-semibold\">We address this complementary need with a flexible, fast, and tailored approach to your projects.</span>"
     },
     "solution": {
       "title": "Our Solutions",
@@ -121,7 +121,7 @@
       "title": "Context & Opportunity",
       "paragraph1": "The digital asset market has grown rapidly but remains dominated by volatile instruments (cryptocurrencies) or low-yield products (stablecoins).",
       "paragraph2": "Investors are now seeking digital assets backed by real-world assets, combining security, yield, and ESG alignment.",
-      "paragraph3": "<span class=\"font-medium\">rebond</span> addresses this demand by digitalizing bonds issued by renewable energy producers."
+      "paragraph3": "<span class=\"font-semibold\">rebond</span> addresses this demand by digitalizing bonds issued by renewable energy producers."
     },
     "offer": {
       "title": "Our Investment Offer",
@@ -184,7 +184,7 @@
         "commodities": {
           "name": "Tokenized Commodities",
           "yield": "Variable",
-          "volatility": "Medium",
+          "volatility": "semibold",
           "esg": "No",
           "regulation": "Yes"
         },

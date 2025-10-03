@@ -2,7 +2,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useHead } from '@unhead/vue'
 
-export function useSeo(pageKey: 'home' | 'contact' | 'legals' | 'producers' | 'investors') {
+export function useSeo(pageKey: 'home' | 'contact' | 'legals' | 'producers' | 'investors' | 'compliance' ) {
   const { t, locale } = useI18n()
   
   const title = computed(() => t(`seo.${pageKey}.title`))
