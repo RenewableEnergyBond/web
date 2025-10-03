@@ -11,11 +11,11 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     tailwindcss(),
     vue(),
-    vueDevTools(),
+    vueDevTools()
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  },
+  }
 }))

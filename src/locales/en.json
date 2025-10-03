@@ -2,6 +2,7 @@
   "menu": {
     "producers": "Producers",
     "investors": "Investors",
+    "compliance": "Conformité",
     "contact": "Contact"
   },
   "seo": {
@@ -75,7 +76,7 @@
     },
     "needs": {
       "title": "Your Financing Needs",
-      "description": "Developing a renewable energy project often requires more than bank debt alone.<br/>Between equity requirements and lengthy procedures, a funding gap frequently remains.<br/><span class=\"font-medium\">We address this complementary need with a flexible, fast, and tailored approach to your projects.</span>"
+      "description": "Developing a renewable energy project often requires more than bank debt alone.<br/>Between equity requirements and lengthy procedures, a funding gap frequently remains.<br/><span class=\"font-semibold\">We address this complementary need with a flexible, fast, and tailored approach to your projects.</span>"
     },
     "solution": {
       "title": "Our Solutions",
@@ -121,7 +122,7 @@
       "title": "Context & Opportunity",
       "paragraph1": "The digital asset market has grown rapidly but remains dominated by volatile instruments (cryptocurrencies) or low-yield products (stablecoins).",
       "paragraph2": "Investors are now seeking digital assets backed by real-world assets, combining security, yield, and ESG alignment.",
-      "paragraph3": "<span class=\"font-medium\">rebond</span> addresses this demand by digitalizing bonds issued by renewable energy producers."
+      "paragraph3": "<span class=\"font-semibold\">rebond</span> addresses this demand by digitalizing bonds issued by renewable energy producers."
     },
     "offer": {
       "title": "Our Investment Offer",
@@ -184,7 +185,7 @@
         "commodities": {
           "name": "Tokenized Commodities",
           "yield": "Variable",
-          "volatility": "Medium",
+          "volatility": "semibold",
           "esg": "No",
           "regulation": "Yes"
         },
@@ -204,6 +205,60 @@
     },
     "disclaimer": {
       "text": "rebond provides financial instruments reserved for qualified investors. The information presented does not constitute a public offering."
+    }
+  },
+  "compliance": {
+    "hero": {
+      "title": "<span class=\"text-secondary\">Regulatory</span> Compliance & Security",
+      "intro": "Trust is at the heart of every transaction. <br/><span class=\"font-semibold\"><span class=\"text-secondary\">re</span>bond</span> builds on a clear legal framework, licensed partners and strict procedures to safeguard both investors and issuers."
+    },
+    "regulation": {
+      "title": "Regulatory framework",
+      "prospectus": "Transactions governed by: <br/><span class=\"font-semibold\">EU Prospectus Regulation (AMF)</span>",
+      "qualified": "Qualified investors only <br/><span class=\"text-sm\">* KYC / AML procedures</span>",
+      "risk": "Risk disclosure<br/><span class=\"text-sm\">* Markets in Financial Instruments Directive (MiFID II)</span>"
+    },
+    "customerSecurity": {
+      "title": "Investor security",
+      "tokenization": "<span class=\"font-semibold\">Secure tokenization</span> through audited smart contracts",
+      "custody": "<span class=\"font-semibold\">Custody of securities</span> with a licensed banking partner",
+      "traceability": "<span class=\"font-semibold\">Traceability & transparency</span><br/>Auditable on public blockchains"
+    },
+    "rwa": {
+      "title": "Real-world asset security",
+      "study": {
+        "title": "Due diligence",
+        "description": "Technical, financial and regulatory audits of financed projects"
+      },
+      "structuration": {
+        "title": "Structuring",
+        "description": "Dedicated SPVs with protective covenants"
+      },
+      "custody": {
+        "title": "Collateral & custody",
+        "description": "Issued securities locked and secured with a regulated custodian"
+      },
+      "impact": {
+        "title": "Impact monitoring",
+        "description": "ESG reporting aligned with international best practices"
+      }
+    },
+    "governance": {
+      "title": "Governance & Oversight",
+      "advisory": {
+        "title": "An independent advisory board",
+        "description": "Gathering experts in financial regulation, renewable energy and blockchain"
+      },
+      "consultants": {
+        "title": "Specialized legal advisors",
+        "description": "Involved in every issuance"
+      }
+    },
+    "transparency": {
+      "title": "Transparency & Accountability",
+      "disclaimer": "Target returns are not guaranteed. Every investment carries a risk of capital loss and limited liquidity",
+      "restricted": "Securities are strictly limited to qualified investors; no public offering is made",
+      "reporting": "<span class=\"font-semibold\"><span class=\"text-secondary\">re</span>bond</span> commits to publishing regular financial and extra-financial reports, including ESG impact tracking"
     }
   },
   "footer": {

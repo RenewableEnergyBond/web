@@ -2,10 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
 import { useSeo } from '@/composables/useSeo'
-import MailIcon from '@/components/icons/MailIcon.vue'
-import MarkerIcon from '@/components/icons/MarkerIcon.vue'
-import OpenIcon from '@/components/icons/OpenIcon.vue'
-import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue'
+import { Icon } from '@iconify/vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
@@ -36,7 +33,7 @@ useSeo('contact')
           class="bg-white p-6 lg:p-8 rounded-xl border-2 border-primary/20 border-dashed hover:border-primary/40 transition-colors">
 
           <h2 class="flex gap-2 text-xl lg:text-2xl font-semibold mb-2">
-            <MailIcon class="w-8 h-8"></MailIcon>
+            <Icon icon="mdi:mail" class="text-4xl" />
             {{ t('contact.email.title') }}
           </h2>
           <p class="mb-4 text-sm lg:text-base">
@@ -45,7 +42,7 @@ useSeo('contact')
           <a href="mailto:bonjour@rebond.eco"
             class="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors font-medium text-lg">
             bonjour@rebond.eco
-            <OpenIcon class="w-4 h-4"></OpenIcon>
+            <Icon icon="mdi:open-in-new" class="text-base" />
           </a>
         </article>
 
@@ -53,7 +50,7 @@ useSeo('contact')
         <article
           class="bg-white p-6 lg:p-8 rounded-xl border-2 border-primary/20 border-dashed hover:border-primary/40 transition-colors">
           <h2 class="flex gap-2 text-xl lg:text-2xl font-semibold mb-2">
-            <MarkerIcon class="w-8 h-8"></MarkerIcon>
+            <Icon icon="mdi:map-marker" class="text-4xl" />
             {{ t('contact.address.title') }}
           </h2>
           <p class="mb-4 text-sm lg:text-base">
@@ -80,7 +77,7 @@ useSeo('contact')
           <!-- Back to Home -->
           <RouterLink :to="getRouteFor('Home')"
             class="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors font-medium text-lg">
-            <ArrowLeftIcon class="w-5 h-5"></ArrowLeftIcon>
+            <Icon icon="mdi:arrow-left" class="text-xl" />
             {{ t('contact.backToHome') }}
           </RouterLink>
         </div>

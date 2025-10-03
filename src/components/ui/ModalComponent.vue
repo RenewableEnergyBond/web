@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, watch } from 'vue'
-import CloseIcon from '@/components/icons/CloseIcon.vue'
+import { Icon } from '@iconify/vue'
 
 interface Props {
   modelValue: boolean
@@ -80,10 +80,10 @@ onUnmounted(() => {
             <!-- Close Button -->
             <button
               @click="closeModal"
-              class="absolute top-4 right-4 z-10 p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-300"
+              class="absolute top-4 right-4 z-10 p-2 rounded-full hover:brightness-[120%] cursor-pointer"
               aria-label="Close modal"
             >
-              <CloseIcon class="w-5 h-5" />
+              <Icon icon="mdi:close" class="text-xl text-primary" />
             </button>
             
             <!-- Modal Body -->

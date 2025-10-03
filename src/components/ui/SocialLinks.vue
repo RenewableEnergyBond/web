@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import LinkedInIcon from '@/components/icons/LinkedInIcon.vue'
+import { Icon } from '@iconify/vue'
 
 const { t } = useI18n()
 
@@ -8,8 +8,8 @@ const { t } = useI18n()
 const socialLinks = [
   {
     name: 'LinkedIn',
-    url: '#', // TODO: Remplacer par l'URL réelle
-    icon: LinkedInIcon,
+    url: 'https://www.linkedin.com/company/rebond-eco',
+    icon: 'mdi:linkedin',
     ariaLabel: 'Follow us on LinkedIn'
   }
 ] as const
@@ -28,9 +28,9 @@ const socialLinks = [
         target="_blank"
         rel="noopener noreferrer"
       >
-        <component 
-          :is="link.icon" 
-          class="w-8 h-8 fill-primary hover:fill-primary/90 transition-colors" 
+        <Icon 
+          :icon="link.icon" 
+          class="w-8 h-8 text-primary hover:text-primary/90 transition-colors" 
         />
       </a>
     </nav>

@@ -2,14 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
 import { useSeo } from '@/composables/useSeo'
-import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
-import FileSignIcon from '@/components/icons/FileSignIcon.vue'
-import CubeScanIcon from '@/components/icons/CubeScanIcon.vue'
-import AccountGroupIcon from '@/components/icons/AccountGroupIcon.vue'
-import ScaleBalanceIcon from '@/components/icons/ScaleBalanceIcon.vue'
-import FinanceIcon from '@/components/icons/FinanceIcon.vue'
-import SproutIcon from '@/components/icons/SproutIcon.vue'
-import FlaskIcon from '@/components/icons/FlaskIcon.vue'
+import { Icon } from '@iconify/vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
@@ -33,7 +26,7 @@ useSeo('home')
         class="text-primary font-semibold text-lg md:text-xl py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%] uppercase"
         :aria-label="t('home.hero.contact')"
       >
-        <ArrowRightIcon class="w-6 h-6" />
+        <Icon icon="mdi:arrow-right" class="text-2xl" />
         {{ t('home.hero.contact') }}
       </RouterLink>
     </div>
@@ -58,21 +51,21 @@ useSeo('home')
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <FileSignIcon class="w-6 h-6"></FileSignIcon>
+          <Icon icon="mdi:file-sign" class="text-2xl" />
           <span v-html="t('home.solution.structuration.title')"></span>
         </h3>
         <div v-html="t('home.solution.structuration.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <CubeScanIcon class="w-6 h-6"></CubeScanIcon>
+          <Icon icon="mdi:cube-scan" class="text-2xl" />
           <span v-html="t('home.solution.tokenization.title')"></span>
         </h3>
         <div v-html="t('home.solution.tokenization.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <AccountGroupIcon class="w-6 h-6"></AccountGroupIcon>
+          <Icon icon="mdi:account-group" class="text-2xl" />
           <span v-html="t('home.solution.distribution.title')"></span>
         </h3>
         <div v-html="t('home.solution.distribution.description')" class="text-base leading-relaxed" />
@@ -89,28 +82,28 @@ useSeo('home')
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <ScaleBalanceIcon class="w-6 h-6"></ScaleBalanceIcon>
+          <Icon icon="mdi:scale-balance" class="text-2xl" />
           <span v-html="t('home.why.regulation.title')"></span>
         </h3>
         <div v-html="t('home.why.regulation.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <FinanceIcon class="w-6 h-6"></FinanceIcon>
+          <Icon icon="mdi:finance" class="text-2xl" />
           <span v-html="t('home.why.yield.title')"></span>
         </h3>
         <div v-html="t('home.why.yield.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <SproutIcon class="w-6 h-6"></SproutIcon>
+          <Icon icon="mdi:sprout" class="text-2xl" />
           <span v-html="t('home.why.impact.title')"></span>
         </h3>
         <div v-html="t('home.why.impact.description')" class="text-base leading-relaxed" />
       </article>
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
-          <FlaskIcon class="w-6 h-6"></FlaskIcon>
+          <Icon icon="mdi:flask" class="text-2xl" />
           <span v-html="t('home.why.innovation.title')"></span>
         </h3>
         <div v-html="t('home.why.innovation.description')" class="text-base leading-relaxed" />
