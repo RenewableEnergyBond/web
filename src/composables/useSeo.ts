@@ -1,13 +1,13 @@
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useHead } from '@unhead/vue'
 
-export function useSeo(pageKey: 'home' | 'contact' | 'legals' | 'producers' | 'investors' | 'compliance' ) {
+export function useSeo(pageKey: string) {
   const { t, locale } = useI18n()
-  
+
   const title = computed(() => t(`seo.${pageKey}.title`))
   const description = computed(() => t(`seo.${pageKey}.description`))
-  
+
   useHead({
     title,
     meta: [
@@ -45,4 +45,8 @@ export function useSeo(pageKey: 'home' | 'contact' | 'legals' | 'producers' | 'i
       }
     ]
   })
+
+  watch(locale, () => {
+    document.documentElement.lang = locale.value
+  }, { immediate: true })
 }
