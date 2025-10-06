@@ -208,9 +208,6 @@
       "title": "Combine performance, security, and sustainability in your digital investments.",
       "subtitle": "Let’s discuss your needs, compliance requirements, and investment horizon.",
       "button": "Contact us"
-    },
-    "disclaimer": {
-      "text": "rebond provides financial instruments reserved for qualified investors. The information presented does not constitute a public offering."
     }
   },
   "compliance": {
@@ -268,6 +265,7 @@
     }
   },
   "footer": {
+    "disclaimer": "rebond provides financial instruments reserved for qualified investors. The information presented does not constitute a public offering.",
     "followUs": "Follow us",
     "newsletter": {
       "placeholder": "Your email",

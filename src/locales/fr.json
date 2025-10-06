@@ -212,9 +212,6 @@
       "title": "Associez performance, sécurité et durabilité dans vos investissements numériques.",
       "subtitle": "Discutons de vos besoins, de vos contraintes de conformité et de votre horizon d’investissement.",
       "button": "Contactez-nous"
-    },
-    "disclaimer": {
-      "text": "rebond propose des instruments financiers réservés aux investisseurs qualifiés. Les informations présentées ne constituent pas une offre publique."
     }
   },
   "compliance": {
@@ -272,6 +269,7 @@
     }
   },
   "footer": {
+    "disclaimer": "rebond propose des instruments financiers réservés aux investisseurs qualifiés. Les informations présentées ne constituent pas une offre publique.",
     "followUs": "Suivez-nous",
     "newsletter": {
       "placeholder": "Votre email",
