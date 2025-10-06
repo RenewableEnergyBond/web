@@ -31,7 +31,7 @@ useSeo('producers')
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
     <div class="flex flex-col lg:flex-row gap-2 items-stretch">
       <div class="grow flex-1">
-        <h2 class="font-semibold text-3xl mb-4">
+        <h2 class="font-semibold  text-2xl sm:text-3xl mb-4">
           <span v-html="t('producers.needs.title')"></span>
         </h2>
         <div v-html="t('producers.needs.description')" class="text-base leading-relaxed" />
@@ -48,7 +48,7 @@ useSeo('producers')
 
   <!-- Solution Section -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4">
+    <h2 class="font-semibold  text-2xl sm:text-3xl mb-4">
       <span v-html="t('producers.solution.title')"></span>
     </h2>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -81,7 +81,7 @@ useSeo('producers')
 
   <!-- Advantages Section -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4">
+    <h2 class="font-semibold  text-2xl sm:text-3xl mb-4">
       <span v-html="t('producers.advantages.title')"></span>
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

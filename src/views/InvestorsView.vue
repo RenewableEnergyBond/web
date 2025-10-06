@@ -30,7 +30,7 @@ useSeo('investors')
 
   <!-- CONTEXTE & OPPORTUNITÉ -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4">
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4">
       {{ t('investors.context.title') }}
     </h2>
     <div class="md:col-span-7 text-muted-foreground leading-relaxed">
@@ -45,7 +45,7 @@ useSeo('investors')
 
   <!-- NOTRE OFFRE -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4">
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4">
       {{ t('investors.offer.title') }}
     </h2>
 
@@ -84,7 +84,7 @@ useSeo('investors')
 
   <!-- POURQUOI INVESTIR AVEC NOUS -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4" v-html="t('investors.why.title')"></h2>
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4" v-html="t('investors.why.title')"></h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
@@ -126,7 +126,7 @@ useSeo('investors')
 
   <!-- COMPARATIF -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4">
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4">
       {{ t('investors.comparison.title') }}
     </h2>
 
