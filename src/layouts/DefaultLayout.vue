@@ -66,6 +66,10 @@ const { showMobileMenu, openMenu, closeMenu } = useMobileMenu()
         class="font-medium text-3xl hover:brightness-[120%]">
         {{ t('menu.investors') }}
       </RouterLink>
+      <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Compliance')"
+        class="font-medium text-3xl hover:brightness-[120%]">
+        {{ t('menu.compliance') }}
+      </RouterLink>
       <RouterLink @click="showMobileMenu = false" :to="getRouteFor('Contact')"
         class="btn-contact text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg px-5 py-2.5">
         {{ t('menu.contact') }}
