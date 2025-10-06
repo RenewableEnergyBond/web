@@ -29,7 +29,7 @@ const openModalNewsletter = (): void => {
     <!-- DISCLAIMER -->
   <div class="bg-[#fdc500]/50">
     <section class="max-w-7xl mx-auto flex flex-col gap-3 py-2 sm:py-4 px-4 lg:px-8 justify-center">
-      <p v-html="t('footer.disclaimer')" class="text-sm text-center"/>
+      <p v-html="t('footer.disclaimer')" class="text-xs text-center text-primary"/>
     </section>
   </div>
     <div :class class="bg-primary/20">
