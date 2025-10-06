@@ -12,7 +12,7 @@ const { t } = useI18n()
 const { getRouteFor } = useLocalization()
 
 // SEO
-useSeo('producers')
+useSeo('compliance')
 </script>
 
 <template>

@@ -2,9 +2,13 @@
 import { Icon } from '@iconify/vue'
 import { useLocalization } from '@/composables/useLocalization'
 import { useI18n } from 'vue-i18n'
+import { useSeo } from '@/composables/useSeo'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
+
+// SEO
+useSeo('investors')
 
 </script>
 
