@@ -67,6 +67,12 @@
         "title": "Technological Innovation",
         "description": "A digital platform that streamlines issuance, management, and monitoring of bonds, enhancing transparency for all stakeholders."
       }
+    },
+    "kpi": {
+      "title": "Key figures",
+      "pipe": "<span class=\"text-3xl font-semibold\">30MWp</span><br/>being qualified",
+      "yield": "Bonds target rate<br/><span class=\"text-3xl font-semibold\">6-9%</span>",
+      "duration": "Bonds maturity<br/><span class=\"text-3xl font-semibold\">3-7 years</span>"
     }
   },
   "producers": {

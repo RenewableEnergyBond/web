@@ -16,16 +16,15 @@ useSeo('home')
   <section class="max-w-7xl mx-auto flex flex-col gap-3 py-8 sm:py-16 px-4 lg:px-8 justify-center">
     <div class="flex flex-col leading-normal">
       <h1 class="font-semibold lg:text-5xl md:text-4xl sm:text-3xl text-2xl uppercase" v-html="t('home.hero.title')" />
-      <p class="font-semibold lg:text-5xl md:text-4xl sm:text-3xl text-2xl uppercase" v-html="t('home.hero.subtitle1')" />
+      <p class="font-semibold lg:text-5xl md:text-4xl sm:text-3xl text-2xl uppercase"
+        v-html="t('home.hero.subtitle1')" />
     </div>
-    
+
     <div class="flex flex-col gap-3 lg:flex-row justify-between items-center">
       <div class="lg:w-2/3 text-lg md:text-xl" v-html="t('home.hero.intro')" />
-      <RouterLink 
-        :to="getRouteFor('Contact')" 
+      <RouterLink :to="getRouteFor('Contact')"
         class="text-primary font-semibold text-lg md:text-xl py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%] uppercase"
-        :aria-label="t('home.hero.contact')"
-      >
+        :aria-label="t('home.hero.contact')">
         <Icon icon="mdi:arrow-right" class="text-2xl" />
         {{ t('home.hero.contact') }}
       </RouterLink>
@@ -36,11 +35,9 @@ useSeo('home')
   <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
 
   <!-- Hero Image -->
-  <section 
-    class="h-[180px] bg-[center_-40px] sm:bg-[center_-270px] relative w-full overflow-hidden bg-cover bg-fixed bg-no-repeat" 
-    :style="{ backgroundImage: 'url(assets/hero-1920.jpg)' }"
-    role="img"
-  />
+  <section
+    class="h-[180px] bg-[center_-40px] sm:bg-[center_-270px] relative w-full overflow-hidden bg-cover bg-fixed bg-no-repeat"
+    :style="{ backgroundImage: 'url(assets/hero-1920.jpg)' }" role="img" />
 
   <!-- Section Divider -->
   <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
@@ -108,6 +105,32 @@ useSeo('home')
         </h3>
         <div v-html="t('home.why.innovation.description')" class="text-base leading-relaxed" />
       </article>
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
+
+  <!-- KPIs Section -->
+  <section class="max-w-7xl mx-auto p-4 lg:p-8">
+    <h2 class="font-semibold text-3xl mb-4" v-html="t('home.kpi.title')"></h2>
+    <div class="flex flex-col md:flex-row gap-4">
+
+      <div class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
+        <h4 class="text-center">
+          <span v-html="t('home.kpi.pipe')"></span>
+        </h4>
+      </div>
+      <div class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
+        <h4 class="text-center">
+          <span v-html="t('home.kpi.yield')"></span>
+        </h4>
+      </div>
+      <div class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
+        <h4 class="text-center">
+          <span v-html="t('home.kpi.duration')"></span>
+        </h4>
+      </div>
     </div>
   </section>
 

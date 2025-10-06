@@ -71,6 +71,12 @@
         "title": "Innovation technologique",
         "description": "Une solution innovante qui facilite l’émission, la gestion et le suivi des obligations, tout en renforçant la transparence pour les parties prenantes."
       }
+    },
+    "kpi": {
+      "title": "Quelques chiffres",
+      "pipe": "<span class=\"text-3xl font-semibold\">30MWc</span><br/>en cours d'étude",
+      "yield": "Taux cible des obligations<br/><span class=\"text-3xl font-semibold\">6-9%</span>",
+      "duration": "Maturité des obligations<br/><span class=\"text-3xl font-semibold\">3-7 ans</span>"
     }
   },
   "producers": {
