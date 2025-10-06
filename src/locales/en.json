@@ -34,6 +34,12 @@
       "intro": "We connect renewable energy producers with digital asset investors within a secure and regulated framework.",
       "contact": "Contact us"
     },
+    "compliance": {
+      "title": "Trust & Compliance",
+      "regulation": "<span class=\"text-nowrap\">Issuances compliant with the</span> <span class=\"text-nowrap\"><strong>AMF Prospectus Regulation</strong>,</span> <span class=\"text-nowrap\">restricted to <strong>qualified investors</strong></span>",
+      "custody": "<span class=\"text-nowrap\">Securities and cash flows</span> <span class=\"text-nowrap\">safeguarded by <strong>Crédit Mutuel</strong>,</span> <span class=\"text-nowrap\">a licensed financial institution</span>",
+      "security": "<span class=\"text-nowrap\"><strong>Transparency and security</strong></span> <span class=\"text-nowrap\">ensured by our smart contracts,</span> <span class=\"text-nowrap\">deployed on public blockchains</span>"
+    },
     "solution": {
       "title": "Our Solutions",
       "structuration": {

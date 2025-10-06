@@ -3,6 +3,9 @@ import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
 import { useSeo } from '@/composables/useSeo'
 import { Icon } from '@iconify/vue'
+import AMFLogo from '@/components/logos/AMFLogo.vue'
+import CreditMutuelLogo from '@/components/logos/CreditMutuelLogo.vue'
+import EthereumLogo from '@/components/logos/EthereumLogo.vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
@@ -42,9 +45,50 @@ useSeo('home')
   <!-- Section Divider -->
   <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
 
+  <!-- Compliance Section -->
+  <section class="max-w-7xl mx-auto p-4 lg:p-8">
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4">
+      <span v-html="t('home.compliance.title')"></span>
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <article
+        class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg flex flex-col items-center justify-center">
+        <h3 class="text-base mb-2 flex flex-col gap-2 items-center text-center">
+          <span class="" v-html="t('home.compliance.regulation')"></span>
+          <div>
+            <AMFLogo class="h-12" />
+          </div>
+        </h3>
+      </article>
+
+      <article
+        class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg flex flex-col items-center justify-center">
+        <h3 class="text-base mb-2 flex flex-col gap-2 items-center text-center">
+          <span class="" v-html="t('home.compliance.custody')"></span>
+          <div>
+            <CreditMutuelLogo class="h-12" />
+          </div>
+        </h3>
+      </article>
+
+      <article
+        class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg flex flex-col items-center justify-center">
+        <h3 class="text-base mb-2 flex flex-col gap-2 items-center text-center">
+          <span class="" v-html="t('home.compliance.security')"></span>
+          <div>
+            <EthereumLogo class="h-12" />
+          </div>
+        </h3>
+      </article>
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
+
   <!-- Solution Section -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 v-html="t('home.solution.title')" class="font-semibold text-3xl mb-4" />
+    <h2 v-html="t('home.solution.title')" class="font-semibold  text-2xl sm:text-3xl mb-4" />
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
@@ -75,7 +119,7 @@ useSeo('home')
 
   <!-- Why Section -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 v-html="t('home.why.title')" class="font-semibold text-3xl mb-4" />
+    <h2 v-html="t('home.why.title')" class="font-semibold  text-2xl sm:text-3xl mb-4" />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
@@ -113,7 +157,7 @@ useSeo('home')
 
   <!-- KPIs Section -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4" v-html="t('home.kpi.title')"></h2>
+    <h2 class="font-semibold  text-2xl sm:text-3xl mb-4" v-html="t('home.kpi.title')"></h2>
     <div class="flex flex-col md:flex-row gap-4">
 
       <div class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">

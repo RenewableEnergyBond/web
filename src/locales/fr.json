@@ -38,6 +38,12 @@
       "intro": "Nous rapprochons les producteurs d’énergie renouvelable et les investisseurs en actifs numériques au sein d’un cadre réglementaire et sécurisé.",
       "contact": "Contactez-nous"
     },
+    "compliance": {
+      "title": "Confiance & conformité",
+      "regulation": "<span class=\"text-nowrap\">Émissions conformes au</span> <span class=\"text-nowrap\"><strong>Règlement Prospectus AMF</strong>,</span> <span class=\"text-nowrap\">réservées aux <strong>investisseurs qualifiés</strong></span>",
+      "custody": "<span class=\"text-nowrap\">Conservation des titres et flux financiers</span> <span class=\"text-nowrap\">assurée par <strong>Crédit Mutuel</strong>,</span> <span class=\"text-nowrap\">établissement agréé</span>",
+      "security": "<span class=\"text-nowrap\"><strong>Transparence et sécurité</strong></span> <span class=\"text-nowrap\">assurée par nos contrats intelligents,</span> <span class=\"text-nowrap\">déployés sur des blockchains publiques</span>"
+    },
     "solution": {
       "title": "Nos Solutions",
       "structuration": {
