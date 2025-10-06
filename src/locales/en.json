@@ -18,6 +18,10 @@
       "title": "Digital Asset Investors {'|'} rebond - Tokenized Renewable Energy Bonds",
       "description": ""
     },
+    "compliance": {
+      "title": "Compliance {'&'} Security {'|'} rebond - Tokenized Renewable Energy Bonds",
+      "description": ""
+    },
     "contact": {
       "title": "Contact {'|'} rebond - Tokenized Renewable Energy Bonds",
       "description": "Contact our rebond team for your tokenized renewable energy bond investment projects."
@@ -218,7 +222,7 @@
   },
   "compliance": {
     "hero": {
-      "title": "<span class=\"text-secondary\">Regulatory</span> Compliance & Security",
+      "title": "Compliance & Security",
       "intro": "Trust is at the heart of every transaction. <br/><span class=\"font-semibold\"><span class=\"text-secondary\">re</span>bond</span> builds on a clear legal framework, licensed partners and strict procedures to safeguard both investors and issuers."
     },
     "regulation": {
