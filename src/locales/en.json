@@ -228,10 +228,10 @@
       "risk": "Risk disclosure<br/><span class=\"text-sm\">* Markets in Financial Instruments Directive (MiFID II)</span>"
     },
     "customerSecurity": {
-      "title": "Investor security",
-      "tokenization": "<span class=\"font-semibold\">Secure tokenization</span> through audited smart contracts",
-      "custody": "<span class=\"font-semibold\">Custody of securities</span> with a licensed banking partner",
-      "traceability": "<span class=\"font-semibold\">Traceability & transparency</span><br/>Auditable on public blockchains"
+      "title": "Investor Security",
+      "custody": "<span class=\"text-nowrap\">Custody of securities and financial flows</span> <span class=\"text-nowrap\">ensured by <strong>Crédit Mutuel</strong>,</span> <span class=\"text-nowrap\">a licensed financial institution</span>",
+      "traceability": "<span class=\"font-semibold text-nowrap\">Transparency and security</span> <span class=\"text-nowrap\">guaranteed by our smart contracts,</span> <span class=\"text-nowrap\">deployed on public blockchains</span>",
+      "tokenization": "<span class=\"font-semibold text-nowrap\">Secure digitalization</span> <span class=\"text-nowrap\">through regular technical audits</span> <span class=\"text-nowrap\">performed by specialized firms</span>"
     },
     "rwa": {
       "title": "Real-world asset security",

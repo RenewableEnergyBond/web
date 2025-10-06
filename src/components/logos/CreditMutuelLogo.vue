@@ -8,6 +8,7 @@ defineProps<Props>();
 
 <template>
   <svg fill="currentColor" :class="class" xmlns="http://www.w3.org/2000/svg" viewBox="6.191 1.994 14.3118 3.1187786">
+    <title>Crédit Mutuel</title>
     <g id="g3468" transform="matrix(0.08799999,0,0,0.08799999,6.5049008,2.479054)">
       <g clip-rule="evenodd" fill-rule="evenodd" id="g6" transform="translate(0,3.5723727e-4)">
         <path

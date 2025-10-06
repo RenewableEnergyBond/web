@@ -8,6 +8,7 @@ defineProps<Props>();
 
 <template>
   <svg fill="currentColor" :class="class" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2500 626">
+    <title>Ethereum</title>
     <g id="Layer_x0020_1">
       <g id="_2082171070528">
         <path fill="#1C1CFF"

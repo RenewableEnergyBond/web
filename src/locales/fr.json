@@ -233,9 +233,9 @@
     },
     "customerSecurity": {
       "title": "Sécurité des investisseurs",
-      "tokenization": "<span class=\"font-semibold\">Digitalisation sécurisée</span> via des smart-contracts audités",
-      "custody": "<span class=\"font-semibold\">Conservation des titres</span> via un dépositaire bancaire agréé",
-      "traceability": "<span class=\"font-semibold\">Traçabilité et transparence</span><br/>Auditable sur blockchains publiques"
+      "custody": "<span class=\"text-nowrap\">Conservation des titres et flux financiers</span> <span class=\"text-nowrap\">assurée par <strong>Crédit Mutuel</strong>,</span> <span class=\"text-nowrap\">établissement agréé</span>",
+      "traceability": "<span class=\"font-semibold text-nowrap\">Transparence et sécurité</span> <span class=\"text-nowrap\">assurée par nos contrats intelligents,</span> <span class=\"text-nowrap\">déployés sur des blockchains publiques</span>",
+      "tokenization": "<span class=\"font-semibold text-nowrap\">Digitalisation sécurisée</span> <span class=\"text-nowrap\">via des audits techniques réguliers</span> <span class=\"text-nowrap\">par des entreprises spécialisées</span>"
     },
     "rwa": {
       "title": "Sécurité des actifs réels",

@@ -33,7 +33,7 @@ useSeo('compliance')
 
   <!-- Compliance Section -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4">
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4">
       <span v-html="t('compliance.regulation.title')"></span>
     </h2>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -72,35 +72,36 @@ useSeo('compliance')
 
   <!-- Customer security Section -->
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4">
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4">
       <span v-html="t('compliance.customerSecurity.title')"></span>
     </h2>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
       <article
         class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg flex flex-col items-center justify-center">
-        <h3 class="lg:text-xl sm:text-lg mb-2 flex flex-col gap-2 items-center text-center">
+        <h3 class="text-base sm:text-md xl:text-lg mb-2 flex flex-col gap-2 items-center text-center">
+          <span v-html="t('compliance.customerSecurity.custody')"></span>
           <div>
             <CreditMutuelLogo class="h-16" />
           </div>
-          <span v-html="t('compliance.customerSecurity.custody')"></span>
+          
         </h3>
       </article>
       <article
         class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg flex flex-col items-center justify-center">
-        <h3 class="lg:text-xl sm:text-lg mb-2 flex flex-col gap-2 items-center text-center">
-          <div class="h-16 flex items-center">
-            <DotsafeLogo class="h-8" />
-          </div>
-          <span v-html="t('compliance.customerSecurity.tokenization')"></span>
-        </h3>
-      </article>
-      <article
-        class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg flex flex-col items-center justify-center">
-        <h3 class="lg:text-xl sm:text-lg mb-2 flex flex-col gap-2 items-center text-center">
+        <h3 class="text-base sm:text-md xl:text-lg mb-2 flex flex-col gap-2 items-center text-center">
+          <span v-html="t('compliance.customerSecurity.traceability')"></span>
           <div class="h-16 flex items-center">
             <EthereumLogo class="h-12" />
           </div>
-          <span v-html="t('compliance.customerSecurity.traceability')"></span>
+        </h3>
+      </article>
+      <article
+        class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg flex flex-col items-center justify-center">
+        <h3 class="text-base sm:text-md xl:text-lg mb-2 flex flex-col gap-2 items-center text-center">
+          <span v-html="t('compliance.customerSecurity.tokenization')"></span>
+          <div class="h-16 flex items-center">
+            <DotsafeLogo class="h-8" />
+          </div>
         </h3>
       </article>
     </div>
@@ -110,7 +111,7 @@ useSeo('compliance')
   <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
 
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4" v-html="t('compliance.rwa.title')"></h2>
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4" v-html="t('compliance.rwa.title')"></h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <article class="basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h3 class="font-semibold xl:text-xl sm:text-lg mb-2 flex gap-2 items-center">
@@ -151,7 +152,7 @@ useSeo('compliance')
   <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
 
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4" v-html="t('compliance.governance.title')"></h2>
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4" v-html="t('compliance.governance.title')"></h2>
     <div class="flex flex-col lg:flex-row gap-4">
 
       <article class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
@@ -177,7 +178,7 @@ useSeo('compliance')
   <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
 
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
-    <h2 class="font-semibold text-3xl mb-4" v-html="t('compliance.transparency.title')"></h2>
+    <h2 class="font-semibold text-2xl sm:text-3xl mb-4" v-html="t('compliance.transparency.title')"></h2>
     <div class="flex flex-col lg:flex-row gap-4">
 
       <article class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">

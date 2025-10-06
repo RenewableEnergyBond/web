@@ -8,6 +8,7 @@ defineProps<Props>();
 
 <template>
   <svg fill="currentColor" :class="class" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 56.69">
+    <title>AMF</title>
     <polygon fill="#DB002E" points="130.067,24.874 130.067,30.343 110.188,30.343 110.188,37.681 128.953,37.681 128.953,42.575 
 	110.188,42.575 110.188,54.806 103.473,54.806 103.473,24.874 " />
     <g>
