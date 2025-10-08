@@ -10,6 +10,9 @@ export function useSeo(pageKey: string) {
 
   useHead({
     title,
+    htmlAttrs: {
+      lang: locale
+    },
     meta: [
       {
         name: 'description',
@@ -47,6 +50,8 @@ export function useSeo(pageKey: string) {
   })
 
   watch(locale, () => {
-    document.documentElement.lang = locale.value
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = locale.value
+    }
   }, { immediate: true })
 }

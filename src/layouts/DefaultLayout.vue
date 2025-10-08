@@ -1,14 +1,30 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
+import { useHead } from '@unhead/vue'
+import { computed, watch } from 'vue'
 import FooterComponent from '@/components/ui/FooterComponent.vue'
 import { Icon } from '@iconify/vue'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
 import { useLocalization } from '@/composables/useLocalization'
 import { useMobileMenu } from '@/composables/useMobileMenu'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { getRouteFor } = useLocalization()
 const { showMobileMenu, openMenu, closeMenu } = useMobileMenu()
+
+// Ensure HTML lang attribute is set globally
+useHead({
+  htmlAttrs: {
+    lang: locale
+  }
+})
+
+// Update document lang for client-side
+watch(locale, () => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = locale.value
+  }
+}, { immediate: true })
 </script>
 
 <template>
