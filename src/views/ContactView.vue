@@ -63,25 +63,6 @@ useSeo('contact')
         </article>
 
       </div>
-
-      <!-- Additional Information -->
-      <div class="mt-12 lg:mt-16 text-center">
-        <div class="bg-primary/5 rounded-xl p-6 lg:p-8 max-w-2xl mx-auto">
-          <h2 class="text-xl lg:text-2xl font-semibold mb-4">
-            {{ t('contact.additional.title') }}
-          </h2>
-          <p class="mb-6 text-sm lg:text-base leading-relaxed">
-            {{ t('contact.additional.description') }}
-          </p>
-
-          <!-- Back to Home -->
-          <RouterLink :to="getRouteFor('Home')"
-            class="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors font-medium text-lg">
-            <Icon icon="mdi:arrow-left" class="text-xl" />
-            {{ t('contact.backToHome') }}
-          </RouterLink>
-        </div>
-      </div>
     </div>
   </section>
 </template>

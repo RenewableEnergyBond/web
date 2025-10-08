@@ -313,12 +313,7 @@
       "description": "Retrouvez-nous dans nos locaux à Bordeaux.",
       "name": "Rebond SAS",
       "value": "16 place des Quinconces <br/>33000 Bordeaux, France"
-    },
-    "additional": {
-      "title": "Vous êtes investisseur ?",
-      "description": "Pour toute demande d'information sur nos obligations EnR digitalisées, n'hésitez pas à nous contacter. Nous étudierons ensemble les opportunités d'investissement adaptées à votre profil."
-    },
-    "backToHome": "Retour à l'accueil"
+    }
   },
   "legals": {
     "title": "Mentions légales",

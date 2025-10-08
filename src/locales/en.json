@@ -313,12 +313,7 @@
       "description": "Visit us at our offices in Bordeaux.",
       "name": "Rebond SAS",
       "value": "16 place des Quinconces <br/>33000 Bordeaux, France"
-    },
-    "additional": {
-      "title": "Are you an investor?",
-      "description": "For any information request about our tokenized renewable energy bonds, feel free to contact us. We'll explore together the investment opportunities that match your profile."
-    },
-    "backToHome": "Back to home"
+    }
   },
   "legals": {
     "title": "Legal Notice",
