@@ -5,10 +5,11 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from "@tailwindcss/vite"
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, process.cwd());
+  const base = process.env.BASE_PATH || env.BASE_PATH || '';
   return {
-    base: env.BASE_PATH ?? '',
+    base,
     plugins: [
       tailwindcss(),
       vue(),
