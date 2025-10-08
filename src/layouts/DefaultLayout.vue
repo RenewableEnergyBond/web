@@ -52,7 +52,7 @@ watch(locale, () => {
           </button>
         </div>
         <!-- MENU DESKTOP -->
-        <div class="menu hidden lg:flex gap-6 justify-end items-center text-primary text-lg">
+        <nav class="menu hidden lg:flex gap-6 justify-end items-center text-primary text-lg">
           <RouterLink :to="getRouteFor('Producers')" class="font-medium hover:brightness-[120%]">
             {{ t('menu.producers') }}</RouterLink>
           <RouterLink :to="getRouteFor('Investors')" class="font-medium hover:brightness-[120%]">
@@ -60,7 +60,7 @@ watch(locale, () => {
           <RouterLink :to="getRouteFor('Compliance')" class="font-medium hover:brightness-[120%]">
             {{ t('menu.compliance') }}</RouterLink>
           <LanguageSwitcher />
-        </div>
+        </nav>
       </div>
     </div>
     <!-- CONTENT -->
@@ -70,7 +70,7 @@ watch(locale, () => {
     <!-- FOOTER -->
     <FooterComponent />
     <!-- MENU MOBILE -->
-    <div :class="[
+    <nav :class="[
       'menu fixed top-0 bottom-0 left-0 right-0 bg-white z-40 px-4 flex flex-col gap-8 items-center justify-center text-primary pt-[60px] md:pt-[72px] h-[100vh] transition-transform duration-500 ease-in-out transform',
       showMobileMenu ? 'translate-x-0' : 'translate-x-full'
     ]">
@@ -91,7 +91,7 @@ watch(locale, () => {
         {{ t('menu.contact') }}
       </RouterLink>
       <LanguageSwitcher />
-    </div>
+    </nav>
   </div>
 </template>
 
