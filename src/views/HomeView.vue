@@ -25,22 +25,45 @@ useSeo('home')
 
     <div class="flex flex-col gap-3 lg:flex-row justify-between items-center">
       <div class="lg:w-2/3 text-lg md:text-xl" v-html="t('home.hero.intro')" />
-      <RouterLink :to="getRouteFor('Contact')"
-        class="text-primary font-semibold text-lg md:text-xl py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%] uppercase"
-        :aria-label="t('home.hero.contact')">
-        <Icon icon="mdi:arrow-right" class="text-2xl" />
-        {{ t('home.hero.contact') }}
-      </RouterLink>
     </div>
   </section>
 
   <!-- Section Divider -->
   <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
 
-  <!-- Hero Image -->
-  <section
-    class="h-[180px] bg-[center_-40px] sm:bg-[center_-270px] relative w-full overflow-hidden bg-cover bg-fixed bg-no-repeat"
-    :style="{ backgroundImage: 'url(assets/hero-1920.jpg)' }" role="img" />
+  <!-- Section CTA & Funnels -->
+  <div
+    class="bg-[center bottom] md:bg-[center_-270px] relative w-full overflow-hidden bg-cover bg-fixed bg-no-repeat"
+    :style="{ backgroundImage: 'url(assets/hero-1920.jpg)' }">
+    <section class="max-w-7xl mx-auto p-4 lg:p-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <article class="bg-white/90 basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg flex flex-col items-center justify-center text-center">
+          <h3 class="text-xl mb-2 font-semibold" v-html="t('home.funnels.producers.title')"></h3>
+          <p class="mb-2" v-html="t('home.funnels.producers.text')"></p>
+          <p>
+            <RouterLink :to="getRouteFor('Producers')"
+              class="text-primary font-semibold text-lg py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%] uppercase"
+              :aria-label="t('home.hero.contact')">
+              <Icon icon="mdi:calculator" class="text-2xl" />
+              {{ t('home.funnels.producers.cta') }}
+            </RouterLink>
+          </p>
+        </article>
+        <article class="bg-white/90 basis-full p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg flex flex-col items-center justify-center text-center">
+          <h3 class="text-xl mb-2 font-semibold" v-html="t('home.funnels.investors.title')"></h3>
+          <p class="mb-2" v-html="t('home.funnels.investors.text')"></p>
+          <p>
+            <RouterLink :to="getRouteFor('Investors')"
+              class="text-primary font-semibold text-lg py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%] uppercase"
+              :aria-label="t('home.hero.contact')">
+              <Icon icon="mdi:account-check" class="text-2xl" />
+              {{ t('home.funnels.investors.cta') }}
+            </RouterLink>
+          </p>
+        </article>
+      </div>
+    </section>
+  </div>
 
   <!-- Section Divider -->
   <hr class="h-0 border-t-2 border-primary/20 border-dashed" />
@@ -159,7 +182,6 @@ useSeo('home')
   <section class="max-w-7xl mx-auto p-4 lg:p-8">
     <h2 class="font-semibold  text-2xl sm:text-3xl mb-4" v-html="t('home.kpi.title')"></h2>
     <div class="flex flex-col md:flex-row gap-4">
-
       <div class="grow p-4 border-2 border-primary/20 hover:border-primary/40 border-dashed rounded-lg">
         <h4 class="text-center">
           <span v-html="t('home.kpi.pipe')"></span>

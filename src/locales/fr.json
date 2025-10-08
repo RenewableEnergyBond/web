@@ -38,6 +38,18 @@
       "intro": "Nous rapprochons les producteurs d’énergie renouvelable et les investisseurs en actifs numériques au sein d’un cadre réglementaire et sécurisé.",
       "contact": "Contactez-nous"
     },
+    "funnels": {
+      "producers": {
+        "title": "Producteurs d'<span class=\"text-secondary text-nowrap\">Energie Renouvelable</span>",
+        "text": "Financement capex de vos actifs <br/>PV, éolien, stockage, ...",
+        "cta": "Obtenir une simulation"
+      },
+      "investors": {
+        "title": "Investisseurs en <span class=\"text-nowrap\">Actifs numériques</span>",
+        "text": "Sous-jacent réel, <span class=\"text-secondary\">Reporting ESG</span><br/>Accès soumis à éligibilité",
+        "cta": "Vérifier votre éligibilité"
+      }
+    },
     "compliance": {
       "title": "Confiance & conformité",
       "regulation": "<span class=\"text-nowrap\">Émissions conformes au</span> <span class=\"text-nowrap\"><strong>Règlement Prospectus AMF</strong>,</span> <span class=\"text-nowrap\">réservées aux <strong>investisseurs qualifiés</strong></span>",

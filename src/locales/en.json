@@ -38,6 +38,18 @@
       "intro": "We connect renewable energy producers with digital asset investors within a secure and regulated framework.",
       "contact": "Contact us"
     },
+    "funnels": {
+      "producers": {
+        "title": "<span class=\"text-secondary text-nowrap\">Renewable Energy</span> Producers",
+        "text": "Capex financing for your assets <br/>PV, wind, storage, ...",
+        "cta": "Get a financing simulation"
+      },
+      "investors": {
+        "title": "<span class=\"text-nowrap\">Digital Assets</span> Investors",
+        "text": "Real-World Asset (RWA) with <span class=\"text-secondary\">ESG reporting</span><br/>Access subject to eligibility",
+        "cta": "Eligibility check"
+      }
+    },
     "compliance": {
       "title": "Trust & Compliance",
       "regulation": "<span class=\"text-nowrap\">Issuances compliant with the</span> <span class=\"text-nowrap\"><strong>AMF Prospectus Regulation</strong>,</span> <span class=\"text-nowrap\">restricted to <strong>qualified investors</strong></span>",
