@@ -60,7 +60,8 @@ interface FormState {
 const { t } = useI18n()
 
 // Configuration Turnstile
-const TURNSTILE_SITE_KEY = import.meta.env.TURNSTILE_SITE_KEY || "1x00000000000000000000AA"
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"
+console.log('TURNSTILE_SITE_KEY', TURNSTILE_SITE_KEY)
 const turnstileWidgetId = ref<string | null>(null)
 
 // État réactif du formulaire

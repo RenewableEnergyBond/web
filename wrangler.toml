@@ -5,7 +5,7 @@ compatibility_date = "2025-10-13"
 
 # Public
 [vars]
-TURNSTILE_SITE_KEY = "0x4AAAAAAB6ZpXuSNzkjmZMQ"
+VITE_TURNSTILE_SITE_KEY = "0x4AAAAAAB6ZpXuSNzkjmZMQ"
 
 # Secrets
 # wrangler secret put BREVO_API_KEY
