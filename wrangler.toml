@@ -1,0 +1,19 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "rebond-contact-api"
+main = "functions/api/paperboy.ts"
+compatibility_date = "2024-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Variables sensibles (secrets) - à configurer via CLI
+# BREVO_API_KEY sera configuré via: wrangler secret put BREVO_API_KEY
+
+# Configuration pour le développement 
+[env.dev]
+name = "rebond-contact-api-dev"
+routes = [
+  { pattern = "dev.rebond.eco/api/paperboy", zone_name = "rebond.eco" }
+]
+
+# Configuration pour la production future
+[env.production]
+name = "rebond-contact-api"
