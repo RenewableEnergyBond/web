@@ -33,7 +33,7 @@ useSeo('home')
 
   <!-- Section CTA & Funnels -->
   <div
-    class="bg-[center bottom] md:bg-[center_-270px] relative w-full overflow-hidden bg-cover bg-fixed bg-no-repeat"
+    class="bg-[center_bottom] md:bg-[center_-270px] relative w-full overflow-hidden bg-cover bg-fixed bg-no-repeat"
     :style="{ backgroundImage: 'url(assets/hero-1920.jpg)' }">
     <section class="max-w-7xl mx-auto p-4 lg:p-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
