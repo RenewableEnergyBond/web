@@ -17,3 +17,6 @@ routes = [
 # Configuration pour la production future
 [env.production]
 name = "rebond-contact-api"
+
+# Configuration pour Cloudflare Pages
+pages_build_output_dir = "dist"
