@@ -15,6 +15,7 @@ interface ContactFormData {
   subject?: string;
   message: string;
   company?: string;
+  turnstileToken?: string; // Token Turnstile pour validation
 }
 
 interface ApiResponse {
@@ -35,6 +36,7 @@ const CORS_HEADERS = {
 } as const;
 
 const BREVO_API_URL = 'https://api.brevo.com/v3/smtp/email';
+const TURNSTILE_VERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const RECIPIENT_EMAIL = 'bonjour@rebond.eco';
 
@@ -59,6 +61,7 @@ function validateFormData(data: ContactFormData): string | null {
   if (!data.name?.trim()) return 'Le nom est obligatoire';
   if (!data.email?.trim()) return 'L\'email est obligatoire';
   if (!data.message?.trim()) return 'Le message est obligatoire';
+  if (!data.turnstileToken?.trim()) return 'La validation anti-robot est obligatoire';
   if (!EMAIL_REGEX.test(data.email)) return 'L\'adresse email n\'est pas valide';
   return null;
 }
@@ -131,6 +134,36 @@ Message envoyé depuis le formulaire de contact de rebond.eco
 }
 
 /**
+ * Valide le token Turnstile avec l'API Cloudflare
+ */
+async function validateTurnstile(token: string, secretKey: string, clientIP?: string): Promise<boolean> {
+  try {
+    const formData = new FormData();
+    formData.append('secret', secretKey);
+    formData.append('response', token);
+    if (clientIP) {
+      formData.append('remoteip', clientIP);
+    }
+
+    const response = await fetch(TURNSTILE_VERIFY_URL, {
+      method: 'POST',
+      body: formData
+    });
+
+    if (!response.ok) {
+      console.error('Erreur lors de la validation Turnstile:', response.statusText);
+      return false;
+    }
+
+    const result = await response.json();
+    return result.success === true;
+  } catch (error) {
+    console.error('Erreur lors de la validation Turnstile:', error);
+    return false;
+  }
+}
+
+/**
  * Envoie l'email via l'API Brevo
  */
 async function sendEmail(data: ContactFormData, apiKey: string): Promise<any> {
@@ -198,6 +231,13 @@ export async function onRequestPost(context: any): Promise<Response> {
         }, 500);
       }
 
+      if (!env.TURNSTILE_SECRET_KEY) {
+        return createJsonResponse({
+          error: 'Configuration manquante',
+          message: 'La clé secrète Turnstile n\'est pas configurée'
+        }, 500);
+      }
+
       // Parser les données du formulaire
       const formData = await parseFormData(request);
       if (!formData) {
@@ -213,6 +253,24 @@ export async function onRequestPost(context: any): Promise<Response> {
         return createJsonResponse({
           error: 'Données invalides',
           message: validationError
+        }, 400);
+      }
+
+      // Valider le token Turnstile
+      const clientIP = request.headers.get('CF-Connecting-IP') || 
+                      request.headers.get('X-Forwarded-For') || 
+                      'unknown';
+      
+      const isTurnstileValid = await validateTurnstile(
+        formData.turnstileToken!,
+        env.TURNSTILE_SECRET_KEY,
+        clientIP
+      );
+
+      if (!isTurnstileValid) {
+        return createJsonResponse({
+          error: 'Validation échouée',
+          message: 'La validation anti-robot a échoué. Veuillez réessayer.'
         }, 400);
       }
 

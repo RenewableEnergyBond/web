@@ -390,5 +390,42 @@
       "captchaRequired": "Veuillez compléter le captcha.",
       "submissionFailed": "Nous n'avons pas pu confirmer votre inscription."
     }
+  },
+  "contactForm": {
+    "title": "Formulaire de contact",
+    "description": "Remplissez ce formulaire et nous vous répondrons dans les plus brefs délais.",
+    "form": {
+      "nameLabel": "Nom complet",
+      "namePlaceholder": "Votre nom et prénom",
+      "nameHelp": "Veuillez indiquer votre nom et prénom",
+      "emailLabel": "Adresse email",
+      "emailPlaceholder": "votre.email{'@'}exemple.com",
+      "emailHelp": "Nous utiliserons cette adresse pour vous répondre",
+      "companyLabel": "Société (optionnel)",
+      "companyPlaceholder": "Nom de votre société",
+      "companyHelp": "Si vous représentez une organisation",
+      "subjectLabel": "Sujet",
+      "subjectPlaceholder": "Objet de votre message",
+      "subjectHelp": "Décrivez brièvement l'objet de votre demande",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Décrivez votre demande, votre projet ou votre question...",
+      "messageHelp": "Détaillez votre demande pour que nous puissions mieux vous aider",
+      "submit": "ENVOYER LE MESSAGE",
+      "submitting": "Envoi en cours..."
+    },
+    "messages": {
+      "success": "Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.",
+      "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+    },
+    "errors": {
+      "nameRequired": "Le nom est obligatoire",
+      "emailRequired": "L'adresse email est obligatoire",
+      "emailInvalid": "L'adresse email n'est pas valide",
+      "subjectRequired": "Le sujet est obligatoire", 
+      "messageRequired": "Le message est obligatoire",
+      "messageMinLength": "Le message doit contenir au moins 10 caractères",
+      "turnstileRequired": "Veuillez compléter la vérification anti-robot",
+      "submissionFailed": "Échec de l'envoi du message. Veuillez réessayer plus tard."
+    }
   }
 }

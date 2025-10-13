@@ -3,6 +3,7 @@ import { useI18n } from 'vue-i18n'
 import { useLocalization } from '@/composables/useLocalization'
 import { useSeo } from '@/composables/useSeo'
 import { Icon } from '@iconify/vue'
+import ContactForm from '@/components/forms/ContactForm.vue'
 
 const { t } = useI18n()
 const { getRouteFor } = useLocalization()
@@ -24,14 +25,15 @@ useSeo('contact')
       </p>
     </header>
 
-    <!-- Contact Information -->
-    <div class="max-w-4xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-
+    <!-- Contact Information & Form -->
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Contact Information Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16">
+        
         <!-- Email Contact -->
         <article
           class="bg-white p-6 lg:p-8 rounded-xl border-2 border-primary/20 border-dashed hover:border-primary/40 transition-colors">
-
           <h2 class="flex gap-2 text-xl lg:text-2xl font-semibold mb-2">
             <Icon icon="mdi:mail" class="text-4xl" />
             {{ t('contact.email.title') }}
@@ -63,6 +65,12 @@ useSeo('contact')
         </article>
 
       </div>
+
+      <!-- Contact Form Section -->
+      <section class="bg-white rounded-xl border-2 border-primary/20 border-dashed p-8 lg:p-12">
+        <ContactForm />
+      </section>
+
     </div>
   </section>
 </template>

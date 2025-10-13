@@ -390,5 +390,42 @@
       "captchaRequired": "Please complete the captcha.",
       "submissionFailed": "We could not confirm your subscription."
     }
+  },
+  "contactForm": {
+    "title": "Contact Form",
+    "description": "Fill out this form and we will get back to you as soon as possible.",
+    "form": {
+      "nameLabel": "Full name",
+      "namePlaceholder": "Your first and last name",
+      "nameHelp": "Please provide your full name",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "your.email{'@'}example.com",
+      "emailHelp": "We will use this address to respond to you",
+      "companyLabel": "Company (optional)",
+      "companyPlaceholder": "Your company name",
+      "companyHelp": "If you represent an organization",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Subject of your message",
+      "subjectHelp": "Briefly describe the subject of your inquiry",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Describe your inquiry, project or question...",
+      "messageHelp": "Please provide details so we can better assist you",
+      "submit": "SEND MESSAGE",
+      "submitting": "Sending..."
+    },
+    "messages": {
+      "success": "Your message has been sent successfully! We will respond as soon as possible.",
+      "error": "An error occurred while sending your message. Please try again."
+    },
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Email address is not valid",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters long",
+      "turnstileRequired": "Please complete the anti-robot verification",
+      "submissionFailed": "Failed to send message. Please try again later."
+    }
   }
 }
