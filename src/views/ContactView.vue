@@ -27,9 +27,14 @@ useSeo('contact')
 
     <!-- Contact Information & Form -->
     <div class="max-w-6xl mx-auto">
+
+      <!-- Contact Form Section -->
+      <section class="bg-white rounded-xl border-2 border-primary/20 border-dashed p-8 lg:p-12 mb-16">
+        <ContactForm />
+      </section>
       
       <!-- Contact Information Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         
         <!-- Email Contact -->
         <article
@@ -66,10 +71,7 @@ useSeo('contact')
 
       </div>
 
-      <!-- Contact Form Section -->
-      <section class="bg-white rounded-xl border-2 border-primary/20 border-dashed p-8 lg:p-12">
-        <ContactForm />
-      </section>
+      
 
     </div>
   </section>

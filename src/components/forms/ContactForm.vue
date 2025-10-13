@@ -2,6 +2,7 @@
 import { ref, computed, reactive, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Icon } from '@iconify/vue'
+import ModalComponent from '../ui/ModalComponent.vue'
 
 /**
  * Déclarations TypeScript pour Turnstile
@@ -81,6 +82,10 @@ const formState = reactive<FormState>({
   errorMessage: '',
   errors: {}
 })
+
+// État des modales
+const showSuccessModal = ref(false)
+const showErrorModal = ref(false)
 
 /**
  * Messages d'erreur réactifs aux changements de langue
@@ -282,15 +287,8 @@ const submitForm = async (): Promise<void> => {
     if (result.success) {
       // Succès de l'envoi
       formState.showSuccess = true
+      showSuccessModal.value = true
       resetForm()
-      
-      // Scroll vers le haut pour voir le message de succès
-      setTimeout(() => {
-        const element = document.querySelector('.contact-form')
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
-      }, 100)
     } else {
       // Erreur retournée par l'API
       throw new Error(result.message || errorMessages.value.submissionFailed)
@@ -302,6 +300,7 @@ const submitForm = async (): Promise<void> => {
     formState.errorMessage = error instanceof Error 
       ? error.message 
       : errorMessages.value.submissionFailed
+    showErrorModal.value = true
   } finally {
     formState.isSubmitting = false
   }
@@ -315,6 +314,23 @@ const clearFieldError = (fieldName: keyof FormErrors): void => {
   if (formState.errors[fieldName]) {
     delete formState.errors[fieldName]
   }
+}
+
+/**
+ * Ferme la modale de succès
+ */
+const closeSuccessModal = (): void => {
+  showSuccessModal.value = false
+  formState.showSuccess = false
+}
+
+/**
+ * Ferme la modale d'erreur
+ */
+const closeErrorModal = (): void => {
+  showErrorModal.value = false
+  formState.showError = false
+  formState.errorMessage = ''
 }
 
 // Hooks de cycle de vie
@@ -352,43 +368,13 @@ onUnmounted(() => {
       </p>
     </header>
 
-    <!-- Messages d'état -->
-    <Transition 
-      enter-active-class="transition-all duration-300 ease-out"
-      enter-from-class="opacity-0 scale-95 -translate-y-2"
-      enter-to-class="opacity-100 scale-100 translate-y-0"
-      leave-active-class="transition-all duration-200 ease-in"
-      leave-from-class="opacity-100 scale-100 translate-y-0"
-      leave-to-class="opacity-0 scale-95 -translate-y-2"
-    >
-      <!-- Message d'erreur global -->
-      <div 
-        v-if="formState.showError" 
-        class="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3"
-        role="alert"
-        aria-live="polite"
-      >
-        <Icon icon="mdi:alert-circle" class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-        <span class="text-red-800 text-sm">{{ formState.errorMessage }}</span>
-      </div>
 
-      <!-- Message de succès -->
-      <div 
-        v-else-if="formState.showSuccess" 
-        class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3"
-        role="alert"
-        aria-live="polite"
-      >
-        <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-        <span class="text-green-800 text-sm">{{ t('contactForm.messages.success') }}</span>
-      </div>
-    </Transition>
 
     <!-- Formulaire de contact -->
     <form @submit.prevent="submitForm" class="space-y-6" novalidate>
       
       <!-- Nom complet -->
-      <div class="form-group">
+      <div>
         <label 
           for="contact-name" 
           class="block text-sm font-semibold text-gray-700 mb-2"
@@ -407,8 +393,8 @@ onUnmounted(() => {
           :aria-invalid="formState.errors.name ? 'true' : 'false'"
           :aria-describedby="formState.errors.name ? 'name-error' : 'name-help'"
           @input="clearFieldError('name')"
-          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          :class="{ 'border-red-300 focus:ring-red-500': formState.errors.name }"
+          class="w-full px-4 py-3 border border-primary/20 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          :class="{ 'border-red-800': formState.errors.name }"
         />
         <p 
           v-if="!formState.errors.name" 
@@ -420,7 +406,7 @@ onUnmounted(() => {
         <p 
           v-if="formState.errors.name" 
           id="name-error" 
-          class="mt-1 text-xs text-red-600" 
+          class="mt-1 text-xs text-red-800" 
           role="alert"
         >
           {{ formState.errors.name }}
@@ -428,7 +414,7 @@ onUnmounted(() => {
       </div>
 
       <!-- Email -->
-      <div class="form-group">
+      <div>
         <label 
           for="contact-email" 
           class="block text-sm font-semibold text-gray-700 mb-2"
@@ -447,8 +433,8 @@ onUnmounted(() => {
           :aria-invalid="formState.errors.email ? 'true' : 'false'"
           :aria-describedby="formState.errors.email ? 'email-error' : 'email-help'"
           @input="clearFieldError('email')"
-          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          :class="{ 'border-red-300 focus:ring-red-500': formState.errors.email }"
+          class="w-full px-4 py-3 border border-primary/20 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          :class="{ 'border-red-800': formState.errors.email }"
         />
         <p 
           v-if="!formState.errors.email" 
@@ -460,7 +446,7 @@ onUnmounted(() => {
         <p 
           v-if="formState.errors.email" 
           id="email-error" 
-          class="mt-1 text-xs text-red-600" 
+          class="mt-1 text-xs text-red-800" 
           role="alert"
         >
           {{ formState.errors.email }}
@@ -468,7 +454,7 @@ onUnmounted(() => {
       </div>
 
       <!-- Société (optionnel) -->
-      <div class="form-group">
+      <div>
         <label 
           for="contact-company" 
           class="block text-sm font-semibold text-gray-700 mb-2"
@@ -483,7 +469,7 @@ onUnmounted(() => {
           autocomplete="organization"
           :disabled="formState.isSubmitting"
           aria-describedby="company-help"
-          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          class="w-full px-4 py-3 border border-primary/20 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
         />
         <p id="company-help" class="mt-1 text-xs text-gray-500">
           {{ t('contactForm.form.companyHelp') }}
@@ -491,7 +477,7 @@ onUnmounted(() => {
       </div>
 
       <!-- Sujet -->
-      <div class="form-group">
+      <div>
         <label 
           for="contact-subject" 
           class="block text-sm font-semibold text-gray-700 mb-2"
@@ -509,8 +495,8 @@ onUnmounted(() => {
           :aria-invalid="formState.errors.subject ? 'true' : 'false'"
           :aria-describedby="formState.errors.subject ? 'subject-error' : 'subject-help'"
           @input="clearFieldError('subject')"
-          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          :class="{ 'border-red-300 focus:ring-red-500': formState.errors.subject }"
+          class="w-full px-4 py-3 border border-primary/20 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          :class="{ 'border-red-800': formState.errors.subject }"
         />
         <p 
           v-if="!formState.errors.subject" 
@@ -522,17 +508,15 @@ onUnmounted(() => {
         <p 
           v-if="formState.errors.subject" 
           id="subject-error" 
-          class="mt-1 text-xs text-red-600" 
+          class="mt-1 text-xs text-red-800" 
           role="alert"
         >
           {{ formState.errors.subject }}
         </p>
       </div>
 
-
-
       <!-- Message -->
-      <div class="form-group">
+      <div>
         <label 
           for="contact-message" 
           class="block text-sm font-semibold text-gray-700 mb-2"
@@ -550,8 +534,8 @@ onUnmounted(() => {
           :aria-invalid="formState.errors.message ? 'true' : 'false'"
           :aria-describedby="formState.errors.message ? 'message-error' : 'message-help'"
           @input="clearFieldError('message')"
-          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors disabled:opacity-50 disabled:cursor-not-allowed resize-y min-h-[120px]"
-          :class="{ 'border-red-300 focus:ring-red-500': formState.errors.message }"
+          class="w-full px-4 py-3 border border-primary/20 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed resize-y min-h-[120px]"
+          :class="{ 'border-red-800': formState.errors.message }"
         ></textarea>
         <p 
           v-if="!formState.errors.message" 
@@ -563,7 +547,7 @@ onUnmounted(() => {
         <p 
           v-if="formState.errors.message" 
           id="message-error" 
-          class="mt-1 text-xs text-red-600" 
+          class="mt-1 text-xs text-red-800" 
           role="alert"
         >
           {{ formState.errors.message }}
@@ -571,11 +555,11 @@ onUnmounted(() => {
       </div>
 
       <!-- Widget Turnstile -->
-      <div class="form-group">
+      <div>
         <div id="turnstile-widget" class="flex justify-center"></div>
         <p 
           v-if="formState.errors.turnstile" 
-          class="mt-2 text-xs text-red-600 text-center" 
+          class="mt-2 text-xs text-red-800 text-center" 
           role="alert"
         >
           {{ formState.errors.turnstile }}
@@ -587,7 +571,7 @@ onUnmounted(() => {
         <button
           type="submit"
           :disabled="formState.isSubmitting"
-          class="w-full bg-primary text-white py-4 px-6 rounded-lg font-semibold hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2"
+          class="w-full bg-primary text-white py-4 px-6 rounded-lg font-semibold hover:brightness-[120%] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer flex items-center justify-center gap-2"
         >
           <Icon 
             v-if="formState.isSubmitting" 
@@ -609,19 +593,48 @@ onUnmounted(() => {
       </div>
 
     </form>
+
+    <!-- Modale de succès -->
+    <ModalComponent v-model="showSuccessModal" @update:model-value="closeSuccessModal">
+      <div class="p-8 text-center">
+        <div class="mb-4">
+          <Icon icon="mdi:check-circle" class="w-16 h-16 text-green-600 mx-auto" />
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+          {{ t('contactForm.messages.successTitle') }}
+        </h3>
+        <p class="text-gray-600 mb-6">
+          {{ t('contactForm.messages.success') }}
+        </p>
+        <button
+          @click="closeSuccessModal"
+          class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:brightness-[120%] cursor-pointer"
+        >
+          {{ t('contactForm.messages.close') }}
+        </button>
+      </div>
+    </ModalComponent>
+
+    <!-- Modale d'erreur -->
+    <ModalComponent v-model="showErrorModal" @update:model-value="closeErrorModal">
+      <div class="p-8 text-center">
+        <div class="mb-4">
+          <Icon icon="mdi:alert-circle" class="w-16 h-16 text-red-800 mx-auto" />
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+          {{ t('contactForm.messages.errorTitle') }}
+        </h3>
+        <p class="text-gray-600 mb-6">
+          {{ formState.errorMessage }}
+        </p>
+        <button
+          @click="closeErrorModal"
+          class="bg-red-800 text-white px-6 py-3 rounded-lg font-semibold hover:brightness-[120%] cursor-pointer"
+        >
+          {{ t('contactForm.messages.close') }}
+        </button>
+      </div>
+    </ModalComponent>
   </div>
 </template>
 
-<style scoped>
-/* Animation pour les messages de validation */
-.error-message-enter-active,
-.error-message-leave-active {
-  transition: all 0.2s ease;
-}
-
-.error-message-enter-from,
-.error-message-leave-to {
-  opacity: 0;
-  transform: translateY(-5px);
-}
-</style>

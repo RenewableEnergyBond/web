@@ -415,7 +415,10 @@
     },
     "messages": {
       "success": "Your message has been sent successfully! We will respond as soon as possible.",
-      "error": "An error occurred while sending your message. Please try again."
+      "successTitle": "Message sent!",
+      "error": "An error occurred while sending your message. Please try again.",
+      "errorTitle": "Sending error",
+      "close": "Close"
     },
     "errors": {
       "nameRequired": "Name is required",

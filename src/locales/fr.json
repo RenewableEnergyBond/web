@@ -415,7 +415,10 @@
     },
     "messages": {
       "success": "Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.",
-      "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+      "successTitle": "Message envoyé !",
+      "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.",
+      "errorTitle": "Erreur d'envoi",
+      "close": "Fermer"
     },
     "errors": {
       "nameRequired": "Le nom est obligatoire",
