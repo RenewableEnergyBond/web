@@ -1,17 +1,13 @@
 /**
  * Paperboy - Service de formulaire de contact sécurisé pour Rebond.eco
  * 
- * Cette fonction Cloudflare Workers gère l'endpoint POST /api/paperboy
+ * Cette fonction Cloudflare Pages gère l'endpoint POST /api/paperboy
  * qui reçoit les données du formulaire de contact et les envoie par email via Brevo.
  */
 
 // ========================================
 // Types & Interfaces
 // ========================================
-
-export interface Env {
-  BREVO_API_KEY: string;
-}
 
 interface ContactFormData {
   name: string;
@@ -175,11 +171,11 @@ async function sendEmail(data: ContactFormData, apiKey: string): Promise<any> {
 }
 
 // ========================================
-// Handler principal
+// Handler principal - Pages Function
 // ========================================
 
-export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+export async function onRequestPost(context: any): Promise<Response> {
+  const { request, env } = context;
     try {
       // Gérer les requêtes OPTIONS (preflight CORS)
       if (request.method === 'OPTIONS') {
@@ -238,5 +234,4 @@ export default {
         message: 'Une erreur inattendue s\'est produite. Veuillez réessayer plus tard.'
       }, 500);
     }
-  },
-};
+}
