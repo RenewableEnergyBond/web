@@ -1,5 +1,5 @@
 /**
- * Paperboy - Service de formulaire de contact sécurisé pour Rebond.eco
+ * Paperboy - Service de formulaire de contact sécurisé pour rebond.eco
  * 
  * Cette fonction Cloudflare Pages gère l'endpoint POST /api/paperboy
  * qui reçoit les données du formulaire de contact et les envoie par email via Brevo.
