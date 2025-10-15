@@ -72,6 +72,12 @@ yarn type-check   # TypeScript validation
 - Use `defineEmits` and `defineProps` for component interface
 - Import types with `type` keyword: `import type { RouteRecordRaw } from 'vue-router'`
 
+### Code Comments & Documentation
+- **All code comments must be in English** - maintain consistency across the codebase
+- Use JSDoc format for function/component documentation
+- Prefer self-documenting code over excessive commenting
+- Follow industry standards for comment formatting and content
+
 ### TypeScript Patterns
 - Export interfaces for reusable types
 - Use `const` assertions for read-only objects: `as const`
