@@ -61,8 +61,9 @@ yarn type-check   # TypeScript validation
 
 ### Environment Setup
 - **Development**: Uses Vite dev server with Vue DevTools
-- **Production**: Static files deployed to Cloudflare Pages
+- **Production**: Static files deployed to Cloudflare Pages via `cloudflare/main` branch
 - **Secrets**: Managed via `wrangler secret put` (BREVO_API_KEY, TURNSTILE_SECRET_KEY)
+- **Repository**: Public with organization-only write access
 
 ## Code Conventions
 
@@ -83,6 +84,13 @@ yarn type-check   # TypeScript validation
 - Use `const` assertions for read-only objects: `as const`
 - Leverage template literal types for route names
 - No `any` types - use proper interfaces or generics
+
+### Git Workflow & Security
+- **Protected main branch**: All changes must go through Pull Requests
+- **Branch naming**: `feature/issue-123-description`, `fix/bug-description`, `hotfix/urgent-fix`
+- **Commit messages**: Follow [Conventional Commits](https://www.conventionalcommits.org/) format
+- **Code ownership**: All PRs require approval from organization members
+- **Deploy branch**: `cloudflare/main` for production deployments only
 
 ### CSS & Styling
 - **Tailwind-first** approach - avoid custom CSS when possible
@@ -143,4 +151,25 @@ User → Cloudflare Edge → Pages (Frontend)
 <span class="iconify mdi--email text-xl"></span>
 ```
 
-When working on this codebase, prioritize multilingual considerations, TypeScript safety, and the SSG build process for optimal SEO performance.
+## Development Guidelines
+
+### Code Quality Standards
+- **TypeScript**: All code must be properly typed - no `any` usage
+- **ESLint**: Code must pass linting checks before PR merge
+- **Testing**: New features should include appropriate tests when applicable
+- **Documentation**: Update relevant docs for significant changes
+
+### Pull Request Process
+- Create feature/fix branches from `main`
+- All PRs require review from organization members
+- PRs must pass CI/CD checks (type-check, build validation)
+- Use "Squash and merge" to maintain clean history
+- Delete feature branches after successful merge
+
+### Deployment Process
+- `main` branch: Protected, contains reviewed code
+- `cloudflare/main` branch: Production deployment trigger
+- Manual sync required: `main` → `cloudflare/main` for deployment
+- Emergency hotfixes: Create from `cloudflare/main`, merge to `main`, then sync back
+
+When working on this codebase, prioritize multilingual considerations, TypeScript safety, the SSG build process for optimal SEO performance, and follow the established Git workflow for secure deployments.
