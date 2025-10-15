@@ -42,6 +42,20 @@ This website is built with modern and performant technologies:
 ✅ **Internationalization** : Native multi-language support  
 ✅ **Responsive Design** : Interface adapted to all devices  
 
+## 🏗️ Architecture
+
+**rebond.eco** uses a full-stack Cloudflare architecture for optimal performance and security:
+
+```mermaid
+flowchart LR
+    U[User] --> CF[Cloudflare Edge]
+    CF --> P[Pages Frontend]
+    P --> W[Worker /api/paperboy]
+    W --> B[Brevo SMTP]
+```
+
+📋 **For detailed infrastructure documentation, see [ARCHITECTURE.md](./ARCHITECTURE.md)**
+
 ## 🚀 Development
 
 ### Prerequisites
