@@ -1,0 +1,12 @@
+# Cloudflare Pages Configuration
+name = "rebond-web"
+pages_build_output_dir = "dist"
+compatibility_date = "2025-10-13"
+
+# Public
+[vars]
+VITE_TURNSTILE_SITE_KEY = "0x4AAAAAAB6ZpXuSNzkjmZMQ"
+
+# Secrets
+# wrangler secret put BREVO_API_KEY
+# wrangler secret put TURNSTILE_SECRET_KEY
