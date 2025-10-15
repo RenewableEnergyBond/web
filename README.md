@@ -42,6 +42,16 @@ This website is built with modern and performant technologies:
 ✅ **Internationalization** : Native multi-language support  
 ✅ **Responsive Design** : Interface adapted to all devices  
 
+## 📖 Documentation
+
+This project includes comprehensive documentation to help developers and contributors:
+
+| Document | Description | Audience |
+|----------|-------------|----------|
+| **[ARCHITECTURE.md](./ARCHITECTURE.md)** | Infrastructure architecture and data flows | Developers & DevOps |
+| **[CONTRIBUTING.md](./CONTRIBUTING.md)** | Development workflow and contribution guidelines | Contributors |
+| **[SECURITY.md](./SECURITY.md)** | Security policies and vulnerability reporting | Security & Compliance |
+
 ## 🏗️ Architecture
 
 **rebond.eco** uses a full-stack Cloudflare architecture for optimal performance and security:
@@ -102,6 +112,22 @@ The website is available in French and English, with dynamic translation managem
 - **Optimized images** and modern formats
 - **Dynamic meta tags** for optimal SEO
 - **Core Web Vitals** optimized
+
+## 🤝 Contributing
+
+We welcome contributions! Please read our documentation before getting started:
+
+1. **[CONTRIBUTING.md](./CONTRIBUTING.md)** - Development workflow and Git conventions
+2. **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Understanding the technical architecture  
+3. **[SECURITY.md](./SECURITY.md)** - Security policies and reporting guidelines
+
+### Quick Start for Contributors
+```bash
+git clone https://github.com/RenewableEnergyBond/web.git
+cd web
+yarn install
+yarn dev
+```
 
 ---
 
