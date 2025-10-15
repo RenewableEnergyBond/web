@@ -1,15 +1,2 @@
-# Code owners for rebond.eco
-# Ces personnes sont automatiquement demandées pour review sur toutes les PR
-
-# Global ownership - tous les fichiers nécessitent l'approbation d'un membre de l'organisation
-* @RenewableEnergyBond/core-team
-
-# Fichiers critiques nécessitent une review spécifique
-/functions/ @RenewableEnergyBond/backend-team
-/src/router/ @RenewableEnergyBond/frontend-team
-/package.json @RenewableEnergyBond/core-team
-/wrangler.toml @RenewableEnergyBond/devops-team
-/.github/ @RenewableEnergyBond/core-team
-
-# Configuration de sécurité
-/functions/api/ @RenewableEnergyBond/security-team
+# Global code ownership - all files require approval from organization members
+* @RenewableEnergyBond/team
