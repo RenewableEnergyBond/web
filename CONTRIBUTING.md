@@ -4,6 +4,8 @@
 
 This project follows a structured Git workflow to ensure code quality and safe deployments.
 
+> 📋 **Pull Request Template**: We use a standardized PR template located in `.github/pull_request_template.md` to ensure all necessary information is provided for efficient code reviews.
+
 ### Branch Strategy
 
 ```
