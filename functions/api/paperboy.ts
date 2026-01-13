@@ -177,7 +177,7 @@ async function sendEmail(data: ContactFormData, apiKey: string): Promise<any> {
     body: JSON.stringify({
       sender: {
         name: 'Formulaire Contact Rebond',
-        email: 'noreply@rebond.eco'
+        email: 'bonjour@rebond.eco'
       },
       to: [{
         email: RECIPIENT_EMAIL,
