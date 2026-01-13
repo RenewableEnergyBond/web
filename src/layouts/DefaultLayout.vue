@@ -59,6 +59,8 @@ watch(locale, () => {
             {{ t('menu.investors') }}</RouterLink>
           <RouterLink :to="getRouteFor('Compliance')" class="font-medium hover:brightness-[120%]">
             {{ t('menu.compliance') }}</RouterLink>
+          <RouterLink :to="getRouteFor('Contact')" class="btn-contact text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg
+          px-5 py-1.5">{{ t('menu.contact') }}</RouterLink>
           <LanguageSwitcher />
         </nav>
       </div>

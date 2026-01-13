@@ -44,7 +44,7 @@ useSeo('home')
             <RouterLink :to="getRouteFor('Producers')"
               class="text-primary font-semibold text-lg py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%] uppercase"
               :aria-label="t('home.hero.contact')">
-              <Icon icon="mdi:calculator" class="text-2xl" />
+              <Icon icon="mdi:lightning-bolt" class="text-2xl" />
               {{ t('home.funnels.producers.cta') }}
             </RouterLink>
           </p>
@@ -56,7 +56,7 @@ useSeo('home')
             <RouterLink :to="getRouteFor('Investors')"
               class="text-primary font-semibold text-lg py-2 px-2 border-1 inline-flex items-center gap-1 rounded-lg self-end hover:brightness-[120%] uppercase"
               :aria-label="t('home.hero.contact')">
-              <Icon icon="mdi:account-check" class="text-2xl" />
+              <Icon icon="mdi:finance" class="text-2xl" />
               {{ t('home.funnels.investors.cta') }}
             </RouterLink>
           </p>
