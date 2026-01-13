@@ -27,11 +27,11 @@ const openModalNewsletter = (): void => {
 <template>
   <footer>
     <!-- DISCLAIMER -->
-  <div class="bg-[#fdc500]/50">
-    <section class="max-w-7xl mx-auto flex flex-col gap-3 py-2 sm:py-4 px-4 lg:px-8 justify-center">
-      <p v-html="t('footer.disclaimer')" class="text-xs text-center text-primary"/>
-    </section>
-  </div>
+    <div class="bg-[#fdc500]/50">
+      <section class="max-w-7xl mx-auto flex flex-col gap-3 py-2 sm:py-4 px-4 lg:px-8 justify-center">
+        <p v-html="t('footer.disclaimer')" class="text-xs text-center text-primary" />
+      </section>
+    </div>
     <div :class class="bg-primary/20">
       <div class="max-w-7xl py-12 px-4 lg:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
 
@@ -45,6 +45,8 @@ const openModalNewsletter = (): void => {
         <div class="text-primary text-right flex flex-col items-start sm:items-end">
           <SocialLinks />
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+            <RouterLink :to="getRouteFor('Contact')" class="btn-contact text-white bg-secondary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg text-lg
+          px-5 py-1.5">{{ t('menu.contact') }}</RouterLink>
             <button type="button" @click="openModalNewsletter"
               class="text-white bg-primary hover:brightness-[120%] active:brightness-[120%] font-medium rounded-lg cursor-pointer px-4 py-2 self-center text-nowrap transition-all duration-200 flex items-center gap-2">
               <Icon icon="mdi:mail" class="text-xl" />

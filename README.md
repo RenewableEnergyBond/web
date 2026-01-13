@@ -50,6 +50,7 @@ This project includes comprehensive documentation to help developers and contrib
 |----------|-------------|----------|
 | **[ARCHITECTURE.md](./ARCHITECTURE.md)** | Infrastructure architecture and data flows | Developers & DevOps |
 | **[CONTRIBUTING.md](./CONTRIBUTING.md)** | Development workflow and contribution guidelines | Contributors |
+| **[CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)** | Community standards and behavior guidelines | All community members |
 | **[SECURITY.md](./SECURITY.md)** | Security policies and vulnerability reporting | Security & Compliance |
 
 ## 🏗️ Architecture
@@ -118,8 +119,9 @@ The website is available in French and English, with dynamic translation managem
 We welcome contributions! Please read our documentation before getting started:
 
 1. **[CONTRIBUTING.md](./CONTRIBUTING.md)** - Development workflow and Git conventions
-2. **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Understanding the technical architecture  
-3. **[SECURITY.md](./SECURITY.md)** - Security policies and reporting guidelines
+2. **[CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)** - Community standards and behavior guidelines
+3. **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Understanding the technical architecture  
+4. **[SECURITY.md](./SECURITY.md)** - Security policies and reporting guidelines
 
 ### Quick Start for Contributors
 ```bash

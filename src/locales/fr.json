@@ -42,12 +42,12 @@
       "producers": {
         "title": "Producteurs d'<span class=\"text-secondary text-nowrap\">Energie Renouvelable</span>",
         "text": "Financement capex de vos actifs <br/>PV, éolien, stockage, ...",
-        "cta": "Obtenir une simulation"
+        "cta": "En savoir plus"
       },
       "investors": {
         "title": "Investisseurs en <span class=\"text-nowrap\">Actifs numériques</span>",
         "text": "Sous-jacent réel, <span class=\"text-secondary\">Reporting ESG</span><br/>Accès soumis à éligibilité",
-        "cta": "Vérifier votre éligibilité"
+        "cta": "En savoir plus"
       }
     },
     "compliance": {
@@ -93,7 +93,7 @@
     "kpi": {
       "title": "Quelques chiffres",
       "pipe": "<span class=\"text-3xl font-semibold\">30MWc</span><br/>en cours d'étude",
-      "yield": "Taux cible des obligations<br/><span class=\"text-3xl font-semibold\">6-9%</span>",
+      "yield": "Taux cible des obligations<br/><span class=\"text-3xl font-semibold\">5-9%</span>",
       "duration": "Maturité des obligations<br/><span class=\"text-3xl font-semibold\">3-7 ans</span>"
     }
   },
